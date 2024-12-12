@@ -3,13 +3,14 @@
   --foreground: #171717;
   --light-background-image: url('/images/light-bg.png');
   --dark-background-image: url('/images/dark-bg.png');
+  --background-image: var(--light-background-image); /* Default to light background */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --background-image: var(--dark-background-image);
+    --background-image: var(--dark-background-image); /* Dark mode background */
   }
 }
 
