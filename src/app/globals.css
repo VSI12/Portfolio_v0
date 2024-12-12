@@ -3,6 +3,14 @@
   --foreground: #171717;
   --light-background-image: url('/images/light-bg.png');
   --dark-background-image: url('/images/dark-bg.png');
+
+  --section-title-size: 2rem;
+  --section-subtitle-size: 1rem;
+  --hue: 0;
+  --sat: 0%;
+  --section-title-color: #342F2F;
+  --section-subtitle-color: #545252;
+
 }
 
 
