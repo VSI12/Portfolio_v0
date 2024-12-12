@@ -23,8 +23,8 @@ const Contact = () => {
               </a> 
           </div>
         </div>
-        <div className={styles.hero__footer}>
-          Victor.
+        <div className={styles.contact__footer}>
+          Contact Me.
         </div>
       </section>
   )
