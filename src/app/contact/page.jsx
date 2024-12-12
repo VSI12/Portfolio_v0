@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './contact.module.css'
+import Socials from '@/components/Socials/Socials'
 
 const Contact = () => {
   return (
@@ -13,7 +14,7 @@ const Contact = () => {
             just want to say hello, feel free to drop me a message. <br />
              I&#39;ll do my best to respond quickly!
           </div>
-          
+          <Socials />
         </div>
         <div className={styles.contact__footer}>
           Contact Me.
