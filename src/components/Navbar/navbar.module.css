@@ -1,0 +1,153 @@
+/* Navbar container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 50;
+    width: 100%;
+  }
+  
+  .navbar-container {
+    max-width: 7xl;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-logo .logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #171717;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #171717;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: #1e40af;
+  }
+  
+  .nav-link.active {
+    color: #1e40af;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .dark-mode-toggle {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background: none;
+    color: #171717;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .dark-mode-toggle:hover {
+    color: #1e40af;
+  }
+  
+  .menu-toggle {
+    display: none;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background: none;
+    color: #171717;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .menu-toggle:hover {
+    color: #1e40af;
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu {
+    display: block;
+  }
+  
+  .mobile-links {
+    padding: 1rem;
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #171717;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .mobile-nav-link:hover {
+    color: #1e40af;
+  }
+  
+  .mobile-nav-link.active {
+    color: #1e40af;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Dark Mode */
+  body.dark {
+    background-color: #171717;
+    color: #ededed;
+  }
+  
+  body.dark .navbar {
+    background-color: #222222;
+  }
+  
+  body.dark .navbar-links .nav-link,
+  body.dark .mobile-nav-link {
+    color: #ededed;
+  }
+  
+  body.dark .navbar-actions .dark-mode-toggle {
+    color: #ededed;
+  }
+  
+  body.dark .menu-toggle {
+    color: #ededed;
+  }
+  
