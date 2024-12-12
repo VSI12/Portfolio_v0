@@ -113,6 +113,10 @@
 .section__title::after {
     right: 15%;             /* Position the right line */
 }
+.contact__footer {
+  font-size:75px;
+}
+  
   }
 
 @media screen and (max-width: 675px) {
