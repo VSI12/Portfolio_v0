@@ -7,9 +7,9 @@
     background-color: transparent;
     z-index: 50;
     width: 100%;
-  }
+}
   
-  .navbar-container {
+.navbarContainer {
     max-width: 7xl;
     margin: 0 auto;
     padding: 1rem 2rem;
@@ -17,22 +17,22 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-  }
+}
   
-  .navbar-header {
+  .navbarHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
   
-  .navbar-logo .logo-text {
+  .navbarLogo .logoText {
     font-size: 2rem;
     font-weight: bold;
     color: #171717;
   }
   
-  .navbar-links {
+  .navbarLinks {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@
     flex: 1;
   }
   
-  .nav-link {
+  .navLink {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
     font-weight: 500;
@@ -49,21 +49,21 @@
     text-decoration: none;
   }
   
-  .nav-link:hover {
+  .navLink:hover {
     color: #1e40af;
   }
   
-  .nav-link.active {
+  .navLink.active {
     color: #1e40af;
   }
   
-  .navbar-actions {
+  .navbarActions {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
   
-  .dark-mode-toggle {
+  .darkModeToggle {
     padding: 0.5rem;
     border-radius: 0.375rem;
     background: none;
@@ -72,11 +72,11 @@
     transition: color 0.2s ease;
   }
   
-  .dark-mode-toggle:hover {
+  .darkModeToggle:hover {
     color: #1e40af;
   }
   
-  .menu-toggle {
+  .menuToggle {
     display: none;
     padding: 0.5rem;
     border-radius: 0.375rem;
@@ -86,20 +86,20 @@
     transition: color 0.2s ease;
   }
   
-  .menu-toggle:hover {
+  .menuToggle:hover {
     color: #1e40af;
   }
   
   /* Mobile menu styles */
-  .mobile-menu {
+  .mobileMenu {
     display: block;
   }
   
-  .mobile-links {
+  .mobileLinks {
     padding: 1rem;
   }
   
-  .mobile-nav-link {
+  .mobileNavLink {
     display: block;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -109,11 +109,11 @@
     transition: color 0.2s ease;
   }
   
-  .mobile-nav-link:hover {
+  .mobileNavLink:hover {
     color: #1e40af;
   }
   
-  .mobile-nav-link.active {
+  .mobileNavLink.active {
     color: #1e40af;
   }
   

@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Moon, Sun, Menu, X } from 'lucide-react'
-
-import './navbar.module.css'
+import styles from './navbar.module.css'
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -30,23 +29,23 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <div className="navbar-header">
+    <nav className={styles.navbar}>
+      <div className={styles.navbarContainer}>
+        <div className={styles.navbarHeader}>
           {/* Logo */}
-          <div className="navbar-logo">
-            <Link href="/" className="logo-text">
+          <div className={styles.navbarLogo}>
+            <Link href="/" className={styles.logoText}>
               YourLogo
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="navbar-links">
+          <div className={styles.navbarLinks}>
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link ${pathname === item.href ? 'active' : ''}`}
+                className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
               >
                 {item.label}
               </Link>
@@ -54,10 +53,10 @@ const Navbar = () => {
           </div>
 
           {/* Dark Mode Toggle */}
-          <div className="navbar-actions">
+          <div className={styles.navbarActions}>
             <button
               onClick={toggleDarkMode}
-              className="dark-mode-toggle"
+              className={styles.darkModeToggle}
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
@@ -66,7 +65,7 @@ const Navbar = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="menu-toggle"
+              className={styles.menuToggle}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -76,13 +75,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="mobile-menu">
-            <div className="mobile-links">
+          <div className={styles.mobileMenu}>
+            <div className={styles.mobileLinks}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`mobile-nav-link ${pathname === item.href ? 'active' : ''}`}
+                  className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
