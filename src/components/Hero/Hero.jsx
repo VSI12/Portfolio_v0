@@ -10,6 +10,9 @@ const Hero = () => {
         <Data />
       </div>
     </div>
+    <div className={styles.hero__footer}>
+      Victor.
+  </div>
   </section>
   )
 }
