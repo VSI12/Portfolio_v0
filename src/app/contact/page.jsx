@@ -19,6 +19,10 @@ const Contact = () => {
         <div className={styles.contact__footer}>
           Contact Me.
         </div>
+        <div className={styles.footer__container}>
+          <span className={styles.footer}>Designed and built by Victor Iliya</span>   
+          <span className={styles.footer__copy}>&#169; Victor Iliya. All right reserved. 2024</span>
+        </div>
       </section>
   )
 }
