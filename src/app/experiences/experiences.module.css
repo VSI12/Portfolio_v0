@@ -55,8 +55,11 @@
 }
 .qualification__tabs {
     display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
+    margin: 0 auto;
+    max-width: 850px;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    font-size: 20px;
 }
 .qualification__button {
     font-size: var(--h3-font-size);
