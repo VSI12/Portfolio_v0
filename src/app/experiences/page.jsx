@@ -123,6 +123,9 @@ const Experiences = () => {
           </div>
         </div>
       </div>
+      <div className={styles.experiences__footer}>
+        Experiences.
+      </div>
     </section>
   );
 };
