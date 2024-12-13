@@ -3,6 +3,8 @@
   --foreground: #171717;
   --light-background-image: url('/images/light-bg.png');
   --dark-background-image: url('/images/dark-bg.png');
+  --navbar-bg-light:var(--light-background-image);
+  --navbar-bg-dark:var(--dark-background-image);
 
   --section-title-size: 2rem;
   --section-subtitle-size: 1rem;
@@ -21,6 +23,7 @@ body {
   
   font-family: 'JetBrains Mono', monospace;
   transition: background-image 0.2s ease-in-out; /* Smooth transition for background */
+  
 }
 
 .dark body {

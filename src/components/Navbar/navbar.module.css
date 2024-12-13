@@ -4,9 +4,13 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: transparent;
+    background-image: url('/images/light-bg.png');
     z-index: 50;
     width: 100%;
+    backdrop-filter: blur(10px);
+}
+html.dark .navbar {
+  background-image: url('/images/dark-bg.png'); /* Dark mode background */
 }
   
 .navbarContainer {
