@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 import styles from './navbar.module.css'
@@ -35,7 +36,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className={styles.navbarLogo}>
             <Link href="/" className={styles.logoText}>
-              YourLogo
+             <Image src="/logo.svg" alt="logo" width={150} height={150} />
             </Link>
           </div>
 
