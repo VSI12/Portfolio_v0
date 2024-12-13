@@ -15,7 +15,7 @@ const About = () => {
             <p className={styles.about__description}>
               My passion for scalable, resilient infrastructures was ignited when I earned my 
               first AWS certification, and I’ve been exploring the limitless possibilities of 
-              cloud technologies ever since. <br />
+              cloud technologies ever since. <br /><br />
               Currently, I focus on DevOps, integrating automation, creating CI/CD pipelines,
               and infrastructure as code to build agile, reliable, highly available and
               resilient systems. My toolkit includes technologies like AWS, Terraform, Docker,
@@ -39,7 +39,7 @@ const About = () => {
             <p className={styles.about__description}>
             I believe in the beauty of simplicity and order — reducing complexity to deliver
             elegant solutions that perform at scale. Continuous learning is my mantra, and I 
-            constantly strive to evolve, improve, and adapt to new challenges. <br />
+            constantly strive to evolve, improve, and adapt to new challenges. <br /><br />
 
             For me, projects are the ultimate learning tool. Each project offers a unique opportunity 
             to apply knowledge, solve real-world problems, and improve processes. 
@@ -49,12 +49,47 @@ const About = () => {
             through blog posts and tutorials.
             </p>
 
-            
-            My main focus now is expanding my expertise into
-             DevOps, integrating automation and CI/CD pipelines
-            to support agile, reliable software delivery.
-            <br /><br />
-            Here are a few technologies I’ve been working with recently:
+            <h2 className={styles.about__h2}>
+            Tools & Technologies
+            </h2>
+            <p className={styles.about__description}>
+            Technologies
+              Terraform: Infrastructure as Code (IaC)
+              AWS Services: EC2, S3, Lambda, VPC, CloudFormation
+              Docker: Containerization
+              Python: Automation and scripting
+              Jenkins: CI/CD pipelines
+              Ansible: Configuration management
+            Tools
+              VS Code: Text editor of choice
+              GitHub & GitLab: Version control platforms
+              Figma: Visual brainstorming and workflows
+              Notion: Task management and organization
+            </p>
+
+            <h2 className={styles.about__h2}>
+            Soft Skills
+            </h2>
+            <p className={styles.about__description}>
+            Attention to Detail: Ensuring every component in a system works cohesively for seamless performance.
+            Problem-Solving: Tackling challenges methodically and developing effective solutions.
+            Self-Motivation: Managing projects independently while meeting deadlines and maintaining quality.
+            Collaboration: Thriving in team environments, fostering learning, and sharing knowledge.
+            Adaptability: Quickly adjusting to new tools, environments, and challenges.
+            Effective Communication: Clearly articulating technical concepts to both technical and non-technical stakeholders.
+            </p>
+
+            <h2 className={styles.about__h2}>
+            Beyond the Terminal
+
+            </h2>
+            <p className={styles.about__description}>
+            When I’m not architecting cloud infrastructures, you’ll find me indulging in my other passions:
+            Playing tennis to keep my mind sharp and focused.
+            Enjoying the melodies of EDM and piano to relax and find inspiration.
+            Exploring new ideas in technology and automation.
+            I also enjoy writing about my experiences and sharing knowledge with the DevOps community through blog posts and tutorials.
+            </p>
             
             <ul className={styles.work__list}>
               <li>AWS</li>
