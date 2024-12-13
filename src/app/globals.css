@@ -31,3 +31,6 @@ body {
   background-image: var(--dark-background-image); /* Dark background image */
   color: #ededed; /* Light foreground color for dark mode */
 }
+a{
+  text-decoration: none;
+}
