@@ -8,26 +8,25 @@ const ViewCounter = () => {
 
   // Lambda URL from environment variable
   const lambdaUrl = process.env.NEXT_PUBLIC_LAMBDA_URL;
-  console.log(lambdaUrl)
 
-  // useEffect(() => {
-  //   const fetchCounter = async () => {
-  //     try {
-  //       const response = await fetch(lambdaUrl);
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! Status: ${response.status}`);
-  //       }
-  //       const data = await response.json();
-  //       setViews(data.views);
-  //     } catch (err) {
-  //       setError(err.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchCounter = async () => {
+      try {
+        const response = await fetch(lambdaUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setViews(data.views);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  //   fetchCounter();
-  // }, [lambdaUrl]);
+    fetchCounter();
+  }, [lambdaUrl]);
 
   return (
     <div>
