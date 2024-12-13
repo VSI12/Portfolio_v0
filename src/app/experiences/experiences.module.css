@@ -1,0 +1,526 @@
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+.section {
+    padding: 6rem 0 2rem;
+  }
+.section__title {
+    font-size: var(--section-title-size);
+    color: var(--section-title-color);
+    position: relative;       /* Establish positioning context */
+    text-align: center;       /* Center the text */
+    margin: 1rem 0;           /* Add some vertical spacing */
+}
+.section__subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: 4rem;
+    color: var(--section-subtitle-color);
+}
+.section__title,
+.section__subtitle {
+    text-align: center;
+}
+
+.section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 130px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+.section__title::before {
+    left: clamp(35%, 35%, 55%);      /* Adjusts dynamically */
+}
+
+.section__title::after {
+    right: clamp(35%, 35%, 55%);
+}
+.qualification__container {
+    max-width: 768px;
+    display: block;
+    margin: 0 auto;  /* Center the container */
+}
+.qualification__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.qualification__button {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: #838383;
+    margin: 0 var(--mb-1);
+    cursor: pointer;
+}
+.qualification__button:hover {
+    color: var(--title-color-dark);
+}
+
+.qualification__icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.qualification__calendar__icon{
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+.qualification__active {
+    color: var(--title-color-dark);
+}
+.qualification__sections {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    justify-content: center;
+}
+.qualification__content {
+    display: none;
+}
+.qualification__content_active {
+    display: block;
+}
+.qualification__data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+/* Reverse the grid for even rows */
+.qualification__data:nth-child(even) {
+  grid-template-columns: 1fr max-content 1fr;  /* Same layout */
+  direction: rtl;  /* Right-to-left layout */
+}
+
+/* Reverse back the child elements inside even rows */
+.qualification__data:nth-child(even) > div {
+  direction: ltr;  /* Set children back to left-to-right */
+}
+
+.qualification__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+.qualification__subtitle {
+    display: inline-block;
+    color: #5e5e5e;
+    margin-bottom:10px;
+}
+
+.qualification__calendar {
+    font-size: var(--smaller-font-size);
+    color: #838383;
+}
+
+.qualification__rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #838383;
+    border-radius: 50%;
+}
+
+.qualification__line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #838383;
+    transform: translate(6px, -7px);
+}
+
+/* WORK EXPERIENCE SECTION */
+.work__container {
+    max-width: 796px;
+    width: 100%;  /* Ensures the container can resize fluidly */
+    display: flex;  /* Ensures the flex items don't wrap when resizing */
+    margin: 0 auto;  
+}
+.work__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-wrap: nowrap;
+    padding-top: 5px;
+}
+.work__sections {
+    display: flex;
+    justify-content: center;
+}
+.work__content {
+    display: none;
+}
+.work__content_active {
+    display: block;
+}
+.work__title{
+    font-weight: 700;;
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
+}
+.work__subtitle{
+    font-weight: 500;
+    color: #5e5e5e;
+    margin-bottom: 100px;
+}
+.work__tab_text{
+    font-size: 16px;
+}
+.work__data_tab {
+    display: flex;                    /* Align horizontally */
+    align-items: flex-start;          /* Align items at the top */
+    gap: 1rem;                        /* Space between rounder and text */
+    position: relative;               /* For positioning reference */    
+}
+.work__button {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: #838383;
+    margin: 0 var(--mb-1);
+    cursor: pointer;
+}
+.work__button:hover {
+    color: var(--title-color-dark);
+}
+.work__active {
+    color: var(--title-color-dark);
+}
+.work__rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #838383;
+    border-radius: 50%;
+    transition: background-color 0.3s ease; /* Smooth transition on color change */
+}
+.activeRounder{
+    background-color:#342F2F;
+}
+.work__line {
+    position: absolute;
+    top: 13px;                        /* Start below the rounder */
+    width: 1px;
+    height: 100%;                     /* Full height for testing */
+    background-color: #838383;  
+}
+.work__tab_rounder{
+    display: flex;                   /* Keep rounder and line stacked vertically */
+    flex-direction: column;
+    align-items: center;             /* Center the rounder horizontally */
+    position: relative; 
+    min-height: 20px;       
+}
+.work__list {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping but control it better */
+    gap: 10px;  /* Adjust space between list items */
+    color: #4A4A4A;
+    font-weight: 600;;
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
+    margin-top: 25px;
+}
+.work__list li {
+    flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
+    min-width: 550px;  /* Set a minimum width for the items */
+    list-style-type: none; /* Removes the default bullets */
+    position: relative; /* For positioning the custom bullet */
+    padding-left: 25px; /* Space for the custom bullet inside the list item */
+}
+.work__list li::before {
+    content: ''; /* Creates a pseudo-element */
+    position: absolute;
+    left: 0; /* Align the bullet with the left side of the list item */
+    top: 20%;
+    transform: translateY(-50%); /* Vertically centers the bullet */
+    width: 16px; /* Size of the custom bullet */
+    height: 16px; /* Size of the custom bullet */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23006CE0"><path d="M21 12c0 2.86-2.72 6.62-15.94 6.97-1.13.03-2.06-.88-2.06-2V7.03c0-1.13.94-2.03 2.06-2C18.28 5.38 21 9.15 21 12Z"></path></svg>');
+    background-size: contain; /* Ensures the SVG scales correctly */
+    background-repeat: no-repeat; /* Prevents the bullet from repeating */
+ }
+
+.highlights{
+    color:#006CE0;
+}
+/* CERTIFICATION EXPERINCE SECTION */
+.certifications__cards{
+    max-width: 996px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 0 auto;
+}
+.certifications__container{
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 230px;
+    border-radius: 20px;
+    background: #1b233d;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card .topsection {
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    position: relative;
+    
+}
+.card .topsection .border {
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    width: 130px;
+    background: white;
+    background: #1b233d;
+    position: relative;
+    transform: skew(-40deg);
+    box-shadow: -10px -10px 0 0 #1b233d;
+}
+.card .topsection .border::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -15px;
+    background: rgba(255, 255, 255, 0);
+    border-top-left-radius: 10px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+}
+.card .topsection::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 15px;
+    width: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+}
+.card .topsection .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.card .topsection .icons .logo {
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 7px 0 7px 15px;
+}
+.card .topsection .icons .logo .topsection {
+    height: 100%;
+}
+.card .topsection .icons .socialmedia {
+    height: 100%;
+    padding: 8px 15px;
+    display: flex;
+    gap: 7px;
+}
+.card .topsection .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;              /* Takes full width of the parent */
+}
+.card .topsection .imageContainer image {
+    max-width: 100%;          /* Ensures the image is responsive */
+    height: auto;             /* Maintain aspect ratio */
+}
+.certifications__icon{
+    font-size: 24px;    
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
+.card .bottomsection {
+    padding: 10px 5px;
+}
+.card .bottomsection .title {
+    display: block;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.card .bottomsection .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card .bottomsection .row .item {
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    color: rgba(170, 222, 243, 0.721);
+}
+.card .bottomsection .row .item .bigtext {
+    font-size: 22px;
+    display: block;
+    color:#f2f2f2;
+}
+.card .bottomsection .row .item .regulartext {
+    font-size: 12px;
+}
+.card .bottomsection .row .item:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.126);
+}
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .qualification__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    .qualification__container{
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
+.section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 100px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+.section__title::before {
+    left: 15%;              /* Position the left line */
+}
+.section__title::after {
+    right: 15%;             /* Position the right line */
+}
+  }
+  
+@media screen and (max-width: 576px) {
+    .qualification__sections{
+        grid-template-columns: initial;
+    }
+
+    .qualification__button{
+        margin: 0 var(--mb-0-75);
+    }
+  }
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+    .qualification__data{
+        gap: .5rem;
+    }
+
+    .section__title::before,
+.section__title::after {
+    content: '';
+    position: absolute;
+    width: 100px;              /* Length of the line on each side */
+    height: 1px;              /* Thickness of the line */
+    background-color: black;  /* Color of the line */
+    top: 50%;                 /* Align to the vertical center of the text */
+}
+
+.section__title::before {
+    left: 10%;              /* Position the left line */
+}
+
+.section__title::after {
+    right: 10%;             /* Position the right line */
+}
+
+  }
+
+
+  @media (max-width: 768px) {
+    .work__container {
+        flex-direction: column;  /* Stack the content vertically on smaller screens */
+    }
+
+    .work__tabs {
+        flex-direction: row;  /* Arrange tabs in a row for smaller screens */
+    }
+
+    .work__sections {
+        display: block;  /* Stack sections vertically */
+    }
+
+    .work__list {
+        white-space: normal;  /* Allow wrapping on small screens */
+    }
+}
+
+
+/* For medium devices */
+@media screen and (max-width: 1540px) {
+    .section__title::before {
+          left: 30%;              /* Position the left line */
+    }
+    .section__title::after {
+          right: 30%;             /* Position the right line */
+    }
+  }
+  
+  @media screen and (max-width: 1125px) {
+    .section__title::before {
+      left: 25%;              /* Position the left line */
+    }
+    .section__title::after {
+      right: 25%;             /* Position the right line */
+    }
+  }
+      
+  
+  
+    /* For medium devices */
+  @media screen and (max-width: 768px) {
+  .section__title::before {
+      left: 15%;              /* Position the left line */
+  }
+  .section__title::after {
+      right: 15%;             /* Position the right line */
+  }
+    }
+  
+  @media screen and (max-width: 675px) {
+    .section__title::before,
+  .section__title::after {
+      width: 75px;              
+  }
+  .section__title::before {
+      left: 7.5%;              /* Position the left line */
+  }
+  .section__title::after {
+      right: 7.5%;             /* Position the right line */
+  }
+    }
+  
+  @media screen and (max-width: 475px) {
+    .section__title::before {
+        left: 5%;              /* Position the left line */
+    }
+    .section__title::after {
+        right: 5%;             /* Position the right line */
+    }
+      }
