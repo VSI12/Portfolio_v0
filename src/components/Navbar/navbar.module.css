@@ -14,7 +14,7 @@ html.dark .navbar {
 }
   
 .navbarContainer {
-    max-width: 7xl;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
