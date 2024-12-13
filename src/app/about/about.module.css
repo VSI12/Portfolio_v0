@@ -107,6 +107,14 @@
 .highlights{
   color:#006CE0;
 }
+.about__footer {
+  position: fixed;
+  bottom: 0px; /* Adjust to position it further or closer to the bottom */
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(0, 0, 0, 0.050);
+  font-size: 140px;
+  font-weight: 600;
+}
 @media screen and (max-width: 992px) {
   .about__container {
     max-width: 768px;

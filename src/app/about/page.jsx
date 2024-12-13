@@ -31,6 +31,7 @@ const About = () => {
               Expanding automation capabilities for CI/CD pipelines in personal and collaborative projects.
               Exploring advanced container orchestration techniques using Kubernetes.
               Contributing to open-source projects focused on cloud automation and tooling.
+              <br /><br />
             </p>
 
             <h2 className={styles.about__h2}>
@@ -91,15 +92,12 @@ const About = () => {
             I also enjoy writing about my experiences and sharing knowledge with the DevOps community through blog posts and tutorials.
             </p>
             
-            <ul className={styles.work__list}>
-              <li>AWS</li>
-              <li>Docker</li>
-              <li>Python</li>
-              <li>Terraform</li>
-              <li>Jenkins</li>
-              <li>Ansible</li>
-            </ul>
+            
           </div>
+          
+        </div>
+        <div className={styles.about__footer}>
+          About Me.
         </div>
       </section>
   )
