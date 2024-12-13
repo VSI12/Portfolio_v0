@@ -20,6 +20,12 @@ const Experiences = () => {
       <span className={styles.section__subtitle}>My Personal Journey</span>
 
       <div className={`${styles.qualification__container} ${styles.container}`} >
+        <div className={styles.experiences}>
+        My journey in tech has been shaped by a combination of education, hands-on work,
+        and professional certifications. Each experience has strengthened my skills and 
+        deepened my understanding of cloud technologies and DevOps practices.
+        </div>
+        
         <div className={styles.qualification__tabs}>
           <div className={ toggleState === 1 ?
            `${styles.qualification__button} ${styles.qualification__active}`
