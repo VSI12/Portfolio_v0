@@ -36,12 +36,13 @@ html.dark .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  gap: 1rem;
+  font-size: 16px;
 }
 
 .navLink {
   padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #171717;
   transition: color 0.2s ease;
@@ -49,11 +50,12 @@ html.dark .navbar {
 }
 
 .navLink:hover {
-  color: #1e40af;
+  border-bottom: 1px solid #171717;
+  transition: 0.2s ease;
 }
 
 .navLink.active {
-  color: #1e40af;
+  font-weight: 600;
 }
 
 /* Navbar Actions */
