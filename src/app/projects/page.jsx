@@ -57,7 +57,7 @@ const Projects = () => {
 
           <div className={styles.projects__card}>
             <div className={styles.projects__image}>
-              <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={400} height={234} />
+              <Image src="/IDS-Architecture 2.png" alt="AWS Architecture" width={400} height={234} />
             </div>
 
             <div className={styles.projects__data}>
