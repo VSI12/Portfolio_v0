@@ -91,9 +91,12 @@
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
+    .section {
+        padding: 6rem 0 2rem;
+      }
     .home__content{
-        grid-template-columns: 100px repeat(2, 1fr);
-        column-gap: 1.25rem;
+        grid-template-columns: 0.5fr 3fr;
+        padding-top: 3.5rem;
     }
     .home__hand{
         width: 35px;
@@ -157,9 +160,17 @@
         font-weight: 700;
         font-size: 15px;
     }
+    .hero__footer {
+        font-size: 100px;
+        font-weight: 600;
+      }
+        
 }
   /* For small devices */
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 450px) {
+    .section {
+        padding: 2rem 0 2rem;
+      }
    .home__img{
     width: 180px;
     height: 180px;

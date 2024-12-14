@@ -141,6 +141,13 @@
 .section__title::after {
     right: 7.5%;             /* Position the right line */
 }
+.footer__container{
+  /* padding: 15rem 0 6rem; */
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
   }
 
 @media screen and (max-width: 475px) {
@@ -149,5 +156,8 @@
   }
   .section__title::after {
       right: 5%;             /* Position the right line */
+  }
+  .contact__footer {
+    font-size:60px;
   }
     }
