@@ -96,6 +96,9 @@ const Projects = () => {
         </div>
           
         </div>
+        <div className={styles.experiences__footer}>
+        Projects.
+      </div>
       </section>
   )
 }

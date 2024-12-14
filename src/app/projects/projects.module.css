@@ -120,6 +120,15 @@ overflow: hidden;
   color: #000;
   transform: translateY(-5px);
 }
+.experiences__footer {
+  position: fixed;
+  bottom: 0px; /* Adjust to position it further or closer to the bottom */
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(0, 0, 0, 0.050);
+  font-size: 140px;
+  font-weight: 600;
+}
+  
 
 
 
