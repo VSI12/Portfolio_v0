@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className={styles.navbarLogo}>
             <Link href="/" className={styles.logoText}>
-             <Image src="/logo.svg" alt="logo" width={150} height={150} />
+             <Image src="/logo.svg" alt="logo" width={100} height={100} />
             </Link>
           </div>
 

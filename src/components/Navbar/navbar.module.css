@@ -29,7 +29,6 @@ html.dark .navbar {
 .navbarHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 /* Navbar Links (Desktop) */
@@ -37,7 +36,6 @@ html.dark .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   flex: 1;
 }
 
@@ -131,6 +129,8 @@ html.dark .navbar {
   overflow-y: auto;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);  /* More pronounced bottom shadow */
+
 }
 
 .mobileMenuWrapper.show .mobileMenu {
@@ -147,6 +147,7 @@ html.dark .navbar {
 .mobileNavLink {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
   font-weight: 500;
@@ -163,7 +164,7 @@ html.dark .navbar {
 
 .mobileNavLink.active {
   border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow *//* Ensure it stays on top of other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow *//* Ensure it stays on top of other content */
 }
 
 /* Media Queries */
@@ -178,6 +179,8 @@ html.dark .navbar {
     display: block;
   }
 }
+
+
 
 /* Dark Mode */
 body.dark {
