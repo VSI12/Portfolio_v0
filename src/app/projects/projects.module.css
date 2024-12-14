@@ -61,6 +61,10 @@
   border-radius: 15px;
   justify-content: center;
   background-color: #e3e1e171;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.projects__card:hover {
+  transform: scale(1.05);
 }
 
 .projects__image{
@@ -88,7 +92,6 @@ overflow: hidden;
 
 .techstacks__list li{
     margin-right: 1rem;        /* Adds space between list items */
-    font-weight: 600;
   }
 
 .projects__title{
