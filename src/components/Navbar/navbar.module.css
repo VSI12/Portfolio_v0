@@ -1,157 +1,223 @@
 /* Navbar container */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-image: url('/images/light-bg.png');
-    z-index: 50;
-    width: 100%;
-    backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url('/images/light-bg.png');
+  z-index: 50;
+  width: 100%;
+  backdrop-filter: blur(10px);
 }
+
 html.dark .navbar {
   background-image: url('/images/dark-bg.png'); /* Dark mode background */
 }
-  
+
+/* Navbar container styles */
 .navbarContainer {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 }
-  
-  .navbarHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .navbarLogo .logoText {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #171717;
-  }
-  
+
+/* Navbar Header */
+.navbarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+/* Navbar Links (Desktop) */
+.navbarLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.navLink {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #171717;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #1e40af;
+}
+
+.navLink.active {
+  color: #1e40af;
+}
+
+/* Navbar Actions */
+.navbarActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.darkModeToggle {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background: none;
+  color: #171717;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.darkModeToggle:hover {
+  color: #1e40af;
+}
+
+/* Menu Toggle Button (Mobile) */
+.menuToggle {
+  display: none;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background: none;
+  color: #171717;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menuToggle:hover {
+  color: #1e40af;
+}
+
+/* Mobile menu styles */
+.mobileMenuWrapper {
+  position: fixed;
+  background-image: url('/images/light-bg.png');
+  top: 80px;
+  left: 0;
+  right: 0;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobileMenuWrapper.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenuBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+}
+
+.mobileMenu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/light-bg.png');
+  box-shadow: 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  overflow-y: auto;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.mobileMenuWrapper.show .mobileMenu {
+  transform: translateY(0);
+}
+
+.mobileLinks {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #171717;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.mobileNavLink:hover {
+  color: #1e40af;
+  background-color: #e5e7eb;
+}
+
+.mobileNavLink.active {
+  border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow *//* Ensure it stays on top of other content */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Hide desktop navbar links */
   .navbarLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex: 1;
-  }
-  
-  .navLink {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #171717;
-    transition: color 0.2s ease;
-    text-decoration: none;
-  }
-  
-  .navLink:hover {
-    color: #1e40af;
-  }
-  
-  .navLink.active {
-    color: #1e40af;
-  }
-  
-  .navbarActions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .darkModeToggle {
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    background: none;
-    color: #171717;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
-  
-  .darkModeToggle:hover {
-    color: #1e40af;
-  }
-  
-  .menuToggle {
     display: none;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    background: none;
-    color: #171717;
-    cursor: pointer;
-    transition: color 0.2s ease;
   }
-  
-  .menuToggle:hover {
-    color: #1e40af;
-  }
-  
-  /* Mobile menu styles */
-  .mobileMenu {
+
+  /* Show mobile menu toggle button */
+  .menuToggle {
     display: block;
   }
-  
-  .mobileLinks {
-    padding: 1rem;
-  }
-  
-  .mobileNavLink {
-    display: block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #171717;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .mobileNavLink:hover {
-    color: #1e40af;
-  }
-  
-  .mobileNavLink.active {
-    color: #1e40af;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
-  /* Dark Mode */
-  body.dark {
-    background-color: #171717;
-    color: #ededed;
-  }
-  
-  body.dark .navbar {
-    background-color: #222222;
-  }
-  
-  body.dark .navbar-links .nav-link,
-  body.dark .mobile-nav-link {
-    color: #ededed;
-  }
-  
-  body.dark .navbar-actions .dark-mode-toggle {
-    color: #ededed;
-  }
-  
-  body.dark .menu-toggle {
-    color: #ededed;
-  }
-  
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #171717;
+  color: #ededed;
+}
+
+body.dark .navbar {
+  background-color: #222222;
+}
+
+body.dark .navbarLinks .navLink,
+body.dark .mobileLinks .mobileNavLink {
+  color: #ededed;
+}
+
+body.dark .navbarActions .darkModeToggle {
+  color: #ededed;
+}
+
+body.dark .menuToggle {
+  color: #ededed;
+}
+
+body.dark .mobileMenu {
+  background-color: #1f2937;
+}
+
+body.dark .mobileNavLink {
+  color: #f3f4f6;
+  background-color: #374151;
+}
+
+body.dark .mobileNavLink:hover {
+  color: #60a5fa;
+  background-color: #4b5563;
+}
+
+body.dark .mobileNavLink.active {
+  color: #ffffff;
+  background-color: #2563eb;
+}
+

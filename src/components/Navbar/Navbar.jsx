@@ -29,6 +29,14 @@ const Navbar = () => {
     setIsDarkMode(isDark)
   }, [])
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'visible'
+    }
+  }, [isMenuOpen])
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
@@ -74,8 +82,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {/* Mobile Menu */}
+        <div className={`${styles.mobileMenuWrapper} ${isMenuOpen ? styles.show : ''}`}>
+          <div className={styles.mobileMenuBackdrop} onClick={() => setIsMenuOpen(false)} />
           <div className={styles.mobileMenu}>
             <div className={styles.mobileLinks}>
               {navItems.map((item) => (
@@ -83,17 +92,18 @@ const Navbar = () => {
                   key={item.href}
                   href={item.href}
                   className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)} // Close menu on click
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   )
 }
 
 export default Navbar
+
