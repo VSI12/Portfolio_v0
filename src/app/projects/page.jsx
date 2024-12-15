@@ -133,8 +133,24 @@ const Projects = () => {
             <button className={styles.popup__close} onClick={closePopup}>
               &times;
             </button>
-            <h3>Project 2 Details</h3>
-            <p>This is the content for Project 2.</p>
+            <h3>Deploying the Containerized flask Web-App to AWS ECS Using Terraform and CI/CD</h3>
+            <p className={styles.popup__description}>
+             This projects leverages Infrastructure as Code using Terraform to provision
+             AWS resources such as Virtual Private Cloud (VPC) ECS (with Fargate), 
+             ECR (Elastic Container Registry), an Application Load Balancer (ALB), 
+             and VPC endpoints.
+            </p>
+            <p className={styles.popup__description}>
+              Click the following links to view the project REPO and BLOG post
+            </p>
+             <div className={styles.projects__links}>
+                <a href="https://github.com/VSI12/Terraform-ECS-IDS" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
+                </a>
+                <a href="https://dev.to/non-existent/deploying-containerized-applications-to-aws-ecs-using-terraform-and-cicd-project-summary-3llc" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
+                </a>
+              </div>
           </div>
         </div>
       )}
