@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from './about.module.css'
+
+export const metadata = {
+  title: "About | Victor Iliya",
+  description: "Learn more about Victor Iliya, a passionate DevOps engineer with expertise in AWS, cloud infrastructure, and automation.",
+};
 const About = () => {
   return (
       <section className={styles.section} id="about">
@@ -28,10 +33,12 @@ const About = () => {
             </h2>
             <p className={styles.about__description}>
             Currently, I’m:
-              Expanding automation capabilities for CI/CD pipelines in personal and collaborative projects.
-              Exploring advanced container orchestration techniques using Kubernetes.
-              Contributing to open-source projects focused on cloud automation and tooling.
-              <br /><br />
+            <br />
+              <ul>
+                <li>Expanding automation capabilities for CI/CD pipelines in personal and collaborative projects.</li>
+                <li>Exploring advanced container orchestration techniques using Kubernetes.</li>
+                <li>Contributing to open-source projects focused on cloud automation and tooling.</li>
+              </ul>
             </p>
 
             <h2 className={styles.about__h2}>
@@ -40,7 +47,7 @@ const About = () => {
             <p className={styles.about__description}>
             I believe in the beauty of simplicity and order — reducing complexity to deliver
             elegant solutions that perform at scale. Continuous learning is my mantra, and I 
-            constantly strive to evolve, improve, and adapt to new challenges. <br /><br />
+            constantly strive to evolve, improve, and adapt to new challenges. <br />
 
             For me, projects are the ultimate learning tool. Each project offers a unique opportunity 
             to apply knowledge, solve real-world problems, and improve processes. 
@@ -54,30 +61,51 @@ const About = () => {
             Tools & Technologies
             </h2>
             <p className={styles.about__description}>
-            Technologies
-              Terraform: Infrastructure as Code (IaC)
-              AWS Services: EC2, S3, Lambda, VPC, CloudFormation
-              Docker: Containerization
-              Python: Automation and scripting
-              Jenkins: CI/CD pipelines
-              Ansible: Configuration management
-            Tools
-              VS Code: Text editor of choice
-              GitHub & GitLab: Version control platforms
-              Figma: Visual brainstorming and workflows
-              Notion: Task management and organization
+              Technologies
+              <ul>
+                <li>Terraform, CloudFormation: Infrastructure as Code (IaC) </li>
+                
+                <li>AWS Services: EC2, S3, Lambda, VPC</li>
+                
+                <li>Docker: Containerization</li>
+                
+                <li>Python: Automation and scripting</li>
+                
+                <li>Jenkins: CI/CD pipelines</li>
+                
+                <li>Ansible: Configuration management</li>
+              </ul>
+              Tools
+              <ul>
+                <li>VS Code: Text editor of choice</li>
+                
+                <li>GitHub & GitLab: Version control platforms</li>
+              
+                <li>LucidCharts: Creating Architecture diagrams and visualizing workflows</li>
+                
+                <li>Notion: Task management and organization</li>
+                
+              </ul>
             </p>
 
             <h2 className={styles.about__h2}>
             Soft Skills
             </h2>
             <p className={styles.about__description}>
-            Attention to Detail: Ensuring every component in a system works cohesively for seamless performance.
-            Problem-Solving: Tackling challenges methodically and developing effective solutions.
-            Self-Motivation: Managing projects independently while meeting deadlines and maintaining quality.
-            Collaboration: Thriving in team environments, fostering learning, and sharing knowledge.
-            Adaptability: Quickly adjusting to new tools, environments, and challenges.
-            Effective Communication: Clearly articulating technical concepts to both technical and non-technical stakeholders.
+              <ul>
+                <li>Attention to Detail: Ensuring every component in a system works cohesively for seamless performance.</li>
+                <br />
+                <li>Problem-Solving: Tackling challenges methodically and developing effective solutions.</li>
+                <br />
+                <li>Self-Motivation: Managing projects independently while meeting deadlines and maintaining quality.</li>
+                <br />
+                <li>Collaboration: Thriving in team environments, fostering learning, and sharing knowledge.</li>
+                <br />
+                <li>Adaptability: Quickly adjusting to new tools, environments, and challenges.</li>
+                <br />
+                <li>Effective Communication: Clearly articulating technical concepts to both technical and non-technical stakeholders.</li>
+
+              </ul>
             </p>
 
             <h2 className={styles.about__h2}>
