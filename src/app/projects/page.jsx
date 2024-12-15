@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import styles from './projects.module.css'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +8,16 @@ import { faDev } from '@fortawesome/free-brands-svg-icons';
 
 
 const Projects = () => {
+  const [popupIndex, setPopupIndex] = useState(null);
+
+  const openPopup = (index) => {
+    setPopupIndex(index);
+  };
+
+  const closePopup = () => {
+    setPopupIndex(null);
+  };
+
   return (
     <section className={styles.section} id="projects">
         <h2 className={styles.section__title}>Projects</h2>
@@ -19,7 +30,7 @@ const Projects = () => {
           deepened my understanding of cloud technologies and DevOps practices.
         </div>
         <div className={styles.projects}>
-          <div className={styles.projects__card}>
+          <div className={styles.projects__card} onClick={() => openPopup(1)}>
             <div className={styles.projects__image}>
               <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={400} height={234} />
             </div>
@@ -55,7 +66,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className={styles.projects__card}>
+          <div className={styles.projects__card} onClick={() => openPopup(2)}>
             <div className={styles.projects__image}>
               <Image src="/IDS-Architecture 2.png" alt="AWS Architecture" width={400} height={234} />
             </div>
@@ -94,7 +105,31 @@ const Projects = () => {
             </div>
           </div>
         </div>
-          
+        {/* Popup for Project 1 */}
+      {popupIndex === 1 && (
+        <div className={styles.popup}>
+          <div className={styles.popup__content}>
+            <button className={styles.popup__close} onClick={() => closePopup()}>
+              &times;
+            </button>
+            <h3>Project 1 Details</h3>
+            <p>This is the content for Project 1.</p>
+          </div>
+        </div>
+      )}
+
+      {/* Popup for Project 2 */}
+      {popupIndex === 2 && (
+        <div className={styles.popup}>
+          <div className={styles.popup__content}>
+            <button className={styles.popup__close} onClick={closePopup}>
+              &times;
+            </button>
+            <h3>Project 2 Details</h3>
+            <p>This is the content for Project 2.</p>
+          </div>
+        </div>
+      )}
         </div>
         <div className={styles.experiences__footer}>
         Projects.
