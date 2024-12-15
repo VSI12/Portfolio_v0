@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import styles from './projects.module.css'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +8,16 @@ import { faDev } from '@fortawesome/free-brands-svg-icons';
 
 
 const Projects = () => {
+  const [popupIndex, setPopupIndex] = useState(null);
+
+  const openPopup = (index) => {
+    setPopupIndex(index);
+  };
+
+  const closePopup = () => {
+    setPopupIndex(null);
+  };
+
   return (
     <section className={styles.section} id="projects">
         <h2 className={styles.section__title}>Projects</h2>
@@ -19,7 +30,7 @@ const Projects = () => {
           deepened my understanding of cloud technologies and DevOps practices.
         </div>
         <div className={styles.projects}>
-          <div className={styles.projects__card}>
+          <div className={styles.projects__card} onClick={() => openPopup(1)}>
             <div className={styles.projects__image}>
               <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={400} height={234} />
             </div>
@@ -44,18 +55,11 @@ const Projects = () => {
                   </li>
                 </ul>
               </div>
-              {/* <div className={styles.projects__links}>
-                <a href="https://github.com/VSI12/IDS-Project" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
-                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
-                </a>
-                <a href="https://dev.to/non-existent/deploying-a-flask-based-intrusion-detection-system-to-aws-ecs-project-summary-1m1m" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
-                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
-                </a>
-              </div> */}
+             
             </div>
           </div>
 
-          <div className={styles.projects__card}>
+          <div className={styles.projects__card} onClick={() => openPopup(2)}>
             <div className={styles.projects__image}>
               <Image src="/IDS-Architecture 2.png" alt="AWS Architecture" width={400} height={234} />
             </div>
@@ -94,7 +98,62 @@ const Projects = () => {
             </div>
           </div>
         </div>
-          
+        {/* Popup for Project 1 */}
+      {popupIndex === 1 && (
+        <div className={styles.popup}>
+          <div className={styles.popup__content}>
+            <button className={styles.popup__close} onClick={() => closePopup()}>
+              &times;
+            </button>
+            <h3>Flask-based Intrusion Detection Web App deployed to AWS</h3>
+            <p className={styles.popup__description}>
+              This Project demonstrates how to build and containerize a flask web-application with docker and deploy it to AWS.
+               This architecture ensures a secure, highly available, fault tolerant and scalable build by leveraging various 
+               AWS architectures.
+            </p>
+            <p className={styles.popup__description}>
+              Click the following links to view the project REPO and BLOG post
+            </p>
+             <div className={styles.projects__links}>
+                <a href="https://github.com/VSI12/IDS-Project" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
+                </a>
+                <a href="https://dev.to/non-existent/deploying-a-flask-based-intrusion-detection-system-to-aws-ecs-project-summary-1m1m" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
+                </a>
+              </div>
+          </div>
+        </div>
+      )}
+
+      {/* Popup for Project 2 */}
+      {popupIndex === 2 && (
+        <div className={styles.popup}>
+          <div className={styles.popup__content}>
+            <button className={styles.popup__close} onClick={closePopup}>
+              &times;
+            </button>
+            <h3>Deploying the Containerized flask Web-App to AWS ECS Using Terraform and CI/CD</h3>
+            <p className={styles.popup__description}>
+             This projects leverages Infrastructure as Code using Terraform to provision
+             AWS resources such as Virtual Private Cloud (VPC) ECS (with Fargate), 
+             ECR (Elastic Container Registry), an Application Load Balancer (ALB), 
+             and VPC endpoints.
+            </p>
+            <p className={styles.popup__description}>
+              Click the following links to view the project REPO and BLOG post
+            </p>
+             <div className={styles.projects__links}>
+                <a href="https://github.com/VSI12/Terraform-ECS-IDS" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
+                </a>
+                <a href="https://dev.to/non-existent/deploying-containerized-applications-to-aws-ecs-using-terraform-and-cicd-project-summary-3llc" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
+                </a>
+              </div>
+          </div>
+        </div>
+      )}
         </div>
         <div className={styles.experiences__footer}>
         Projects.
