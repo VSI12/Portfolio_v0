@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { Moon, Sun, Menu, X,file, File } from 'lucide-react'
 import styles from './navbar.module.css'
 
 const Navbar = () => {
@@ -63,14 +63,18 @@ const Navbar = () => {
 
           {/* Dark Mode Toggle */}
           <div className={styles.navbarActions}>
-            <button
+            {/* <button
               onClick={toggleDarkMode}
               className={styles.darkModeToggle}
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
-            </button>
-
+            </button> */}
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button className={styles.darkModeToggle}>  
+              <File size={24} />
+              </button>
+            </a>
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
