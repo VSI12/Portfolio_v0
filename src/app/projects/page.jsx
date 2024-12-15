@@ -55,14 +55,7 @@ const Projects = () => {
                   </li>
                 </ul>
               </div>
-              {/* <div className={styles.projects__links}>
-                <a href="https://github.com/VSI12/IDS-Project" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
-                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
-                </a>
-                <a href="https://dev.to/non-existent/deploying-a-flask-based-intrusion-detection-system-to-aws-ecs-project-summary-1m1m" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
-                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
-                </a>
-              </div> */}
+             
             </div>
           </div>
 
@@ -112,8 +105,23 @@ const Projects = () => {
             <button className={styles.popup__close} onClick={() => closePopup()}>
               &times;
             </button>
-            <h3>Project 1 Details</h3>
-            <p>This is the content for Project 1.</p>
+            <h3>Flask-based Intrusion Detection Web App deployed to AWS</h3>
+            <p className={styles.popup__description}>
+              This Project demonstrates how to build and containerize a flask web-application with docker and deploy it to AWS.
+               This architecture ensures a secure, highly available, fault tolerant and scalable build by leveraging various 
+               AWS architectures.
+            </p>
+            <p className={styles.popup__description}>
+              Click the following links to view the project REPO and BLOG post
+            </p>
+             <div className={styles.projects__links}>
+                <a href="https://github.com/VSI12/IDS-Project" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faGithub} className={styles.projects__link__icon} />
+                </a>
+                <a href="https://dev.to/non-existent/deploying-a-flask-based-intrusion-detection-system-to-aws-ecs-project-summary-1m1m" target="_blank" rel="noopener noreferrer" className={styles.projects__link}>
+                  <FontAwesomeIcon icon={faDev} className={styles.projects__link__icon} />
+                </a>
+              </div>
           </div>
         </div>
       )}
