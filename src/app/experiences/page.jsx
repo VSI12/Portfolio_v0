@@ -32,8 +32,6 @@ const Experiences = () => {
             : styles.qualification__button
             } onClick={() => toggleTab(1)}>
 
-            <FontAwesomeIcon icon={faGraduationCap} className={styles.qualification__icon}/>
-
             Education
 
           </div>
@@ -43,8 +41,6 @@ const Experiences = () => {
           : styles.qualification__button
             } onClick={() => toggleTab(2)}>
 
-            <FontAwesomeIcon icon={faBriefcase} className={styles.qualification__icon}/>
-
             Experiences
 
           </div>
@@ -53,8 +49,6 @@ const Experiences = () => {
           `${styles.qualification__button} ${styles.qualification__active}`
           : styles.qualification__button
             } onClick={() => toggleTab(3)}>
-
-            <FontAwesomeIcon icon={faCertificate} className={styles.qualification__icon}/>
 
             Certifications
 

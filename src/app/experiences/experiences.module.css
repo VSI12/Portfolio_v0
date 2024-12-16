@@ -60,13 +60,15 @@
     justify-content: space-between;
     margin-bottom: 3rem;
     font-size: 20px;
+    text-wrap: wrap;
 }
 .qualification__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     color: #838383;
-    margin: 0 var(--mb-1);
     cursor: pointer;
+    flex-shrink: 0; 
+    min-width: 100px;
 }
 .qualification__button:hover {
     color: var(--title-color-dark);
@@ -484,6 +486,12 @@
   .section__title::after {
       right: 7.5%;             /* Position the right line */
   }
+  .experiences{
+    display: none;
+}
+.section__subtitle {
+    margin-bottom: 2rem;
+}
     }
   
   @media screen and (max-width: 475px) {
@@ -493,4 +501,10 @@
     .section__title::after {
         right: 5%;             /* Position the right line */
     }
+    .qualification__tabs {
+       font-size: 18px;
+       gap: 10px; ;
+       border:2px solid blue;
+    }
+    
       }
