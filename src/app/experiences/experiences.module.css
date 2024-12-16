@@ -147,21 +147,23 @@
 
 /* WORK EXPERIENCE SECTION */
 .work__container {
-    max-width: 796px;
     width: 100%;  /* Ensures the container can resize fluidly */
     display: flex;  /* Ensures the flex items don't wrap when resizing */
     margin: 0 auto;  
+    border: 2px solid red;
 }
 .work__tabs {
     display: flex;
     flex-direction: column;
     gap: 3px;
     text-wrap: nowrap;
-    padding-top: 5px;
+    padding-top: 20px;
+    border: 2px solid red;
 }
 .work__sections {
     display: flex;
     justify-content: center;
+    border: 2px solid red;
 }
 .work__content {
     display: none;
@@ -171,7 +173,8 @@
 }
 .work__title{
     font-weight: 700;;
-    font-size: clamp(0.5rem, 3vw, 1.25rem);
+    font-size: 1.25rem;
+    color: #424242
 }
 .work__subtitle{
     font-weight: 500;
@@ -179,7 +182,8 @@
     margin-bottom: 100px;
 }
 .work__tab_text{
-    font-size: 16px;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 .work__data_tab {
     display: flex;                    /* Align horizontally */
@@ -237,25 +241,13 @@
 .work__list li {
     flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
     min-width: 550px;  /* Set a minimum width for the items */
-    list-style-type: none; /* Removes the default bullets */
     position: relative; /* For positioning the custom bullet */
-    padding-left: 25px; /* Space for the custom bullet inside the list item */
+    /* Space for the custom bullet inside the list item */
 }
-.work__list li::before {
-    content: ''; /* Creates a pseudo-element */
-    position: absolute;
-    left: 0; /* Align the bullet with the left side of the list item */
-    top: 20%;
-    transform: translateY(-50%); /* Vertically centers the bullet */
-    width: 16px; /* Size of the custom bullet */
-    height: 16px; /* Size of the custom bullet */
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23006CE0"><path d="M21 12c0 2.86-2.72 6.62-15.94 6.97-1.13.03-2.06-.88-2.06-2V7.03c0-1.13.94-2.03 2.06-2C18.28 5.38 21 9.15 21 12Z"></path></svg>');
-    background-size: contain; /* Ensures the SVG scales correctly */
-    background-repeat: no-repeat; /* Prevents the bullet from repeating */
- }
+
 
 .highlights{
-    color:#006CE0;
+    color:#000000;
 }
 /* CERTIFICATION EXPERINCE SECTION */
 .certifications__cards{
@@ -367,6 +359,10 @@
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);
     }
+    .work__list li {
+        min-width: 550px;  /* Set a minimum width for the items */
+       margin: 0 auto;
+    }
 
 .section__title::before,
 .section__title::after {
@@ -396,6 +392,10 @@
 
     .qualification__button{
         margin: 0 var(--mb-0-75);
+    }
+    .work__list li {
+        min-width: 330px;  /* Set a minimum width for the items */
+        font-size: 20px;
     }
   }
   /* For small devices */
@@ -429,17 +429,19 @@
     .work__container {
         flex-direction: column;  /* Stack the content vertically on smaller screens */
     }
-
     .work__tabs {
         flex-direction: row;  /* Arrange tabs in a row for smaller screens */
+    display: flex;
+    justify-content: space-around;
     }
-
     .work__sections {
         display: block;  /* Stack sections vertically */
     }
-
     .work__list {
         white-space: normal;  /* Allow wrapping on small screens */
+    }
+    .work__line{
+        display: none;
     }
 }
 
