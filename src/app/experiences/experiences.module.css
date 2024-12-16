@@ -150,7 +150,7 @@
     width: 100%;  /* Ensures the container can resize fluidly */
     display: flex;  /* Ensures the flex items don't wrap when resizing */
     margin: 0 auto;  
-    border: 2px solid red;
+
 }
 .work__tabs {
     display: flex;
@@ -158,12 +158,12 @@
     gap: 3px;
     text-wrap: nowrap;
     padding-top: 20px;
-    border: 2px solid red;
+
 }
 .work__sections {
     display: flex;
     justify-content: center;
-    border: 2px solid red;
+
 }
 .work__content {
     display: none;
