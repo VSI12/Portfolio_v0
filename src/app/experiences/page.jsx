@@ -67,6 +67,7 @@ const Experiences = () => {
               <div>
                 <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>
                 <span className={styles.qualification__subtitle}>B.Eng. Computer Engineering</span>
+                <span className={styles.qualification__subtitle}>(First Class Honours)</span>
                 <div className={styles.qualification__calendar}>
                 <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
                   2019 - 2024
