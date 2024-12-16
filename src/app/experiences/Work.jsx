@@ -53,12 +53,14 @@ const Work = () => {
               <div>
                 <h3 className={styles.work__title}>Information Systems intern 
                   <a href="https://www.hilton.com/en/hotels/abuhitw-transcorp-hilton-abuja/" target="_blank" rel="noopener noreferrer">
-                  <span className={styles.highlights}>@Transcorp Hilton, Abuja</span></a>
+                  <span className={styles.highlights}> @Transcorp Hilton, Abuja</span></a>
                 </h3>
                 <span className={styles.work__subtitle}>May 2023 - September 2023</span>
                 <ul className={styles.work__list}>
-                  <li>Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
-                  internet speeds </li>
+                  <li>
+                    Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
+                    internet speeds 
+                  </li>
                   <li>Facilitated the configurations of upgraded routers and access points, ensuring seamless integration into the existing 
                   network.</li>
                   <li>Conducted server updates to maintain and ensure system stability and security.</li>
