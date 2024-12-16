@@ -383,6 +383,10 @@
 .section__title::after {
     right: 15%;             /* Position the right line */
 }
+.experiences__footer {
+    font-size: 100px;
+  }
+   
   }
   
 @media screen and (max-width: 576px) {
@@ -526,6 +530,9 @@
         font-size: 18px;
         gap: 10px; ;
     }
-     }
+    .experiences__footer {
+        font-size:80px;
+      }
+}
      
       
