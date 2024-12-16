@@ -32,8 +32,6 @@ const Experiences = () => {
             : styles.qualification__button
             } onClick={() => toggleTab(1)}>
 
-            <FontAwesomeIcon icon={faGraduationCap} className={styles.qualification__icon}/>
-
             Education
 
           </div>
@@ -43,8 +41,6 @@ const Experiences = () => {
           : styles.qualification__button
             } onClick={() => toggleTab(2)}>
 
-            <FontAwesomeIcon icon={faBriefcase} className={styles.qualification__icon}/>
-
             Experiences
 
           </div>
@@ -53,8 +49,6 @@ const Experiences = () => {
           `${styles.qualification__button} ${styles.qualification__active}`
           : styles.qualification__button
             } onClick={() => toggleTab(3)}>
-
-            <FontAwesomeIcon icon={faCertificate} className={styles.qualification__icon}/>
 
             Certifications
 
@@ -73,6 +67,7 @@ const Experiences = () => {
               <div>
                 <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>
                 <span className={styles.qualification__subtitle}>B.Eng. Computer Engineering</span>
+                <span className={styles.qualification__subtitle}>(First Class Honours)</span>
                 <div className={styles.qualification__calendar}>
                 <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
                   2019 - 2024
