@@ -25,9 +25,7 @@ const Projects = () => {
 
         <div className={`${styles.projects__container} $f{styles.container} ${styles.grid}`}>
         <div className={styles.projects_description}>
-          My journey in tech has been shaped by a combination of education, hands-on work,
-          and professional certifications. Each experience has strengthened my skills and 
-          deepened my understanding of cloud technologies and DevOps practices.
+        Over the years, I’ve worked on a variety of projects, focusing on cloud infrastructure, automation, and CI/CD pipelines. These are some of the ones I’m most proud of. Many are open-source, so if something catches your eye, feel free to check out the code, contribute, or share feedback to make it even better!
         </div>
         <div className={styles.projects}>
           <div className={styles.projects__card} onClick={() => openPopup(1)}>
