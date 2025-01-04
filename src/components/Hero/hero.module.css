@@ -26,11 +26,13 @@
     color: #202020;
     margin:0 auto;
     padding-bottom: 36px;
+    text-align: center;
 }
 .home__subdes{
     font-weight: 600;
     font-size: 42px;
     margin:0 auto;
+    text-align: center;
     color: #202020;
 }
 .home__description{
@@ -109,7 +111,7 @@
   /* For medium devices */
 @media screen and (max-width: 768px) {
     .section {
-        padding: 8rem 0 2rem;
+        padding: 10rem 0 2rem;
     }
    .home__description{
         max-width: initial;
@@ -140,6 +142,9 @@
 }
   /* For small devices */
   @media screen and (max-width: 450px) {
+    .home__data{
+        padding : 0;
+    }
    .home__subtitle{
     font-size: 20px;
     }
@@ -151,11 +156,14 @@
     }
     .home__description{
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
     }
     .home__counter{
         color: #000000;
         font-weight: 700;
         font-size: 15px;
+    }
+    .hero__footer {
+        font-size: 76px;
     }
 }
