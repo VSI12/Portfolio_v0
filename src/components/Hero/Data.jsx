@@ -6,22 +6,26 @@ import Styles from './hero.module.css'
 const Data = () => {
   return (
     <div className={Styles.home__data}>
+        <h3 className={Styles.home__subtitle}>
+          Hello, I'm
+        </h3>
         <h1 className={Styles.home__title}>
-          I,m Victor Iliya
+          Victor Iliya
+        </h1>
+        <h1 className={Styles.home__subdes}>
+          DevOps Engineer
         </h1>
         <p className={Styles.home__description}>
-          DevOps engineer, AWS cloud architect, and automation specialist. I spend my days (and often nights) 
-          designing efficient pipelines, managing resilient infrastructure, and ensuring deployments run like 
-          clockwork. Turning scripts and cloud services into scalable systems that keep the digital world running 
-          smoothly.
+          I spend my days (and often nights) creating efficient
+          CI/CD pipelines, designing and managing resilient
+          infrastructure, and ensuring deployments run like 
+          clockwork. Leveraging AWS cloud services,I turn scripts 
+          and cloud technologies into scalable and highly available 
+          systems that runs smoothly.
         </p>
-        <p className={Styles.home__description}>
-          Efficiency and simplicity are at the heart of my work — reducing the unnecessary to highlight what 
-          truly matters. When I’m not working with cloud technologies or optimizing workflows, you’ll find me on 
-          the tennis court( on the moon on Tuesdays) or immersed in the beats of EDM and the melodies of
-          classical piano pieces.
+        <p className={Styles.home__counter}>
+          <ViewCounter />
         </p>
-        <p className={Styles.home__counter}><ViewCounter /></p>
     </div>
   )
 }
