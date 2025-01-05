@@ -18,7 +18,7 @@ const Features = () => {
 
         <div className={styles.features__cards}>
             <div className={styles.features__image}>
-                <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={325} height={303} />
+                <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={325} height={300} />
             </div>
             <div className={styles.features__content}>
                 <h2 className={styles.features__title}>
