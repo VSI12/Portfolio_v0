@@ -67,7 +67,7 @@
 .projects__content{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 .title{
     font-size: 24px;
@@ -82,3 +82,21 @@
     font-weight: 500;
     color: #4A4A4A;
 }
+.projects__properties{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+.features {
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4A4A4A;
+  }
+  .features__list li{
+    padding-bottom: 15px;
+  }

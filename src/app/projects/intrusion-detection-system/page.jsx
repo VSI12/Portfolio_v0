@@ -117,6 +117,32 @@ const IDS = () => {
           "malicious" using machine learning, with a user-friendly interface  for data upload, 
           analysis, and visualization.
           </div>
+
+          <div className={styles.projects__properties}>
+            <div className={styles.features}>
+              <div className={styles.title}>
+                Key Features
+              </div>
+              <ul className={styles.features__list}>
+                <li>User Authentication: Secure login and personalized storage of classification results.</li>
+                <li>Data Classification: Process and classify NSL-KDD formatted network traffic data with a machine learning model.</li>
+                <li>Visualization: Dynamic charts displaying insights like malicious traffic percentages.</li>
+                <li>Scalability & Security: Deployed on AWS, leveraging Docker, Terraform, and AWS ECS Fargate for a fault-tolerant and secure architecture.</li>
+              </ul>
+            </div>
+
+            <div className={styles.features}>
+              <div className={styles.title}>
+                Features
+              </div>
+              <ul>
+                <li>Upload and analyze network traffic data</li>
+                <li>Visualize network traffic data</li>
+                <li>Classify network traffic as "normal" or "malicious"</li>
+                <li>View classification results</li>
+              </ul>
+            </div>
+          </div>
         </div>
     </section>     
   )
