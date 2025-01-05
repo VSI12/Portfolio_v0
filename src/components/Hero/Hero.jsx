@@ -12,7 +12,7 @@ const Hero = () => {
         <Data />
       </div>
       <div className={styles.arrow}>
-        <ChevronDown size={128} />
+        <ChevronDown size={128} strokeWidth={1} />
       </div>
     </div>
     <div className={styles.hero__footer}>
