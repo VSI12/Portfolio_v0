@@ -4,6 +4,7 @@
     margin-right: auto;
     padding: 0 2rem;
     padding: 6rem 0 2rem;
+    height: calc(100vh - 200px);
   }
   .section__title {
       font-size: var(--section-title-size);
