@@ -1,11 +1,19 @@
 import React from 'react'
 import styles from './ids.module.css'
 import Image from 'next/image'
+import { MoveLeft } from 'lucide-react';
+import Link from 'next/link'
 
 const IDS = () => {
   return (
     <section className={styles.section} id="ids">
-        <span className={styles.section__navback}>Back to Projects</span>
+
+        <span className={styles.section__navback}>
+          <Link href="/projects">
+            <MoveLeft />
+            Back to Projects
+          </Link>
+        </span>
         <h2 className={styles.section__title}>Intrusion Detection System</h2>
 
         <Image src="/IDS-Architecture.png" alt="IDS Architecture Diagram" width={1000} height={667} className={styles.architecture}/>
