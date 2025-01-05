@@ -6,6 +6,8 @@ const Features = () => {
   return (
     <section className={`${styles.features} ${styles.section}`} id="features">
         <h2 className={styles.section__title}>Featured Projects</h2>
+        <span className={styles.section__subtitle}>My featured builds</span>
+
         <div className={styles.features__container}>
         <div className={styles.features__description}>
             A selection of my most impactful projects, showcasing expertise in AWS, automation, and 
