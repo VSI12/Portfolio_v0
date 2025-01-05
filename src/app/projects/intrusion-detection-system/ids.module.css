@@ -36,7 +36,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
+    justify-content: start;
 }
 .tech{
     max-width: fit-content;
@@ -84,19 +84,42 @@
 }
 .projects__properties{
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     justify-content: space-between;
+    align-items: stretch;
 }
-.features {
+.project__features1, .project__features2{
     flex: 1;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 30px;
     font-size: 18px;
     font-weight: 500;
     color: #4A4A4A;
   }
+  .project__features2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .features{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
   .features__list li{
     padding-bottom: 15px;
+  }
+  .features__tech{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
+  .project__links{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
+
+  .project__usage{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
   }
