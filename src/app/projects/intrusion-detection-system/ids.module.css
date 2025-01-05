@@ -117,6 +117,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 30px;
   }
+  .links a, .icon{
+    color: #4A4A4A;
+    fill: #4A4A4A;
+  }
+.links a:hover, .icon:hover{
+        color: black;
+        fill: black;
+        transition: ease-in-out 0.3s;
+}
+.link__tech{
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
 
   .project__usage{
     border-radius: 10px;
