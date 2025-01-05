@@ -8,7 +8,7 @@ const IDS = () => {
         <span className={styles.section__navback}>Back to Projects</span>
         <h2 className={styles.section__title}>Intrusion Detection System</h2>
 
-        <Image src="/IDS-Architecture.png" alt="IDS Architecture Diagram" width={400} height={234} />
+        <Image src="/IDS-Architecture.png" alt="IDS Architecture Diagram" width={1000} height={667} className={styles.architecture}/>
         <span className={styles.architecture__title}>Project Architecture Diagram</span>
 
         <div className={styles.tech_stack}>
