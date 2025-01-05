@@ -108,8 +108,15 @@ const IDS = () => {
           </div>
         </div>
 
-        <div className={styles.projects__overview}>
-        
+        <div className={styles.projects__content}>
+          <div className={styles.projects__overview}>
+            <div className={styles.title}>
+              Project Overview
+            </div>
+          A scalable, efficient system for classifying network traffic as "normal" or
+          "malicious" using machine learning, with a user-friendly interface  for data upload, 
+          analysis, and visualization.
+          </div>
         </div>
     </section>     
   )
