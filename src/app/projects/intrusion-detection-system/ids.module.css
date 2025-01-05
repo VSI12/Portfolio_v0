@@ -1,3 +1,26 @@
+.section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.section__title {
+  font-size: var(--section-title-size);
+  color: var(--section-title-color);
+  position: relative;       /* Establish positioning context */
+  margin: 1rem 0;           /* Add some vertical spacing */
+}
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+  color: var(--section-subtitle-color);
+}
+.architecture{
+    border: 20px;
+    overflow: hidden;
+}
 .tech_stack{
     display: flex;
     flex-wrap: wrap;
