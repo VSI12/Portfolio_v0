@@ -54,9 +54,12 @@
 }
 .arrow {
     animation: bounce 2s infinite;
-    display: flex;
-    justify-content: center;
     margin-top: 3.5rem;
+    margin-left: auto; 
+    margin-right: auto;
+    cursor: pointer;
+    border: 2px solid red;
+    max-width: fit-content;
 }
 
 @keyframes bounce {
