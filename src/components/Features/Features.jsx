@@ -25,9 +25,10 @@ const Features = () => {
                     Intrusion Detection System
                 </h2>
                 <p className={styles.features__des}>
-                    This Project demonstrates how to build and containerize a flask  web-application with
-                    docker and deploy it to AWS. This architecture  ensures a secure, highly available,
-                    fault tolerant and scalable build by leveraging various AWS architectures
+                    This project showcases the development and containerization of a Flask web application with 
+                    Docker, deployed on AWS. The application serves as an Intrusion Detection System, allowing 
+                    users to upload network data for analysis and classification. The architecture leverages AWS
+                    services to provide a secure, highly available, fault-tolerant, and scalable solution.
                 </p>
                 <div className={styles.features__techstack}>
                     <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" height="50px" width="50px">
