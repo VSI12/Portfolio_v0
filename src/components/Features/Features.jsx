@@ -26,8 +26,8 @@ const Features = () => {
                 </h2>
                 <p className={styles.features__des}>
                     This project showcases the development and containerization of a Flask web application with 
-                    Docker, deployed on AWS. The application serves as an Intrusion Detection System, allowing 
-                    users to upload network data for analysis and classification. The architecture leverages AWS
+                    Docker. The application serves as an Intrusion Detection System, allowing 
+                    users to upload network data in the NSL-KDD format for analysis and classification. The architecture leverages AWS
                     services to provide a secure, highly available, fault-tolerant, and scalable solution.
                 </p>
                 <div className={styles.features__techstack}>
