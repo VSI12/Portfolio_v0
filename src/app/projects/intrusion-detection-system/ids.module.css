@@ -1,0 +1,25 @@
+.tech{
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding:0 10px;
+}
+.tech__line {
+    width: 1px;
+    height: 36px; /* Adjust height as needed */
+    background-color: #505050; /* Adjust color as needed */
+    margin: 0px; /* Adjust spacing as needed */
+}
+.tech__title{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+.tech__icon{
+    width: 35px;
+    height: 35px;
+}
