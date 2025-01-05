@@ -1,5 +1,7 @@
 .section {
     padding: 10rem 0 2rem;
+    height: calc(100vh - 205px);
+    border: 2px solid red
 }
 .container {
     max-width: 1120px;
