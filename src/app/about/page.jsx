@@ -263,22 +263,6 @@ const About = () => {
           </div>
           <div className={styles.about__data}>
             <h2 className={styles.about__h2}>
-              My Philosophy
-            </h2>
-            <p className={styles.about__description}>
-            I believe in the beauty of simplicity and order — reducing complexity to deliver
-            elegant solutions that perform at scale. Continuous learning is my mantra, and I 
-            constantly strive to evolve, improve, and adapt to new challenges. <br />
-            For me, projects are the ultimate learning tool. Each project offers a unique opportunity 
-            to apply knowledge, solve real-world problems, and improve processes. 
-            By tackling diverse challenges, I deepen my expertise and stay on the cutting edge
-            of DevOps practices.
-            I also enjoy writing about my experiences and sharing knowledge with the DevOps community 
-            through blog posts and tutorials.
-            </p>
-          </div>
-          <div className={styles.about__data}>
-            <h2 className={styles.about__h2}>
             Soft Skills
             </h2>
             <p className={styles.about__description}>
@@ -295,17 +279,17 @@ const About = () => {
           <div className={styles.about__data}>
             <h2 className={styles.about__h2}>
             Beyond the Terminal
-
             </h2>
             <p className={styles.about__description}>
             When I’m not architecting cloud infrastructures, you’ll find me indulging in my other passions:
-            Playing tennis to keep my mind sharp and focused.
-            Enjoying the melodies of EDM and piano to relax and find inspiration.
-            Exploring new ideas in technology and automation.
+            <ul>
+              <li>Playing tennis to keep my mind sharp and focused.</li>
+              <li>Enjoying the melodies of EDM and piano to relax and find inspiration.</li>
+              <li>Exploring new ideas in technology and automation.</li>
+            </ul>
             I also enjoy writing about my experiences and sharing knowledge with the DevOps community through blog posts and tutorials.
             </p>
           </div>
-            
         </div>
         
         <div className={styles.about__footer}>
