@@ -135,22 +135,23 @@
   font-size: 140px;
   font-weight: 600;
 }
-
+.about__tech{
+  padding:0 20px;
+}
 .tech_stack{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: start;
+  margin: 0 auto;
 }
 .tech{
   max-width: fit-content;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 32px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding:0 10px;
+  padding:0 5px;
 }
 .tech__line {
   width: 1px;
@@ -161,11 +162,15 @@
 .tech__title{
   font-size: 18px;
   font-weight: 600;
-  padding: 0 10px;
+  padding: 0 3px;
 }
 .tech__icon{
   width: 35px;
   height: 35px;
+}
+.tech__h1{
+  font-size: 20px;
+  font-weight: 600;
 }
 @media screen and (max-width: 992px) {
   .about__container {
