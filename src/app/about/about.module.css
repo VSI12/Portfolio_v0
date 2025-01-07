@@ -123,9 +123,6 @@
   font-size: 36px;
   font-weight: 600;
 }
-.highlights{
-  color:#006CE0;
-}
 .about__footer {
   position: fixed;
   bottom: 0px; /* Adjust to position it further or closer to the bottom */
@@ -133,6 +130,7 @@
   color: rgba(0, 0, 0, 0.050);
   font-size: 140px;
   font-weight: 600;
+  z-index: -1;
 }
 .about__tech{
   padding:0 20px;
