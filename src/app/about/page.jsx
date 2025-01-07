@@ -283,12 +283,12 @@ const About = () => {
             </h2>
             <p className={styles.about__description}>
               <ul>
-                <li>Attention to Detail: Ensuring every component in a system works cohesively for seamless performance.</li>
-                <li>Problem-Solving: Tackling challenges methodically and developing effective solutions.</li>
-                <li>Self-Motivation: Managing projects independently while meeting deadlines and maintaining quality.</li>
-                <li>Collaboration: Thriving in team environments, fostering learning, and sharing knowledge.</li>
-                <li>Adaptability: Quickly adjusting to new tools, environments, and challenges.</li>
-                <li>Effective Communication: Clearly articulating technical concepts to both technical and non-technical stakeholders.</li>
+                <li>Attention to Detail</li>
+                <li>Problem-Solving</li>
+                <li>Self-Motivation</li>
+                <li>Collaboration</li>
+                <li>Adaptability</li>
+                <li>Effective Communication</li>
               </ul>
             </p>
           </div>
