@@ -73,7 +73,7 @@
 .about__data{
   color: #4A4A4A;
   font-weight: 600;;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: 24px;
   text-align: left;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.315);
@@ -88,7 +88,7 @@
   font-weight: 600;
 }
 .about__description{
-  font-size: clamp(0.5rem, 3vw, 1.25rem);
+  font-size: 24px;
 }
 .group2 .about__data{
   border: 2px solid rgba(255, 255, 255, 0);
@@ -220,11 +220,14 @@
   flex-wrap: wrap;
   gap: 5px;
   margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 .tech{
   max-width: fit-content;
   display: flex;
   flex-direction: column;
+
   align-items: center;
   gap: 0;
   border-radius: 10px;
@@ -233,6 +236,9 @@
 }
 .tech__line {
   display: none;
+}
+.tech__h1{
+  text-align: center;
 }
 .group1{
   display: flex;
@@ -277,5 +283,9 @@
   }
   .section__title::after {
       right: 5%;             /* Position the right line */
+  }
+  .about__h2{
+    text-align: center;
+    font-size: 2px;
   }
     }

@@ -21,7 +21,7 @@ body {
   background-color: var(--background); /* Default light background */
   background-image: var(--light-background-image); /* Default light background image */
   background-attachment: fixed;
-  font-family: 'geist Mono', monospace;
+  font-family: 'inter', sans-serif;
   transition: background-image 0.2s ease-in-out; /* Smooth transition for background */
   
 }
