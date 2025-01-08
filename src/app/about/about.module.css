@@ -210,7 +210,46 @@
 .section__title::after {
     right: 15%;             /* Position the right line */
 }
-  }
+.tech__title{
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+}
+.tech_stack{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 auto;
+}
+.tech{
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding:0 5px;
+}
+.tech__line {
+  display: none;
+}
+.group1{
+  display: flex;
+  flex-direction: column;
+}
+
+.about__links{
+  display: flex; /* Make the parent a flex container */
+  flex-direction: row; /* Arrange children in a row */
+ justify-content: space-between;
+  gap: 30px;
+}
+.about__links .link {
+  flex: 1; 
+  box-sizing: border-box; 
+}
+}
 
 @media screen and (max-width: 675px) {
   .section__title::before,

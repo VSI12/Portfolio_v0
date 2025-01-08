@@ -48,29 +48,30 @@ const About = () => {
                   </ul>
                 </p>
               </div>
-
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <div className={styles.resume}>
-                  <h3 className={styles.about__h3}>
-                    View my <br />
-                    <span className={styles.about__span}>
-                      Resume
-                    </span>
-                  </h3>
-                  <SquareArrowOutUpRight size={48}/>
-                </div>
-              </a>
-              <a href="https://victoriliya.hashnode.dev" target="_blank" rel="noopener noreferrer">
-                <div className={styles.resume}>
-                  <h3 className={styles.about__h3}>
-                    View my <br />
-                    <span className={styles.about__span}>
-                      Blog
-                    </span>
-                  </h3>
-                  <SquareArrowOutUpRight size={48}/>
-                </div>
-              </a>
+              <div className={styles.about__links}>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <div className={styles.resume}>
+                    <h3 className={styles.about__h3}>
+                      View my <br />
+                      <span className={styles.about__span}>
+                        Resume
+                      </span>
+                    </h3>
+                    <SquareArrowOutUpRight size={48}/>
+                  </div>
+                </a>
+                <a href="https://victoriliya.hashnode.dev" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <div className={styles.resume}>
+                    <h3 className={styles.about__h3}>
+                      View my <br />
+                      <span className={styles.about__span}>
+                        Blog
+                      </span>
+                    </h3>
+                    <SquareArrowOutUpRight size={48}/>
+                  </div>
+                </a>
+              </div>
             </div>
             <div className={`${styles.about__data} ${styles.about__tech}`}>
                 <h2 className={styles.about__h2}>
