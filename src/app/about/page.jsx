@@ -3,7 +3,6 @@ import React from 'react'
 import styles from './about.module.css'
 import { SquareArrowOutUpRight } from 'lucide-react'
 
-
 export const metadata = {
   title: "About | Victor Iliya",
   description: "Learn more about Victor Iliya, a passionate DevOps engineer with expertise in AWS, cloud infrastructure, and automation.",
@@ -23,12 +22,12 @@ const About = () => {
               DevOps Engineer
             </h1>
             <p className={styles.about__description}>
-            I specializing in building cloud-based solutions that drive scalable, reliable, and efficient systems.
-            My passion for scalable, resilient infrastructures was ignited when I earned my first AWS certification, 
-            and I’ve been exploring the limitless possibilities of cloud technologies ever since.
-            Currently, I focus on DevOps, integrating automation, creating CI/CD pipelines, and infrastructure as code
-            to build agile, reliable, highly available and resilient systems. My toolkit includes technologies like AWS,
-            Terraform, Docker, Jenkins, and Python, which I leverage to drive impactful solutions.
+              I specializing in building cloud-based solutions that drive scalable, reliable, and efficient systems.
+              My passion for scalable, resilient infrastructures was ignited when I earned my first AWS certification, 
+              and I’ve been exploring the limitless possibilities of cloud technologies ever since.
+              Currently, I focus on DevOps, integrating automation, creating CI/CD pipelines, and infrastructure as code
+              to build agile, reliable, highly available and resilient systems. My toolkit includes technologies like AWS,
+              Terraform, Docker, Jenkins, and Python, which I leverage to drive impactful solutions.
             </p>
           </div>
 
