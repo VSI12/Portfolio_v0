@@ -108,7 +108,7 @@
 .about__h2{
   font-size: 30px;
   font-weight: 700;
-  font-family: 'geist mono', monospace;
+  font-family: 'jetbrains mono', monospace;
 }
 .about__span{
   font-size: 36px;
@@ -150,6 +150,7 @@
 .tech__title{
   font-size: 18px;
   font-weight: 600;
+  font-family: 'jetbrains mono', monospace;
   padding: 0 3px;
 }
 .tech__icon{
@@ -160,16 +161,22 @@
   font-size: 20px;
   font-weight: 600;
 }
+.about__list{
+  padding: 0;
+  margin-left: 15px;
+}
+.about__list li{
+  padding-bottom: 15px;
+}
 @media screen and (max-width: 992px) {
   .about__container {
-    max-width: 768px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    margin: 0 auto;  /* Center the container */
     font-size: 32px;
+  }
+  .about__footer{
+    font-size: 100px;
   }
 }
  /* For medium devices */
@@ -283,9 +290,25 @@
   }
   .about__h2{
     text-align: center;
-    font-size: 2px;
+    font-size: 24px;
+  }
+  .about__title, .about__subtitle{
+    text-align: center;
   }
   .about__data{
     padding:0 20px;
   }
-    }
+  .about__h3{
+    font-size: 14px;
+  }
+  .about__span{
+    font-size: 18px;
+  }
+  .about__icon{
+    font-size: 16px;
+  }
+  .about__footer{
+    font-size: 75px;
+    font-weight: 800;
+  }
+}

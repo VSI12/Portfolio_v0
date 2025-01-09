@@ -40,7 +40,7 @@ const About = () => {
                 <p className={styles.about__description}>
                 Currently, I’m:
                 <br />
-                  <ul>
+                  <ul className={styles.about__list}>
                     <li>Expanding automation capabilities for CI/CD pipelines in personal and collaborative projects.</li>
                     <li>Exploring advanced container orchestration techniques using Kubernetes.</li>
                     <li>Contributing to open-source projects focused on cloud automation and tooling.</li>
