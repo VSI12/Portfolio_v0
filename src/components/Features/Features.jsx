@@ -47,11 +47,11 @@ const Features = () => {
                     </div>
                 </Link>
             </div>
-            <div className={styles.viewmore}>
-                <Link href="/projects">
+            <Link href="/projects">
+                <div className={styles.viewmore}>
                     View More
-                </Link>
-            </div>
+                </div>
+            </Link>
         </div>
         
     </section>
