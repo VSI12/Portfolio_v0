@@ -152,8 +152,10 @@
     max-width: 1280px;
     width: 100%;  /* Ensures the container can resize fluidly */
     display: flex;  /* Ensures the flex items don't wrap when resizing */
-    margin: 0 auto;  
-    gap: 50px
+    justify-content: center; 
+    gap: 50px;
+    border: 2px solid red;
+    padding:0 10px;
 }
 .work__tabs {
     display: flex;
@@ -167,6 +169,7 @@
 .work__sections {
     display: flex;
     justify-content: center;
+
 }
 .work__content {
     display: none;
@@ -523,10 +526,25 @@
         margin-top: 10px;
     }
     .work__list li {
-        min-width: 500px;  /* Set a minimum width for the items */
+       min-width: 400px;  /* Set a minimum width for the items */
     }
 }
-  
+@media screen and (max-width: 576px) {
+    .qualification__sections{
+        grid-template-columns: initial;
+    }
+
+    .qualification__button{
+        margin: 0 var(--mb-0-75);
+    }
+    
+    .work__list li {
+        flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
+        min-width: 200px;  /* Set a minimum width for the items */
+        position: relative; /* For positioning the custom bullet */
+        font-size: 16px;
+    }
+  }
   @media screen and (max-width: 475px) {
     .section__title::before {
         left: 5%;              /* Position the left line */
