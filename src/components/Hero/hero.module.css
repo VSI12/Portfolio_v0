@@ -19,29 +19,29 @@
     color: rgba(0, 0, 0, 0.478);
     font-size: 24px;
     margin:0 auto;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-weight: 600;
 }
 .home__title{
-    font-size: 36px;
+    font-size: 42px;
     color: #202020;
     margin:0 auto;
-    padding-bottom: 36px;
     text-align: center;
 }
 .home__subdes{
     font-weight: 600;
-    font-size: 42px;
+    font-size: 36px;
     margin:0 auto;
     text-align: center;
-    color: #202020;
+    color: #383838;
 }
 .home__description{
     max-width: 796px;
     color: #4A4A4A;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 24px;
     text-align: center;
+    font-family: 'inter' , sans-serif;
 }
 .home__highlight{
     color: #006CE0;
@@ -166,5 +166,8 @@
     }
     .hero__footer {
         font-size: 76px;
+    }
+    .arrow{
+        margin-top: 2rem;
     }
 }
