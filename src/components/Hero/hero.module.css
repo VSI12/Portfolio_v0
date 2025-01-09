@@ -42,6 +42,7 @@
     font-size: 24px;
     text-align: center;
     font-family: 'inter' , sans-serif;
+    line-height: 1.5;
 }
 .home__highlight{
     color: #006CE0;
