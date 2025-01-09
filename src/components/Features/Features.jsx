@@ -19,7 +19,7 @@ const Features = () => {
 
             <div className={styles.features__cards}>
                 <div className={styles.features__image}>
-                    <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={325} height={300} />
+                    <Image src="/IDS-Architecture.png" alt="AWS Architecture" width={300} height={200} />
                 </div>
                 <Link href="/projects/intrusion-detection-system">
                     <div className={styles.features__content}>
