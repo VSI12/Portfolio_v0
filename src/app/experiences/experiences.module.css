@@ -154,7 +154,6 @@
     display: flex;  /* Ensures the flex items don't wrap when resizing */
     justify-content: center; 
     gap: 50px;
-    border: 2px solid red;
     padding:0 10px;
 }
 .work__tabs {
