@@ -149,18 +149,20 @@
 
 /* WORK EXPERIENCE SECTION */
 .work__container {
+    max-width: 1280px;
     width: 100%;  /* Ensures the container can resize fluidly */
     display: flex;  /* Ensures the flex items don't wrap when resizing */
     margin: 0 auto;  
-
+    gap: 50px
 }
 .work__tabs {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 5px;
     text-wrap: nowrap;
-    padding-top: 20px;
-
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.315);
+    padding: 20px;
 }
 .work__sections {
     display: flex;
@@ -184,8 +186,8 @@
     margin-bottom: 100px;
 }
 .work__tab_text{
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
 }
 .work__data_tab {
     display: flex;                    /* Align horizontally */
