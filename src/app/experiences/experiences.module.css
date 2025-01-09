@@ -241,6 +241,7 @@
     font-weight: 600;;
     font-size: clamp(0.5rem, 3vw, 1.25rem);
     margin-top: 25px;
+    font-family: 'inter', sans-serif;
 }
 .work__list li {
     flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
