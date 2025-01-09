@@ -1,0 +1,312 @@
+.section {
+    padding: 6rem 0 2rem;
+}
+.section__title {
+  font-size: var(--section-title-size);
+  color: var(--section-title-color);
+  position: relative;       /* Establish positioning context */
+  text-align: center;       /* Center the text */
+  margin: 1rem 0;           /* Add some vertical spacing */
+}
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+  color: var(--section-subtitle-color);
+}
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+.section__title::before,
+.section__title::after {
+  content: '';
+  position: absolute;
+  width: 130px;              /* Length of the line on each side */
+  height: 1px;              /* Thickness of the line */
+  background-color: black;  /* Color of the line */
+  top: 50%;                 /* Align to the vertical center of the text */
+}
+.section__title::before {
+  left: 35%;      /* Adjusts dynamically */
+}
+.section__title::after {
+  right: 35%;
+}
+
+.projects__container {
+  max-width:996px;
+  margin-bottom: 50px;
+  margin: 0 auto;  /* Center the container */
+  padding: 0 2rem;
+}
+.projects_description{
+  max-width: 1170px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #424242;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between items */
+}
+.projects__card{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  height: auto;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.247);
+  border-radius: 15px;
+  justify-content: center;
+  background-color: #e3e1e171;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.projects__card:hover {
+  transform: scale(1.05);
+  cursor:pointer
+}
+
+.projects__image{
+border-radius: 15px;
+overflow: hidden;
+}
+
+.projects__data{
+  width: 100%;
+  height: auto;
+}
+
+.projects__techstacks{
+  display: flex;
+  padding: 10px 0;
+}
+
+.techstacks__list{
+  list-style: none;          /* Removes bullet points */
+  padding: 0;                /* Removes default padding */
+  margin: 0;                 /* Removes default margin */
+  display: flex;
+  
+}
+
+.techstacks__list li{
+    margin-right: 1rem;        /* Adds space between list items */
+  }
+
+.projects__title{
+  text-align: left;
+  font-weight: 700;;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  padding: 10px;
+  color: var(--section-title-color);
+}
+
+.projects__links{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.projects__link{
+  display: inline-block;
+  width: 24px;  /* Set width */
+  height: 24px; /* Set height */
+  font-size: 36px;
+  color: rgb(82, 82, 82);
+  transition: all 0.3s ease-in-out;
+  margin-right: 25px;
+  margin-top: 15px;
+}
+.projects__link:hover{
+  color: #000;
+  transform: translateY(-5px);
+}
+.experiences__footer {
+  position: fixed;
+  bottom: 0px; /* Adjust to position it further or closer to the bottom */
+  color: rgba(0, 0, 0, 0.050);
+  font-size: 140px;
+  font-weight: 600;
+}
+  /* Pop-up styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Blurred background effect */
+  backdrop-filter: blur(2px);      /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;                  /* Ensure it is on top */
+}
+
+/* Pop-up content box */
+.popup__content {
+  background-image: url('/images/light-bg.png');
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+
+}
+.popup__description{
+  font-size: 18px;
+}
+
+/* Close button for pop-up */
+.popup__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #424242;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Fade-in animation for the pop-up */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .about__container {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin: 0 auto;  /* Center the container */
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__container{
+    max-width: 600px;
+  }
+  .projects__card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .projects__data{
+    width: 100%;
+    height: auto;
+  }
+  .projects__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f2f2f2;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+    /* transition: opacity 0.3s ease-in-out */
+  }
+  .projects_description{
+    font-size: 20px;
+  }
+  .popup__content{
+    max-width: 300px;
+  }
+  }
+  
+  
+/* For medium devices */
+@media screen and (max-width: 1540px) {
+  .section__title::before {
+        left: 30%;              /* Position the left line */
+  }
+  .section__title::after {
+        right: 30%;             /* Position the right line */
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .section__title::before {
+    left: 25%;              /* Position the left line */
+  }
+  .section__title::after {
+    right: 25%;             /* Position the right line */
+  }
+}
+    
+
+
+  /* For medium devices */
+@media screen and (max-width: 768px) {
+.section__title::before {
+    left: 15%;              /* Position the left line */
+}
+.section__title::after {
+    right: 15%;             /* Position the right line */
+}
+  }
+
+@media screen and (max-width: 675px) {
+  .section__title::before,
+.section__title::after {
+    width: 75px;              
+}
+.section__title::before {
+    left: 7.5%;              /* Position the left line */
+}
+.section__title::after {
+    right: 7.5%;             /* Position the right line */
+}
+.section__subtitle {
+  margin-bottom: 2rem;
+}
+  }
+
+@media screen and (max-width: 475px) {
+  .section__title::before {
+      left: 5%;              /* Position the left line */
+  }
+  .section__title::after {
+      right: 5%;             /* Position the right line */
+  }
+  .projects{
+    display: flex;
+    flex-direction: column; /* Two equal-width columns */
+  gap: 1px; /* Space between items */
+  }
+  .projects_description{
+    text-align: center;
+  }
+  
+    }
