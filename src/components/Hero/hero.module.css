@@ -39,7 +39,7 @@
     max-width: 796px;
     color: #4A4A4A;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
     font-family: 'inter' , sans-serif;
     line-height: 1.5;
@@ -92,9 +92,6 @@
     .home__data{
         padding : 0 1rem;
     }
-   .home__description{
-    max-width: initial;
-   }
    .home__subtitle{
     font-size: 24px;
     }
@@ -104,10 +101,6 @@
     .home__subdes{
         font-weight: 600;
         font-size: 36px;
-    }
-    .home__description{
-        font-weight: 600;
-        font-size: 20px;
     }
 }
   /* For medium devices */
@@ -126,10 +119,6 @@
     }
     .home__subdes{
         font-size: 36px;
-    }
-    .home__description{
-        font-weight: 600;
-        font-size: 20px;
     }
     .home__counter{
         color: #000000;
@@ -157,7 +146,6 @@
         font-size: 24px;
     }
     .home__description{
-        font-weight: 600;
         font-size: 16px;
     }
     .home__counter{
