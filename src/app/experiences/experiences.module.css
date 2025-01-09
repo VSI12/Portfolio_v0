@@ -1,7 +1,6 @@
 .container {
     max-width: 992px;
-    margin-left: auto;
-    margin-right: auto;
+
     padding: 0 2rem;
 }
 .section {
@@ -61,6 +60,7 @@
     justify-content: space-between;
     margin-bottom: 3rem;
     font-size: 20px;
+    font-weight: 500;
     text-wrap: wrap;
 }
 .qualification__button {
@@ -167,7 +167,6 @@
 .work__sections {
     display: flex;
     justify-content: center;
-
 }
 .work__content {
     display: none;
@@ -193,7 +192,7 @@
     display: flex;                    /* Align horizontally */
     align-items: flex-start;          /* Align items at the top */
     gap: 1rem;                        /* Space between rounder and text */
-    position: relative;               /* For positioning reference */    
+    position: relative;               /* For positioning reference */   
 }
 .work__button {
     font-size: var(--h3-font-size);
@@ -238,14 +237,14 @@
     flex-wrap: wrap;  /* Allow wrapping but control it better */
     gap: 10px;  /* Adjust space between list items */
     color: #4A4A4A;
-    font-weight: 600;;
+    font-weight: 500;;
     font-size: clamp(0.5rem, 3vw, 1.25rem);
     margin-top: 25px;
     font-family: 'inter', sans-serif;
 }
 .work__list li {
     flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
-    min-width: 550px;  /* Set a minimum width for the items */
+    min-width: 600px;  /* Set a minimum width for the items */
     position: relative; /* For positioning the custom bullet */
     /* Space for the custom bullet inside the list item */
 }
@@ -369,24 +368,24 @@
        margin: 0 auto;
     }
 
-.section__title::before,
-.section__title::after {
-    content: '';
-    position: absolute;
-    width: 100px;              /* Length of the line on each side */
-    height: 1px;              /* Thickness of the line */
-    background-color: black;  /* Color of the line */
-    top: 50%;                 /* Align to the vertical center of the text */
-}
-.section__title::before {
-    left: 15%;              /* Position the left line */
-}
-.section__title::after {
-    right: 15%;             /* Position the right line */
-}
-.experiences__footer {
-    font-size: 100px;
-  }
+    .section__title::before,
+    .section__title::after {
+        content: '';
+        position: absolute;
+        width: 100px;              /* Length of the line on each side */
+        height: 1px;              /* Thickness of the line */
+        background-color: black;  /* Color of the line */
+        top: 50%;                 /* Align to the vertical center of the text */
+    }
+    .section__title::before {
+        left: 15%;              /* Position the left line */
+    }
+    .section__title::after {
+        right: 15%;             /* Position the right line */
+    }
+    .experiences__footer {
+        font-size: 100px;
+    }
    
   }
   
@@ -510,11 +509,23 @@
   }
   .experiences{
     display: none;
-}
-.section__subtitle {
-    margin-bottom: 2rem;
-}
     }
+    .section__subtitle {
+        margin-bottom: 2rem;
+    }
+    .work__container {  
+        gap: 15px
+    }
+    .qualification__tabs {
+        margin-bottom: 1rem;
+    }
+    .work__list{
+        margin-top: 10px;
+    }
+    .work__list li {
+        min-width: 500px;  /* Set a minimum width for the items */
+    }
+}
   
   @media screen and (max-width: 475px) {
     .section__title::before {
