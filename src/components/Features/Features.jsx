@@ -27,10 +27,9 @@ const Features = () => {
                             Intrusion Detection System
                         </h2>
                         <p className={styles.features__des}>
-                            This project showcases the development and containerization of a Flask web application with 
+                        This project showcases the development of a Flask web application with 
                             Docker. The application serves as an Intrusion Detection System, allowing 
-                            users to upload network data in the NSL-KDD format for analysis and classification. The architecture leverages AWS
-                            services to provide a secure, highly available, fault-tolerant, and scalable solution.
+                            users to upload network data in the NSL-KDD format for analysis and classification.
                         </p>
                         <div className={styles.features__techstack}>
                             <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" height="50px" width="50px">
