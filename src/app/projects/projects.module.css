@@ -208,6 +208,15 @@
   .popup__content{
     max-width: 300px;
   }
+  .features__description{
+    font-size: 20px;
+  }
+  .features__image{
+    display: none;
+  }
+  .features__content{
+    border-radius: 30px;
+  }
   }
   
   
