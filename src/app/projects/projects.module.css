@@ -41,10 +41,12 @@
   padding: 0 2rem;
 }
 .projects_description{
-  max-width: 1170px;
   padding-bottom: 30px;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'inter', sans-serif;
+  line-height: 1.5;
+  text-align: center;
   color: #424242;
 }
 
