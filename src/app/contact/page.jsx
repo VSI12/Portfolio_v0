@@ -14,7 +14,9 @@ const Contact = () => {
             just want to say hello, feel free to drop me a message. <br />
              I&#39;ll do my best to respond quickly!
           </div>
-          <Socials />
+          <div className={styles.socials}>
+            <Socials />
+          </div>
         </div>
         <div className={styles.contact__footer}>
           Contact Me.

@@ -47,6 +47,10 @@
     color: #006CE0;
     font-weight: 700;
 }
+.home__socials{
+        border-radius: 0;
+        box-shadow: 0;
+}
 .home__counter{
     color: #000000;
     font-weight: 700;

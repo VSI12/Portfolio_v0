@@ -96,7 +96,14 @@
   transform: translateX(-50%);
   color:#4A4A4A;
 }
-
+.socials{
+  bottom: 20px;    /* Distance from the bottom */
+    left: 20px;      /* Distance from the left */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+}
   /* For medium devices */
 @media screen and (max-width: 1540px) {
   .section__title::before {

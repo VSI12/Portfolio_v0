@@ -1,6 +1,7 @@
 import React from 'react'
 import ViewCounter from './Counter'
 import Styles from './hero.module.css'
+import Socials from '../Socials/Socials'
 
 
 const Data = () => {
@@ -20,6 +21,9 @@ const Data = () => {
           and cloud technologies into scalable and highly available 
           systems that runs smoothly.
         </p>
+        <div className={Styles.home__socials}>
+          <Socials />
+        </div>
         <p className={Styles.home__counter}>
           <ViewCounter />
         </p>

@@ -1,14 +1,6 @@
 .floatingWidget {
-    bottom: 20px;    /* Distance from the bottom */
-    left: 20px;      /* Distance from the left */
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow *//* Ensure it stays on top of other content */
     display: block;
-    max-width: 300px;
-    
-  
+    max-width: fit-content;
   }
   
 .icon{
@@ -25,7 +17,6 @@
 }
   
 .social{
-
     display: flex;
     justify-content: center;
     flex-direction: row;
