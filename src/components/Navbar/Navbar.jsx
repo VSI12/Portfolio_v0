@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className={styles.navbarLogo}>
             <Link href="/" className={styles.logoText}>
-             <Image src="/logo.svg" alt="logo" width={100} height={100} />
+             <Image src="/logo.svg" alt="logo" width={80} height={80} />
             </Link>
           </div>
 
@@ -63,18 +63,13 @@ const Navbar = () => {
 
           {/* Dark Mode Toggle */}
           <div className={styles.navbarActions}>
-            {/* <button
+            <button
               onClick={toggleDarkMode}
               className={styles.darkModeToggle}
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
-            </button> */}
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <button className={styles.darkModeToggle}>  
-              <File size={24} />
-              </button>
-            </a>
+            </button>
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
