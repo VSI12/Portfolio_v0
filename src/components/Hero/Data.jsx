@@ -7,13 +7,10 @@ const Data = () => {
   return (
     <div className={Styles.home__data}>
         <h3 className={Styles.home__subtitle}>
-          Hello, I'm
+          Hello, I'm VICTOR ILIYA
         </h3>
-        <h1 className={Styles.home__title}>
-          Victor Iliya
-        </h1>
         <h1 className={Styles.home__subdes}>
-          DevOps Engineer
+          AWS Cloud and DevOps Engineer
         </h1>
         <p className={Styles.home__description}>
           I spend my days (and often nights) creating efficient
