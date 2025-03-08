@@ -28,7 +28,7 @@ body {
   transition: background-image 0.2s ease-in-out; /* Smooth transition for background */
 }
 
-.dark body {
+html.dark body {
   background-color: #0a0a0a; /* Dark background color */
   background-image: var(--dark-background-image); /* Dark background image */
   color: #ededed; /* Light foreground color for dark mode */
