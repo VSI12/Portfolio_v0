@@ -20,7 +20,10 @@ body {
   color: var(--foreground);
   background-color: var(--background); /* Default light background */
   background-image: var(--light-background-image); /* Default light background image */
-  background-attachment: fixed;
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps it fixed while scrolling */
   font-family: 'jetbrains mono', sans-serif;
   transition: background-image 0.2s ease-in-out; /* Smooth transition for background */
 }
