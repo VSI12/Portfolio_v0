@@ -183,7 +183,7 @@ body.dark .closeButton:hover {
 .mobileNavLink {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
   font-weight: 500;
@@ -191,6 +191,7 @@ body.dark .closeButton:hover {
   text-decoration: none;
   transition: all 0.2s ease;
   border-radius: 0.5rem;
+  border-bottom: #00000013 2px solid;
 }
 
 .mobileNavLink:hover {
