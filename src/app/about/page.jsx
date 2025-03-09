@@ -15,19 +15,26 @@ const About = () => {
 
         <div className={`${styles.about__container} ${styles.container} ${styles.grid}`}>
           <div className={styles.about__data}>
-            <Image
-              src="/Victor Iliya.png"
-              alt="Victor Iliya"
-              width={335.51}
-              height={468}
-              className={styles.profile}
-            />
-            <h1 className={styles.about__title}>
-              Victor Iliya
-            </h1>
-            <h1 className={styles.about__subtitle}>
-              AWS Cloud & DevOps Engineer
-            </h1>
+            <div className={styles.about__profile}>
+              <div className={styles.profile__container}>
+                <Image
+                src="/Victor Iliya.png"
+                alt="Victor Iliya"
+                width={335.51}
+                height={468}
+                className={styles.profile}
+                />
+               <div className={styles.profileText}>VICTOR</div>
+              </div>
+              
+              <h1 className={styles.about__title}>
+                Victor Iliya
+              </h1>
+              <h1 className={styles.about__subtitle}>
+                AWS Cloud & DevOps Engineer
+              </h1>
+            </div>
+
             <div className={styles.about__philosophy}>
               <h1 className={styles.about__philosophy__title}>
                 My Philosophy
@@ -40,20 +47,7 @@ const About = () => {
 
           <div className={styles.group1}>
             <div className={styles.group2}>
-              <div className={styles.about__data}>
-                <h2 className={styles.about__h2}>
-                  What I’m Working On
-                </h2>
-                <p className={styles.about__description}>
-                Currently, I’m:
-                <br />
-                  <ul className={styles.about__list}>
-                    <li>Expanding automation capabilities for CI/CD pipelines in personal and collaborative projects.</li>
-                    <li>Exploring advanced container orchestration techniques using Kubernetes.</li>
-                    <li>Contributing to open-source projects focused on cloud automation and tooling.</li>
-                  </ul>
-                </p>
-              </div>
+             
               <div className={styles.about__links}>
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <div className={styles.resume}>
