@@ -1,33 +1,28 @@
 .section {
-    padding: 10rem 0 2rem;
-    height: calc(100vh - 205px);
+    height: 100vh;
+    padding: 0 2rem;
 }
 .container {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5rem 2rem;
+    padding: 7.5rem 0 0 0 ;
 }
 
-.home__data{
- 
-    flex-direction: column;
-    align-items: left;
-
-}
 .home__subtitle{
-    color: rgba(0, 0, 0, 0.478);
+    color: #202020b0;
     font-size: 24px;
     margin:0 auto;
     padding-bottom: 20px;
     font-weight: 600;
-    
+}
+.name{
+    color: #202020;
+    font-weight: 700;
 }
 .home__title{
     font-size: 42px;
     color: #202020;
-    margin:0 auto;
-    text-align: center;
 }
 .home__subdes{
     font-weight: 600;
@@ -78,9 +73,8 @@
 }
 .hero__footer {
   position: fixed;
-  bottom: 0px; /* Adjust to position it further or closer to the bottom */
- 
-  color: var(--watermark-color);
+  bottom: 1;
+  color: rgba(0, 0, 0, 0.050);
   font-size: 140px;
   font-weight: 600;
   z-index: -100;
@@ -90,7 +84,7 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
     .section {
-        padding: 7.5rem 0 2rem;
+        padding: 0  2rem;
       }
     .home__data{
         padding : 0 1rem;
@@ -109,7 +103,7 @@
   /* For medium devices */
 @media screen and (max-width: 768px) {
     .section {
-        padding: 10rem 0 2rem;
+        padding: 0 0 2rem;
     }
    .home__description{
         max-width: initial;

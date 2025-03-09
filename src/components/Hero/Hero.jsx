@@ -11,9 +11,9 @@ const Hero = () => {
     document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
   };
   return (
-    <section className={`${styles.home} ${styles.section}`} id="hero">
+    <section className={styles.section} id="hero">
     <div className={`${styles.home__container} ${styles.container} ${styles.grid}`}>
-      <div className={`${styles.home__content} ${styles.grid}`}>
+      <div className={styles.home__content}>
         <Data />
       </div>
       <div className={styles.arrow} onClick={scrollToFeatures}>

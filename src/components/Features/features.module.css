@@ -3,7 +3,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
-    height: calc(100vh - 120px);
+    height: 100vh;
   }
   .section__title {
       font-size: var(--section-title-size);

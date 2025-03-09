@@ -8,7 +8,7 @@ const Data = () => {
   return (
     <div className={Styles.home__data}>
         <h3 className={Styles.home__subtitle}>
-          Hello, I'm VICTOR ILIYA
+          Hello, I'm <span className={Styles.name}>VICTOR ILIYA</span>
         </h3>
         <h1 className={Styles.home__subdes}>
           AWS Cloud and DevOps Engineer
