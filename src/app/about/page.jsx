@@ -15,20 +15,27 @@ const About = () => {
 
         <div className={`${styles.about__container} ${styles.container} ${styles.grid}`}>
           <div className={styles.about__data}>
+            <Image
+              src="/Victor Iliya.png"
+              alt="Victor Iliya"
+              width={335.51}
+              height={468}
+              className={styles.profile}
+            />
             <h1 className={styles.about__title}>
               Victor Iliya
             </h1>
             <h1 className={styles.about__subtitle}>
-              DevOps Engineer
+              AWS Cloud & DevOps Engineer
             </h1>
-            <p className={styles.about__description}>
-              I specializing in building cloud-based solutions that drive scalable, reliable, and efficient systems.
-              My passion for scalable, resilient infrastructures was ignited when I earned my first AWS certification, 
-              and I’ve been exploring the limitless possibilities of cloud technologies ever since.
-              Currently, I focus on DevOps, integrating automation, creating CI/CD pipelines, and infrastructure as code
-              to build agile, reliable, highly available and resilient systems. My toolkit includes technologies like AWS,
-              Terraform, Docker, Jenkins, and Python, which I leverage to drive impactful solutions.
-            </p>
+            <div className={styles.about__philosophy}>
+              <h1 className={styles.about__philosophy__title}>
+                My Philosophy
+              </h1>
+              <p className={styles.about__philosophy__content}>
+                I believe in the beauty of simplicity and order — reducing complexity to deliver elegant solutions that perform at scale. Continuous learning is my mantra, and I constantly strive to evolve, improve, and adapt to new challenges.
+              </p>
+            </div>
           </div>
 
           <div className={styles.group1}>
