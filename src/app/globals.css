@@ -1,8 +1,8 @@
 :root {
   --background: #e5e5e5;
   --foreground: #171717;
-  --light-background-image: url('/images/light-bg.png');
-  --dark-background-image: url('/images/dark-bg.jpg');
+  --light-background-image: url('/images/light-bg.webp');
+  --dark-background-image: url('/images/dark-bg.webp');
   --navbar-bg-light:var(--light-background-image);
   --navbar-bg-dark:var(--dark-background-image);
 
