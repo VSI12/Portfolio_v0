@@ -115,23 +115,63 @@
 }
 
 .mobileMenu {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100vh;
+  background-color: var(--background); /* Default light background */
+  background-image: var(--light-background-image); /* Default light background image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps it fixed while scrolling */
   z-index: 100;
-  box-shadow: 10px rgba(0, 0, 0, 0.1);
-  transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  overflow-y: auto;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);  /* More pronounced bottom shadow */
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.4s ease-in-out; /* Smooth slide effect */
 }
 
 .mobileMenuWrapper.show .mobileMenu {
-  transform: translateY(0);
+  transform: translateX(0); /* Slide in from right */
 }
+.mobileMenuWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* High value to stay on top */
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #171717;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #1e40af;
+}
+
+body.dark .closeButton {
+  color: #ededed;
+}
+
+body.dark .closeButton:hover {
+  color: #60a5fa;
+}
+
 
 .mobileLinks {
   padding: 2rem;

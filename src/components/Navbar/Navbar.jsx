@@ -60,8 +60,13 @@ const Navbar = () => {
       </div>
 
       <div className={`${styles.mobileMenuWrapper} ${isMenuOpen ? styles.show : ''}`}>
-        <div className={styles.mobileMenuBackdrop} onClick={() => setIsMenuOpen(false)} />
         <div className={styles.mobileMenu}>
+          {/* Close Button */}
+          <button onClick={() => setIsMenuOpen(false)} className={styles.closeButton} aria-label="Close menu">
+            <X size={28} />
+          </button>
+
+          {/* Mobile Navigation Links */}
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`} onClick={() => setIsMenuOpen(false)}>
               {item.label}
@@ -69,6 +74,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
+
     </nav>
   )
 }
