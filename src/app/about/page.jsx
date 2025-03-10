@@ -76,14 +76,15 @@ const About = () => {
           </div>
           
 
-          <div className={styles.group1}>
-            <div className={styles.group2}>
-            </div>
-            <div className={`${styles.about__data} ${styles.about__tech}`}>
+          <div className={styles.skills}>
+            <div className={styles.about__toolkit}>
                 <h2 className={styles.about__h2}>
-                Tools & Technologies
+                My Toolkit
                 </h2>
-                <p className={styles.about__description}>
+                <p className={styles.skills_des}>
+                I've worked with a variety of technologies and tools throughout my career. Here's a snapshot of my technical expertise with the tools and technologies I use.
+                </p>
+                <div className={styles.about__description}>
                   <h2 className={styles.tech__h1}>Technologies</h2>
                   <div className={styles.tech_stack}>
                     {/* Bash */}
@@ -265,10 +266,10 @@ const About = () => {
                       </h3>
                     </div>
                   </div>
-                </p>
+                </div>
             </div>
           </div>
-          <div className={styles.about__data}>
+          <div className={styles.about__softskills}>
             <h2 className={styles.about__h2}>
             Soft Skills
             </h2>
