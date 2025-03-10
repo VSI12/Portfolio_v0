@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import styles from './about.module.css'
 import { SquareArrowOutUpRight } from 'lucide-react'
@@ -42,36 +43,41 @@ const About = () => {
               <p className={styles.about__philosophy__content}>
                 I believe in the beauty of simplicity and order — reducing complexity to deliver elegant solutions that perform at scale. Continuous learning is my mantra, and I constantly strive to evolve, improve, and adapt to new challenges.
               </p>
+              <div className={styles.about__links}>
+                <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <div className={styles.icon}>
+                  <Image src="/resume.svg" alt="Resume" width={50} height={50} />
+                  </div>
+                    <h3 className={styles.about__h3}>
+                      View my <br />
+                      Resume
+                    </h3>
+                </Link>
+                <Link href="/experiences" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <div className={styles.icon}>
+                  <Image src="/experience.svg" alt="experience" width={50} height={50} />
+                  </div>
+                    <h3 className={styles.about__h3}>
+                      My <br />
+                      Professional Experiences
+                    </h3>
+                </Link>
+                <a href="https://victoriliya.hashnode.dev" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <div className={styles.icon}>
+                  <Image src="/blog.svg" alt="Blog" width={50} height={50} />
+                  </div>
+                    <h3 className={styles.about__h3}>
+                      Go to my <br />
+                      Blog
+                    </h3>
+                </a>
+              </div>
             </div>
           </div>
+          
 
           <div className={styles.group1}>
             <div className={styles.group2}>
-             
-              <div className={styles.about__links}>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                  <div className={styles.resume}>
-                    <h3 className={styles.about__h3}>
-                      View my <br />
-                      <span className={styles.about__span}>
-                        Resume
-                      </span>
-                    </h3>
-                    <SquareArrowOutUpRight size={48}/>
-                  </div>
-                </a>
-                <a href="https://victoriliya.hashnode.dev" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                  <div className={styles.resume}>
-                    <h3 className={styles.about__h3}>
-                      View my <br />
-                      <span className={styles.about__span}>
-                        Blog
-                      </span>
-                    </h3>
-                    <SquareArrowOutUpRight size={48}/>
-                  </div>
-                </a>
-              </div>
             </div>
             <div className={`${styles.about__data} ${styles.about__tech}`}>
                 <h2 className={styles.about__h2}>

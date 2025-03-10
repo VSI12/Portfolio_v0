@@ -41,7 +41,6 @@
 
 .about__data{
   display: flex;
- 
 }
 .about__title{
   font-size: 36px;
@@ -98,6 +97,7 @@
 .about__philosophy__content{
   font-size: 22px;
   font-weight: 600;
+  color: #505050;
 }
 .resume{
   display: flex;
@@ -116,15 +116,52 @@
   transform: scale(1.05);
   color: black;
 }
-.about__h3{
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-}
+
 .about__h2{
   font-size: 30px;
   font-weight: 700;
   font-family: 'jetbrains mono', monospace;
+}
+.about__links {
+  padding-top: 150px;
+  display: flex;
+  gap: 20px;
+
+}
+.link {
+  flex: 1; /* Makes all divs take equal space */
+  min-width: 100px; /* Ensures they don’t shrink too much */
+  max-width: 150px; /* Prevents excessive stretching */
+  height: 150px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  color: #4A4A4A;
+}
+
+.about__links .link:hover {
+  transform: scale(1.05);
+  color: black;
+}
+
+/* Ensures the icons and text are spaced properly */
+.about__links .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.about__links .about__h3 {
+  font-size: 18px;
+  line-height: 1.4; /* Reduces space between broken lines */
+  font-weight: bold;
+  
 }
 .about__span{
   font-size: 36px;
@@ -258,9 +295,9 @@
 
 .about__links{
   display: flex; /* Make the parent a flex container */
-  flex-direction: row; /* Arrange children in a row */
  justify-content: space-between;
   gap: 30px;
+  border: 2px solid red;
 }
 .about__links .link {
   flex: 1; 
