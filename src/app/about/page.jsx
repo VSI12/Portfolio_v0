@@ -76,7 +76,7 @@ const About = () => {
           </div>
           
 
-          <div className={styles.skills}>
+          <div className={styles.about}>
             <div className={styles.about__toolkit}>
                 <h2 className={styles.about__h2}>
                 My Toolkit
@@ -269,20 +269,62 @@ const About = () => {
                 </div>
             </div>
           </div>
-          <div className={styles.about__softskills}>
-            <h2 className={styles.about__h2}>
-            Soft Skills
-            </h2>
-            <p className={styles.about__description}>
-              <ul>
-                <li>Attention to Detail</li>
-                <li>Problem-Solving</li>
-                <li>Self-Motivation</li>
-                <li>Collaboration</li>
-                <li>Adaptability</li>
-                <li>Effective Communication</li>
-              </ul>
-            </p>
+
+          <div className={styles.about}>
+            <div className={styles.about__softskills}>
+              <h2 className={styles.about__h2}>
+                Soft Skills
+              </h2>
+                <p className={styles.skills_des}>
+                Beyond technical expertise, I bring valuable interpersonal and professional qualities that enhance collaboration and project success.
+                </p>
+              <div className={styles.about__skilldescription}>
+                {[
+                    { title: "Communication",
+                       description: "Articulating ideas clearly and effectively in both written and verbal forms.", icon: "/communication.svg" },
+
+                    { title: "Problem-Solving",
+                      description: "Analyzing issues and finding efficient solutions quickly.", 
+                      icon: "/problem solving.svg" },
+
+                    { title: "Active Listening", 
+                      description: "Fully concentrating, understanding, responding, and remembering what is being said.",
+                      icon: "/active listening.svg" },
+
+                    { title: "Teamwork", 
+                      description: "Collaborating effectively with others to achieve common goals.", 
+                      icon: "team work.svg" },
+                      
+                    { title: "Adaptability", 
+                      description: "Adjusting to new conditions and embracing change positively.", 
+                      icon: "/adaptability.svg" },
+
+                    { title: "Creativity", 
+                      description: "Generating new ideas and approaches to solve problems.", 
+                      icon: "/creativity.svg" },
+
+                    { title: "Leadership",
+                      description: "Guiding and inspiring others to achieve collective objectives.", 
+                      icon: "/leadership.svg" },
+
+                    { title: "Critical Thinking", 
+                      description: "Analyzing facts to form a judgment with logical reasoning.", 
+                      icon: "/critical thinkg.svg" },
+
+                    { title: "Time Management", 
+                      description: "Organizing and planning how to divide time between activities effectively.", icon: "/time management.svg" }
+                  ].map((skill, index) => (
+                    <div key={index} className={styles.skillcube}>
+                      <div className={styles.skillcube__icon}>
+                        <Image src={skill.icon} alt={skill.title} width={50} height={50} />
+                      </div>
+                      <div className={styles.skillcube__title}>{skill.title}</div>
+                      <div className={styles.skillcube__des}>{skill.description}</div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+           
           </div>
           <div className={styles.about__data}>
             <h2 className={styles.about__h2}>

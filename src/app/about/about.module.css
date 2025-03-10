@@ -248,6 +248,58 @@
   margin: 0 auto;
   justify-content: center;
 }
+
+.about__skilldescription {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.skillcube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+
+  min-height: 180px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skillcube:hover {
+  transform: scale(1.05);
+}
+
+.skillcube__icon {
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.skillcube__title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.skillcube__des {
+  font-size: 18px;
+  color:#4A4A4A;
+  font-weight: 600;
+}
+.about__softskills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 900px;
+  padding-top: 50px;
+}
+
 @media screen and (max-width: 992px) {
   .about__container {
     align-items: center;
