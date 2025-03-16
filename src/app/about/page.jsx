@@ -352,8 +352,8 @@ const About = () => {
                       <div className={styles.skillcube__icon}>
                         <Image src={skill.icon} alt={skill.title} width={100} height={100} />
                       </div>
-                      <div className={styles.skillcube__des}>{skill.description}</div>
-                      <div className={styles.skillcube__des}>{skill.description1}</div>
+                      <div className={styles.skillcube__desbeyond}>{skill.description}</div>
+                      <div className={styles.skillcube__desbeyond}>{skill.description1}</div>
                     </div>
                   ))}
               </div>
