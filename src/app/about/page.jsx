@@ -27,7 +27,6 @@ const About = () => {
                 />
                <div className={styles.profileText}>VICTOR</div>
               </div>
-              
               <h1 className={styles.about__title}>
                 Victor Iliya
               </h1>

@@ -43,18 +43,31 @@
   display: flex;
 }
 .about__title{
-  font-size: 36px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 700;
   color: black;
+ 
+  padding: 0;
+  margin-top: 20px;
 }
 .about__subtitle{
   font-size: 28px;
   font-weight: 600;
+
+  padding: 0;
+  margin: 0;
+}
+.about__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
 .profile__container {
   position: relative;
   display: inline-block; /* Ensures container wraps around the image */
   width: fit-content; /* Matches the image width */
+
 }
 
 .profile {
@@ -220,10 +233,10 @@
 }
 .skills_des{
   max-width: 900px;
-  color: var(--content-font-colour);
   font-family: var(--content-font-family);
-  font-size: 20px;
-  font-weight: 600;
+  font-weight: var(--content-font-weight);
+  font-size: var(--content-font-size);
+  color: var(--content-font-colour);
   text-align: center;
 }
 .tech_stack{
