@@ -326,19 +326,38 @@ const About = () => {
             </div>
            
           </div>
-          <div className={styles.about__data}>
-            <h2 className={styles.about__h2}>
-            Beyond the Terminal
-            </h2>
-            <p className={styles.about__description}>
-            When I’m not architecting cloud infrastructures, you’ll find me indulging in my other passions:
-            <ul>
-              <li>Playing tennis to keep my mind sharp and focused.</li>
-              <li>Enjoying the melodies of EDM and piano to relax and find inspiration.</li>
-              <li>Exploring new ideas in technology and automation.</li>
-            </ul>
-            I also enjoy writing about my experiences and sharing knowledge with the DevOps community through blog posts and tutorials.
-            </p>
+          <div className={styles.about}>
+          <div className={styles.about__softskills}>
+              <h2 className={styles.about__h2}>
+                Beyond the Terminal
+              </h2>
+                <p className={styles.skills_des}>
+                 When I’m not architecting cloud infrastructures, you’ll find me :
+                </p>
+              <div className={styles.about__skilldescription}>
+                {[
+                  { description: "Playing Tennis ",
+                    description1: " { On the moon on Tuesdays}",
+                  icon: "/tennis.svg" },
+
+                    { description: "immersed in the beats of EDM and the melodies of classical piano pieces.", 
+                      icon: "/piano.svg" },
+
+                    { 
+                      description: "Expressing creativity through intricate sketches and bold strokes.",
+                      icon: "/art.svg" },
+
+                  ].map((skill, index) => (
+                    <div key={index} className={styles.skillcube}>
+                      <div className={styles.skillcube__icon}>
+                        <Image src={skill.icon} alt={skill.title} width={100} height={100} />
+                      </div>
+                      <div className={styles.skillcube__des}>{skill.description}</div>
+                      <div className={styles.skillcube__des}>{skill.description1}</div>
+                    </div>
+                  ))}
+              </div>
+            </div>
           </div>
         </div>
         

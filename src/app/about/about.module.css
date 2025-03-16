@@ -95,26 +95,10 @@
   font-weight: 600;
 }
 .about__philosophy__content{
-  font-size: 22px;
-  font-weight: 600;
-  color: #505050;
-}
-.resume{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  text-align: justify;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #4A4A4A;
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-}
-.resume:hover{
-  transition: ease-in-out 0.3s;
-  transform: scale(1.05);
-  color: black;
+  font-family: var(--content-font-family);
+  font-weight: var(--content-font-weight);
+  font-size: var(--content-font-size);
+  color: var(--content-font-colour);
 }
 
 .about__h2{
@@ -251,7 +235,7 @@
 
 .about__skilldescription {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
@@ -286,9 +270,10 @@
 }
 
 .skillcube__des {
+  font-family: var(--content-font-family);
+  font-weight: var(--content-font-weight);
   font-size: 18px;
   color:#4A4A4A;
-  font-weight: 600;
 }
 .about__softskills{
   display: flex;
@@ -384,6 +369,19 @@
 }
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+  .about__skilldescription {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) { /* Mobile */
+  .skillcube__des{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 675px) {
   .section__title::before,
 .section__title::after {
@@ -442,5 +440,66 @@
   .about__footer{
     font-size: 75px;
     font-weight: 800;
+  }
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about__data {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about__title {
+    font-size: 30px;
+  }
+
+  .about__subtitle {
+    font-size: 24px;
+  }
+
+  .about__philosophy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileText {
+    font-size: 150px;
+  }
+
+  .about__title {
+    font-size: 28px;
+  }
+
+  .about__subtitle {
+    font-size: 22px;
+  }
+
+  .about__philosophy__title {
+    font-size: 28px;
+  }
+
+  .about__philosophy__content {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .about__title {
+    font-size: 24px;
+  }
+
+  .about__subtitle {
+    font-size: 20px;
+  }
+
+  .about__philosophy__title {
+    font-size: 24px;
+  }
+
+  .about__philosophy__content {
+    font-size: 16px;
   }
 }

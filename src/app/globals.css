@@ -14,6 +14,14 @@
   --section-subtitle-color: #545252;
   --watermark-color: #73737334;
 
+
+  
+  --content-font-size: 22px;
+  --content-font-weight: 500;
+  --content-font-colour: #4A4A4A;
+  --content-font-family: 'inter' , sans-serif;
+  --content-line-height: 1.5;
+
 }
 
 
