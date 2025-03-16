@@ -425,6 +425,14 @@
   .profileText{
     font-size: 10px;
   }
+  .link {
+    min-width: 80px; /* Ensures they don’t shrink too much */
+    max-width: 150px; /* Prevents excessive stretching */
+    padding: 5px;
+  }
+  .about__links {
+    padding-top:20px;  
+  }
 }
 
 @media screen and (max-width: 675px) {
