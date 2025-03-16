@@ -326,8 +326,9 @@ const About = () => {
             </div>
            
           </div>
+
           <div className={styles.about}>
-          <div className={styles.about__softskills}>
+          <div className={styles.about__beyond}>
               <h2 className={styles.about__h2}>
                 Beyond the Terminal
               </h2>

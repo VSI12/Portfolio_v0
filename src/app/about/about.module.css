@@ -104,7 +104,6 @@
 .about__h2{
   font-size: 30px;
   font-weight: 700;
-  font-family: 'jetbrains mono', monospace;
 }
 .about__links {
   padding-top: 150px;
@@ -221,7 +220,8 @@
 }
 .skills_des{
   max-width: 900px;
-  color: #4A4A4A;
+  color: var(--content-font-colour);
+  font-family: var(--content-font-family);
   font-size: 20px;
   font-weight: 600;
   text-align: center;
@@ -278,11 +278,19 @@
 .about__softskills{
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   margin: 0 auto;
   justify-content: center;
   max-width: 900px;
   padding-top: 50px;
+}
+.about__beyond{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 900px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 @media screen and (max-width: 992px) {
