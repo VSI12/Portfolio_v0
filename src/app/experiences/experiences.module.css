@@ -268,7 +268,7 @@
   .logo {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -279,7 +279,6 @@
   }
   
   .logoImage {
-    border-radius: 50%;
     object-fit: cover;
   }
   
@@ -290,15 +289,14 @@
     transform: translateX(-50%);
     width: 2px;
     height: calc(100% + 3rem - 70px);
-    background-color: #424242;
+    background-color: #a7a6a6;
     z-index: 1;
   }
   
   .content {
     flex: 1;
-    background-color: white;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 0.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #e5e7eb;
   }

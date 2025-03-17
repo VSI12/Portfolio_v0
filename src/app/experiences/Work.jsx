@@ -4,51 +4,52 @@ import styles from "./experiences.module.css";
 const experiences = [
   {
     id: 1,
-    company: "Company One",
-    position: "Senior Developer",
-    duration: "Jan 2022 - Present",
+    company: "Current Link Hospitality Systems",
+    position: "Cloud Support Engineer",
+    duration: "March 2025 - Present",
     description: [
       "Led development of key features resulting in 30% user growth",
       "Managed a team of 5 developers across multiple projects",
       "Implemented CI/CD pipeline reducing deployment time by 40%",
     ],
-    logo: "/placeholder.svg?height=80&width=80",
+    logo: "/clhs.svg",
   },
-  {
-    id: 2,
-    company: "Company Two",
-    position: "Full Stack Developer",
-    duration: "Mar 2020 - Dec 2021",
-    description: [
-      "Developed responsive web applications using React and Node.js",
-      "Optimized database queries improving performance by 25%",
-      "Collaborated with design team to implement UI/UX improvements",
-    ],
-    logo: "/placeholder.svg?height=80&width=80",
-  },
+  
   {
     id: 3,
-    company: "Company Three",
-    position: "Frontend Developer",
-    duration: "Jun 2018 - Feb 2020",
+    company: "Transcorp Hilton, Abuja",
+    position: "Network SYtsmes Intern",
+    duration: "May 2023 - September 2023",
     description: [
       "Built interactive user interfaces with React and Redux",
       "Implemented responsive designs for mobile and desktop",
       "Reduced bundle size by 35% through code optimization",
     ],
-    logo: "/placeholder.svg?height=80&width=80",
+    logo: "/hilton.svg",
+  },
+  {
+    id: 2,
+    company: "HNG Tech",
+    position: "DevOps Engineer",
+    duration: "Jan 2025 - March 2025",
+    description: [
+      "Developed responsive web applications using React and Node.js",
+      "Optimized database queries improving performance by 25%",
+      "Collaborated with design team to implement UI/UX improvements",
+    ],
+    logo: "/hng.svg",
   },
   {
     id: 4,
-    company: "Company Four",
+    company: "Institute of Human Virology, Nigeria",
     position: "Junior Developer",
-    duration: "Jan 2017 - May 2018",
+    duration: "June 2022 - September 2022",
     description: [
       "Developed and maintained company website using JavaScript and CSS",
       "Assisted in migrating legacy codebase to modern frameworks",
       "Participated in code reviews and team knowledge sharing sessions",
     ],
-    logo: "/placeholder.svg?height=80&width=80",
+    logo: "/ihvn.svg",
   },
 ];
 const Work = () => {
