@@ -1,98 +1,106 @@
-'use client'
-import { useState } from "react";
-import React from 'react'
+import Image from "next/image";
+import styles from "./experiences.module.css";
 
-import styles from './experiences.module.css'
-
+const experiences = [
+  {
+    id: 1,
+    company: "Company One",
+    position: "Senior Developer",
+    duration: "Jan 2022 - Present",
+    description: [
+      "Led development of key features resulting in 30% user growth",
+      "Managed a team of 5 developers across multiple projects",
+      "Implemented CI/CD pipeline reducing deployment time by 40%",
+    ],
+    logo: "/placeholder.svg?height=80&width=80",
+  },
+  {
+    id: 2,
+    company: "Company Two",
+    position: "Full Stack Developer",
+    duration: "Mar 2020 - Dec 2021",
+    description: [
+      "Developed responsive web applications using React and Node.js",
+      "Optimized database queries improving performance by 25%",
+      "Collaborated with design team to implement UI/UX improvements",
+    ],
+    logo: "/placeholder.svg?height=80&width=80",
+  },
+  {
+    id: 3,
+    company: "Company Three",
+    position: "Frontend Developer",
+    duration: "Jun 2018 - Feb 2020",
+    description: [
+      "Built interactive user interfaces with React and Redux",
+      "Implemented responsive designs for mobile and desktop",
+      "Reduced bundle size by 35% through code optimization",
+    ],
+    logo: "/placeholder.svg?height=80&width=80",
+  },
+  {
+    id: 4,
+    company: "Company Four",
+    position: "Junior Developer",
+    duration: "Jan 2017 - May 2018",
+    description: [
+      "Developed and maintained company website using JavaScript and CSS",
+      "Assisted in migrating legacy codebase to modern frameworks",
+      "Participated in code reviews and team knowledge sharing sessions",
+    ],
+    logo: "/placeholder.svg?height=80&width=80",
+  },
+];
 const Work = () => {
-  const [toggleState, setToggle] = useState(1);
-  const toggleTab = (index) => {
-    setToggle(index);
-  };
+  const leftExperiences = experiences.filter((_, index) => index % 2 === 0);
+  const rightExperiences = experiences.filter((_, index) => index % 2 === 1);
+
   return (
-    <div className={styles.work__container}>
-        <div className={styles.work__tabs}>
-          <div className={ toggleState === 1 ?
-           `${styles.work__button} ${styles.work__active}`
-            : styles.work__button
-            } onClick={() => toggleTab(1)}>
-                <div className={styles.work__data_tab}>
-                    <div className={styles.work__tab_rounder}>
-                      <span className={toggleState === 1 ? `${styles.work__rounder} ${styles.activeRounder}` : styles.work__rounder}></span>
-                      <span className={styles.work__line}></span>
-                    </div>
-                    <div className={styles.work__tab_text}>
-                      Transcorp Hilton, Abuja
-                    </div>
-                </div>
-          </div>
-
-          <div className={ toggleState === 2 ? 
-          `${styles.work__button} ${styles.work__active}`
-          : styles.work__button
-            } onClick={() => toggleTab(2)}>
-                <div className={styles.work__data_tab}>
-                    <div className={styles.work__tab_rounder}>
-                      <span className={toggleState === 2 ? `${styles.work__rounder} ${styles.activeRounder}` : styles.work__rounder}></span>
-                      {/* <span className={styles.work__line}></span> */}
-                    </div>
-                    <div className={styles.work__tab_text}>
-                      IHVN
-                    </div>
-                </div>
-          </div>
+    <section className={styles.workExperience}>
+      <h2 className={styles.sectionTitle}>Work Experience</h2>
+      <div className={styles.experienceContainer}>
+        <div className={styles.column}>
+          {leftExperiences.map((experience, index) => (
+            <ExperienceItem key={experience.id} experience={experience} isLast={index === leftExperiences.length - 1} />
+          ))}
         </div>
-
-        <div className={styles.work__sections}>
-          {/* Transcorp Hilton*/}
-          <div className={ toggleState === 1
-                ? `${styles.work__content} ${styles.work__content_active}`
-                : styles.work__content
-            }>
-            <div className={styles.work__data}>
-              <div>
-                <h3 className={styles.work__title}>Information Systems intern 
-                  <a href="https://www.hilton.com/en/hotels/abuhitw-transcorp-hilton-abuja/" target="_blank" rel="noopener noreferrer">
-                  <span className={styles.highlights}> @Transcorp Hilton, Abuja</span></a>
-                </h3>
-                <span className={styles.work__subtitle}>May 2023 - September 2023</span>
-                <ul className={styles.work__list}>
-                  <li>
-                    Collaborated with team members to upgrade Wi-Fi access points from Wi-Fi 4 to Wi-Fi 6 giving a 60% increase in 
-                    internet speeds 
-                  </li>
-                  <li>Facilitated the configurations of upgraded routers and access points, ensuring seamless integration into the existing 
-                  network.</li>
-                  <li>Conducted server updates to maintain and ensure system stability and security.</li>
-                </ul>    
-              </div>
-            </div>
-          </div>
-
-          {/* Experience Section */}
-          <div className={ toggleState === 2
-                ? `${styles.work__content} ${styles.work__content_active}`
-                : styles.work__content
-            }>
-            <div className={styles.work__data}>
-              <div>
-              <h3 className={styles.work__title}>Intern 
-                  <a href="https://ihvnigeria.org/" target="_blank" rel="noopener noreferrer">
-                  <span className={styles.highlights}> @Institute of Human Virology, Nigeria</span></a>
-                </h3>
-                <span className={styles.work__subtitle}>June 2022 - September 2022</span>
-                <ul className={styles.work__list}>
-                  <li>Provided comprehensive technical support, troubleshooting hardware, software, and network issues to ensure minimal downtime and optimal performance. </li>
-                  <li>Assisted with system upgrades and configurations to improve performance and user experience.</li>
-                  <li>Performed system updates to maintain stability and security.</li>
-                  <li>Worked with teams to solve complex IT issues and integrate new technologies.</li>
-                </ul>  
-              </div>
-            </div>
-          </div>
+        <div className={styles.column}>
+          {rightExperiences.map((experience, index) => (
+            <ExperienceItem key={experience.id} experience={experience} isLast={index === rightExperiences.length - 1} />
+          ))}
         </div>
+      </div>
+    </section>
+  );
+};
+
+const ExperienceItem = ({ experience, isLast }) => {
+  return (
+    <div className={styles.experienceItem}>
+      <div className={styles.logoContainer}>
+        <div className={styles.logo}>
+          <Image
+            src={experience.logo || "/placeholder.svg"}
+            alt={`${experience.company} logo`}
+            width={60}
+            height={60}
+            className={styles.logoImage}
+          />
+        </div>
+        {!isLast && <div className={styles.connectingLine}></div>}
+      </div>
+      <div className={styles.content}>
+        <h3 className={styles.company}>{experience.company}</h3>
+        <h4 className={styles.position}>{experience.position}</h4>
+        <p className={styles.duration}>{experience.duration}</p>
+        <ul className={styles.description}>
+          {experience.description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

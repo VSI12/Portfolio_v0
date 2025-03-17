@@ -26,36 +26,7 @@ const Experiences = () => {
         deepened my understanding of cloud technologies and DevOps practices.
         </div>
         
-        <div className={styles.qualification__tabs}>
-          <div className={ toggleState === 1 ?
-           `${styles.qualification__button} ${styles.qualification__active}`
-            : styles.qualification__button
-            } onClick={() => toggleTab(1)}>
-
-            Education
-
-          </div>
-
-          <div className={ toggleState === 2 ? 
-          `${styles.qualification__button} ${styles.qualification__active}`
-          : styles.qualification__button
-            } onClick={() => toggleTab(2)}>
-
-            Experiences
-
-          </div>
-
-          <div className={ toggleState === 3 ? 
-          `${styles.qualification__button} ${styles.qualification__active}`
-          : styles.qualification__button
-            } onClick={() => toggleTab(3)}>
-
-            Certifications
-
-          </div>
-
-        </div>
-
+        
         <div className={styles.qualification__sections}>
           {/* Education Section */}
           <div className={ toggleState === 1
@@ -96,12 +67,9 @@ const Experiences = () => {
           </div>
 
           {/* Experience Section */}
-          <div className={ toggleState === 2
-                ? `${styles.qualification__content} ${styles.qualification__content_active}`
-                : styles.qualification__content
-            }>
+          <div className={styles.qualification__content}>
             {/* Repeat Experience Entries */}
-            <div className={styles.qualification__data}>
+            <div className={styles.qualification}>
               <Work/>
             </div>
           </div>

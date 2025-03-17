@@ -93,9 +93,7 @@
     grid-template-columns: 0.5fr;
     justify-content: center;
 }
-.qualification__content {
-    display: none;
-}
+
 .qualification__content_active {
     display: block;
 }
@@ -148,113 +146,213 @@
 }
 
 /* WORK EXPERIENCE SECTION */
+/* Work Experience Container */
 .work__container {
     max-width: 1280px;
-    width: 100%;  /* Ensures the container can resize fluidly */
-    display: flex;  /* Ensures the flex items don't wrap when resizing */
-    justify-content: center; 
-    gap: 50px;
-    padding:0 10px;
-}
-.work__tabs {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    text-wrap: nowrap;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.315);
-    padding: 20px;
-}
-.work__sections {
+    width: 100%;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
+}
 
+/* Work Sections */
+.work__sections {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
 }
-.work__content {
-    display: none;
+
+/* Each Column */
+.work__column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-.work__content_active {
-    display: block;
+
+/* Work Data Layout */
+.work__data {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 1.5rem;
+    align-items: flex-start;
+    position: relative;
 }
-.work__title{
-    font-weight: 700;;
-    font-size: 1.25rem;
-    color: #424242
+
+/* Timeline (Left Side) */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-.work__subtitle{
-    font-weight: 500;
-    color: #5e5e5e;
-    margin-bottom: 100px;
+
+/* Company Logo */
+.work__logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
-.work__tab_text{
-    font-size: 20px;
-    font-weight: 500;
-}
-.work__data_tab {
-    display: flex;                    /* Align horizontally */
-    align-items: flex-start;          /* Align items at the top */
-    gap: 1rem;                        /* Space between rounder and text */
-    position: relative;               /* For positioning reference */   
-}
-.work__button {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    color: #838383;
-    margin: 0 var(--mb-1);
-    cursor: pointer;
-}
-.work__button:hover {
-    color: var(--title-color-dark);
-}
-.work__active {
-    color: var(--title-color-dark);
-}
-.work__rounder {
-    display: inline-block;
+
+/* Rounder Dot */
+.qualification__rounder {
     width: 13px;
     height: 13px;
     background-color: #838383;
     border-radius: 50%;
-    transition: background-color 0.3s ease; /* Smooth transition on color change */
+    position: relative;
+    z-index: 1;
 }
-.activeRounder{
-    background-color:#342F2F;
+
+/* Timeline Line */
+.qualification__line {
+    width: 2px;
+    height: 100%;
+    background-color: #838383;
+    flex-grow: 1;
+    transform: translateY(-5px);
 }
-.work__line {
+
+/* Work Content (Right Side) */
+.workExperience {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: "";
     position: absolute;
-    top: 13px;                        /* Start below the rounder */
-    width: 1px;
-    height: 100%;                     /* Full height for testing */
-    background-color: #838383;  
-}
-.work__tab_rounder{
-    display: flex;                   /* Keep rounder and line stacked vertically */
-    flex-direction: column;
-    align-items: center;             /* Center the rounder horizontally */
-    position: relative; 
-    min-height: 20px;       
-}
-.work__list {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #3b82f6;
+  }
+  
+  .experienceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .column {
     display: flex;
-    flex-wrap: wrap;  /* Allow wrapping but control it better */
-    gap: 10px;  /* Adjust space between list items */
-    color: #4A4A4A;
-    font-weight: 500;;
-    font-size: clamp(0.5rem, 3vw, 1.25rem);
-    margin-top: 25px;
-    font-family: 'inter', sans-serif;
-}
-.work__list li {
-    flex: 1 1 auto;  /* Allow items to grow/shrink but prevent overflow */
-    min-width: 600px;  /* Set a minimum width for the items */
-    position: relative; /* For positioning the custom bullet */
-    /* Space for the custom bullet inside the list item */
-}
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .experienceItem {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+  }
+  
+  .logoContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    border: 2px solid #e5e7eb;
+  }
+  
+  .logoImage {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .connectingLine {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 3rem - 70px);
+    background-color: #424242;
+    z-index: 1;
+  }
+  
+  .content {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+  }
+  
+  .company {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+  
+  .position {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .duration {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.75rem;
+  }
+  
+  .description li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .experienceContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .workExperience {
+      padding: 3rem 1rem;
+    }
+  
+    .sectionTitle {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  
 
-
-.highlights{
-    color:#000000;
-}
 /* CERTIFICATION EXPERINCE SECTION */
 .certifications__cards{
     max-width: 996px;
