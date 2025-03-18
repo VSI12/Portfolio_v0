@@ -50,6 +50,11 @@
     font-size: 25px;
     font-weight: 600;
     color: #424242;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .experiences{
     padding-bottom: 30px;
@@ -59,27 +64,6 @@
     font-family: 'inter', sans-serif;
     color: #424242;
     line-height: 1.5;
-}
-.qualification__tabs {
-    display: flex;
-    margin: 0 auto;
-    max-width: 850px;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    font-size: 20px;
-    font-weight: 500;
-    text-wrap: wrap;
-}
-.qualification__button {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    color: #838383;
-    cursor: pointer;
-    flex-shrink: 0; 
-    min-width: 100px;
-}
-.qualification__button:hover {
-    color: var(--title-color-dark);
 }
 
 .qualification__icon {
@@ -92,17 +76,15 @@
     height: 16px;
     font-size: 16px;
 }
-.qualification__active {
-    color: var(--title-color-dark);
-}
+
 .qualification__sections {
     display: grid;
     grid-template-columns: 0.5fr;
     justify-content: center;
 }
 
-.qualification__content_active {
-    display: block;
+.qualification__content{
+    padding-bottom: 50px;
 }
 .qualification__data {
     display: grid;
@@ -130,6 +112,11 @@
     color: #5e5e5e;
     margin-bottom:10px;
 }
+.qualification__subtitle__honour{
+    display: inline-block;
+    color: #d88c00;
+    margin-bottom:10px;
+}
 
 .qualification__calendar {
     font-size: var(--smaller-font-size);
@@ -153,7 +140,6 @@
 }
 
 /* WORK EXPERIENCE SECTION */
-/* Work Experience Container */
 .work__container {
     max-width: 1280px;
     width: 100%;

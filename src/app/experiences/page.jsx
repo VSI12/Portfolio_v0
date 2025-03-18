@@ -1,11 +1,13 @@
 "use client"; // Add this if using Next.js 13+ with App Router
 import styles from "./experiences.module.css";
 import Certifications from "./Certifications";
+
 import Work from "./Work";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays,faGraduationCap, faBriefcase, faCertificate} from '@fortawesome/free-solid-svg-icons'
+import Education from "./Education";
 
 const Experiences = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -29,47 +31,19 @@ const Experiences = () => {
         
         <div className={styles.qualification__sections}>
           {/* Education Section */}
-          <div className={ toggleState === 1
-                ? `${styles.qualification__content} ${styles.qualification__content_active}`
-                : styles.qualification__content
-            }>
-
-            <div className={styles.qualification__data}>
-              <div>
-                <h3 className={styles.qualification__title}>Afe Babalola University, Ado-Ekiti</h3>
-                <span className={styles.qualification__subtitle}>B.Eng. Computer Engineering</span>
-                <span className={styles.qualification__subtitle}>(First Class Honours)</span>
-                <div className={styles.qualification__calendar}>
-                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
-                  2019 - 2024
-                </div>
+          <div className={  styles.qualification__content}>
+            <div className={styles.content__title}>
+              <FontAwesomeIcon icon={faGraduationCap} className={styles.qualification__icon} />
+                Education
               </div>
-              <div>
-                <span className={styles.qualification__rounder}></span>
-                <span className={styles. qualification__line}></span>
-              </div>
-            </div>
-
-            <div className={styles.qualification__data}>
-              <div>
-                <h3 className={styles.qualification__title}>Premiere Academy, Lugbe, Abuja</h3>
-                <span className={styles.qualification__subtitle}>Senior School Certificate</span>
-                <div className={styles.qualification__calendar}>
-                <FontAwesomeIcon icon={faCalendarDays} className={styles.qualification__calendar__icon}/>
-                  2013 - 2019
-                </div>
-              </div>
-              <div>
-              <span className={styles.qualification__rounder}></span>
-              <span className={styles. qualification__line}></span>
-              </div>
-            </div>
+            <Education/>
           </div>
 
           {/* Experience Section */}
           <div className={styles.qualification__content}>
             <div className={styles.qualification}>
               <div className={styles.content__title}>
+              <FontAwesomeIcon icon={faBriefcase} className={styles.qualification__icon} />
                 Work Experiences
               </div>
               <Work/>
@@ -80,6 +54,7 @@ const Experiences = () => {
           <div className={styles.qualification__content}>
             <div className={styles.certifications__container}>
               <div className={styles.content__title}>
+              <FontAwesomeIcon icon={faCertificate} className={styles.qualification__icon} />
                 Certifications
               </div>
               <Certifications/>
@@ -87,6 +62,7 @@ const Experiences = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.experiences__footer}>
         Experiences.
       </div>
