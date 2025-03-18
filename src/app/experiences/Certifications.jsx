@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./experiences.module.css";
+import styles from "./certifications.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAws } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";

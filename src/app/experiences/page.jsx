@@ -75,12 +75,11 @@ const Experiences = () => {
           </div>
 
           {/* Certifications Section */}
-          <div className={ toggleState === 3
-                ? `${styles.qualification__content} ${styles.qualification__content_active}`
-                : styles.qualification__content
-            }>
-            {/* Repeat Experience Entries */}
+          <div className={styles.qualification__content}>
             <div className={styles.certifications__container}>
+              <div className={styles.content__title}>
+                Certifications
+              </div>
               <Certifications/>
             </div>
           </div>
