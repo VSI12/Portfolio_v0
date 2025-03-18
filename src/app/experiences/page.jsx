@@ -30,15 +30,6 @@ const Experiences = () => {
         
         
         <div className={styles.qualification__sections}>
-          {/* Education Section */}
-          <div className={  styles.qualification__content}>
-            <div className={styles.content__title}>
-              <FontAwesomeIcon icon={faGraduationCap} className={styles.qualification__icon} />
-                Education
-              </div>
-            <Education/>
-          </div>
-
           {/* Experience Section */}
           <div className={styles.qualification__content}>
             <div className={styles.qualification}>
@@ -60,6 +51,15 @@ const Experiences = () => {
               <Certifications/>
             </div>
           </div>
+          {/* Education Section */}
+          <div className={  styles.qualification__content}>
+            <div className={styles.content__title}>
+              <FontAwesomeIcon icon={faGraduationCap} className={styles.qualification__icon} />
+                Education
+              </div>
+            <Education/>
+          </div>
+
         </div>
       </div>
 
