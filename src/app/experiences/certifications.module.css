@@ -1,0 +1,117 @@
+/* CERTIFICATION EXPERINCE SECTION */
+.certifications__cards{
+    max-width: 996px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 230px;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card .topsection {
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.card .topsection .border {
+    height: 30px;
+    width: 130px;
+    position: relative;
+    transform: skew(-40deg);
+}
+
+.card .topsection .icons {
+    display: flex;
+    justify-content: flex-end;
+}
+.card .topsection .icons .certlogo {
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 7px 0 7px 15px;
+}
+
+
+.card .topsection .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;              /* Takes full width of the parent */
+}
+.card .topsection .imageContainer image {
+    max-width: 100%;          /* Ensures the image is responsive */
+    height: auto;             /* Maintain aspect ratio */
+}
+.certifications__icon{
+    font-size: 24px;    
+    width: 24px;
+    height: 24px;
+    color: #000;
+}
+.card .bottomsection .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card .bottomsection .row .item {
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    color: #424242;
+}
+.card .bottomsection .row .item .bigtext {
+    font-size: 22px;
+    display: block;
+    color:#424242;
+}
+.card .bottomsection .row .item .regulartext {
+    font-size: 12px;
+}
+.card .bottomsection .row .item:nth-child(2) {
+    border-left: 1px solid #42424242;
+}
+
+
+@media screen and (max-width: 1125px) {
+    .certifications__cards{
+        max-width: 996px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        gap: 20px; /* Space between items */
+    }
+    .card {
+        width: 230px;
+        border-radius: 20px;
+        padding: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+
+@media screen and (max-width: 475px) {
+    .topsection{
+        padding-bottom: 30px;
+}
+    .certifications__cards{
+        display: flex;
+        flex-direction: column; /* Two equal-width columns */
+        gap: 20px; /* Space between items */
+    }
+    .card .bottomsection .row {
+        margin-top: 0px;
+    }
+}
+     
+      
