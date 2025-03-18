@@ -68,8 +68,10 @@ const Experiences = () => {
 
           {/* Experience Section */}
           <div className={styles.qualification__content}>
-            {/* Repeat Experience Entries */}
             <div className={styles.qualification}>
+              <div className={styles.content__title}>
+                Work Experiences
+              </div>
               <Work/>
             </div>
           </div>

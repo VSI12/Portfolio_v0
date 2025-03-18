@@ -58,7 +58,6 @@ const Work = () => {
 
   return (
     <section className={styles.workExperience}>
-      <h2 className={styles.sectionTitle}>Work Experience</h2>
       <div className={styles.experienceContainer}>
         <div className={styles.column}>
           {leftExperiences.map((experience, index) => (
