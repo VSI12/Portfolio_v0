@@ -287,7 +287,7 @@
   }
   
   .content {
-    flex: 1;
+    min-width: 350px;
     border-radius: 8px;
     padding: 0.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -465,6 +465,7 @@
     .section__title::after {
           right: 30%;             /* Position the right line */
     }
+  
   }
   
   @media screen and (max-width: 1125px) {
@@ -489,6 +490,10 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+    .content {
+      min-width: 250px;
+      
+    }
   }
       
   
@@ -500,6 +505,9 @@
   }
   .section__title::after {
       right: 15%;             /* Position the right line */
+  }
+  .content {
+    min-width: 200px;
   }
     }
   
@@ -531,6 +539,9 @@
     }
     .work__list li {
        min-width: 400px;  /* Set a minimum width for the items */
+    }
+    .content {
+      min-width: 175px;
     }
 }
 @media screen and (max-width: 576px) {

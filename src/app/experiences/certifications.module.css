@@ -1,13 +1,16 @@
 /* CERTIFICATION EXPERINCE SECTION */
-.certifications__cards{
+.certifications__cards {
     max-width: 996px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    gap: 50px; /* Adjust spacing */
     margin: 0 auto;
 }
-
+.certification {
+    width: calc(33.33% - 50px); /* Ensures three per row */
+    min-width: 250px; /* Prevents cards from shrinking too much */
+}
 .card {
     width: 230px;
     border-radius: 20px;

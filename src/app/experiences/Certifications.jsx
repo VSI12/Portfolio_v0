@@ -6,9 +6,14 @@ import Image from "next/image";
 
 const certs = [
   {
-    title: "AWS Certified Cloud Practitioner",
-    image: "/AWS CCP.png",
-    link: "https://www.credly.com/badges/c9003c46-d666-457d-9d44-b6cd1dec3653/",
+    title: "AWS Certified DevOps Engineer – Professional",
+    image: "/AWS DOP.png",
+    link: "https://www.credly.com/badges/58e17714-f9d1-4d11-b056-a88996a8fcfd/public_url",
+  },
+  {
+    title: "AWS Certified Developer – Associate",
+    image: "/AWS DVA.png",
+    link: "https://www.credly.com/badges/a8f7cc24-1740-47da-816b-a3a28115207f",
   },
   {
     title: "AWS Certified Solutions Architect – Associate",
@@ -16,9 +21,9 @@ const certs = [
     link: "https://www.credly.com/badges/bc27d052-e7de-4c91-9568-9321f5e137c6/",
   },
   {
-    title: "AWS Certified Developer – Associate",
-    image: "/AWS DVA.png",
-    link: "https://www.credly.com/badges/a8f7cc24-1740-47da-816b-a3a28115207f",
+    title: "AWS Certified Cloud Practitioner",
+    image: "/AWS CCP.png",
+    link: "https://www.credly.com/badges/c9003c46-d666-457d-9d44-b6cd1dec3653/",
   },
 ];
 
