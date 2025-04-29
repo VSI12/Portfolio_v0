@@ -4,6 +4,26 @@ import styles from './projects.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const projects = [
+    {
+      title: 'Intrusion Detection System',
+      description: 'Flask web app with Docker for analyzing NSL-KDD format network data.',
+      image: '/IDS-Architecture.png',
+      category: 'aws',
+      link: '/projects/intrusion-detection-system',
+      tech: ['aws', 'terraform', 'docker']
+    },
+    {
+      title: 'CI/CD Monitoring Dashboard',
+      description: 'Monitoring pipelines with Prometheus, Grafana, and GitHub Actions.',
+      image: '/cicd-monitoring.png',
+      category: 'ci-cd',
+      link: '/projects/ci-cd-monitoring-dashboard',
+      tech: ['github', 'grafana', 'prometheus']
+    }
+  ]
+  
+const categories = ['All', 'CI/CD', 'Monitoring', 'AWS', 'Terraform', 'Docker']
 const Projects = () => {
   return (
     <section className={styles.section} id="projects">
