@@ -9,21 +9,31 @@ const certs = [
     title: "AWS Certified DevOps Engineer – Professional",
     image: "/AWS DOP.png",
     link: "https://www.credly.com/badges/58e17714-f9d1-4d11-b056-a88996a8fcfd/public_url",
+    icon: "/AWS.svg",
+  },
+  {
+    title: "Hashicorp Certified Terraform Associate",
+    image: "/HCTA 003.png",
+    link: "lhttps://www.credly.com/badges/e45abcbe-b410-4f85-8fc0-eec05019d17b/public_url",
+    icon: "/HCP.svg",
   },
   {
     title: "AWS Certified Developer – Associate",
     image: "/AWS DVA.png",
     link: "https://www.credly.com/badges/a8f7cc24-1740-47da-816b-a3a28115207f",
+    icon: "/AWS.svg",
   },
   {
     title: "AWS Certified Solutions Architect – Associate",
     image: "/AWS SAA.png",
     link: "https://www.credly.com/badges/bc27d052-e7de-4c91-9568-9321f5e137c6/",
+    icon: "/AWS.svg",
   },
   {
     title: "AWS Certified Cloud Practitioner",
     image: "/AWS CCP.png",
     link: "https://www.credly.com/badges/c9003c46-d666-457d-9d44-b6cd1dec3653/",
+    icon: "/AWS.svg",
   },
 ];
 
@@ -34,7 +44,7 @@ const CertificationCard = ({ cert }) => (
         <div className={styles.topsection}>
           <div className={styles.border}></div>
           <div className={styles.icons}>
-            <FontAwesomeIcon icon={faAws} className={styles.certifications__icon} />
+            <Image src={cert.icon} alt={cert.title} width={170} height={170} className={styles.certifications__icon} />
           </div>
           <div className={styles.imageContainer}>
             <Image src={cert.image} alt={cert.title} width={170} height={170} className={styles.certifications__img} />
