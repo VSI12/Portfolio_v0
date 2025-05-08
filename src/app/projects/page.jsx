@@ -1,86 +1,113 @@
-'use client'
-import React, { useState } from 'react'
-import styles from './projects.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client"
+import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import styles from "./projects.module.css"
 
 const projects = [
-    {
-      title: 'Intrusion Detection System',
-      description: 'Flask web app with Docker for analyzing NSL-KDD format network data.',
-      image: '/IDS-Architecture.png',
-      categories: ['AWS', 'Terraform', 'Docker'],
-      subcategories: ['ECS'],
-      link: '/projects/intrusion-detection-system',
-      tech: ['AWS', 'Terraform', 'Docker']
-    },
-    {
-      title: 'GitHub Actions CI/CD Pipeline to ECR',
-      description: 'A github actions CI/CD pipeline to build and push Docker images to Amazon ECR.',
-      image: '/IDS-Architecture.png',
-      categories: ['AWS', 'Terraform', 'Docker'],
-      link: '/projects/intrusion-detection-system',
-      tech: ['AWS', 'Terraform', 'Docker', 'Github Actions']
-    },
+  {
+    title: "Intrusion Detection System",
+    description: "Flask web app with Docker for analyzing NSL-KDD format network data.",
+    image: "/IDS-Architecture.png",
+    categories: ["AWS"],
+    subcategories: ["ECS"],
+    link: "/projects/intrusion-detection-system",
+    tech: ["AWS", "Terraform", "Docker"],
+  },
+  {
+    title: "GitHub Actions CI/CD Pipeline to ECR",
+    description: "CI/CD pipeline using GitHub Actions to push Docker images to Amazon ECR.",
+    image: "/IDS-Architecture.png",
+    categories: ["CI/CD"],
+    subcategories: ["ECR"],
+    link: "/projects/github-actions-ecr-pipeline",
+    tech: ["GitHub Actions", "Docker", "ECR"],
+  },
+]
 
-  ]
-  
-const categories = ['All', 'Originals' ,'AWS', 'CI/CD', 'Monitoring', 'Terraform', 'Data Engineering', 'Linux']
+const categories = ["All", "AWS", "CI/CD", "Monitoring", "Terraform", "Data Engineering", "Linux"]
 
 const subcategoryMap = {
-  AWS: ['ECS', 'EC2'],
-  'CI/CD': ['GitHub Actions', 'CodePipeline', 'Jenkins'],
+  AWS: ["ECS", "S3", "Lambda"],
+  "CI/CD": ["GitHub Actions", "CodePipeline", "Jenkins"],
+  Terraform: ["Modules", "Remote State"],
+  "Data Engineering": ["ETL", "Airflow", "Glue"],
 }
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedSubcategory, setSelectedSubcategory] = useState(null)
 
+  const filteredProjects = projects.filter((project) => {
+    const matchCategory = selectedCategory === "All" || project.categories?.includes(selectedCategory)
+    const matchSubcategory = !selectedSubcategory || project.subcategories?.includes(selectedSubcategory)
+    return matchCategory && matchSubcategory
+  })
 
-  const filteredProjects = projects.filter(project => {
-      const matchCategory =
-        selectedCategory === 'All' || project.categories?.includes(selectedCategory)
-      const matchSubcategory =
-        !selectedSubcategory || project.subcategories?.includes(selectedSubcategory)
-      return matchCategory && matchSubcategory
-    })
+  return (
+    <section className={styles.section} id="projects">
+      <h2 className={styles.section__title}>Projects</h2>
+      <span className={styles.section__subtitle}>Featured builds</span>
+      <div className={styles.projects_description}>
+        I've worked on a range of projects focused on cloud infrastructure, automation, and CI/CD pipelines. These
+        projects reflect my continuous learning and growth in these areas.
+      </div>
 
-    return (
-      <section className={styles.section} id="projects">
-        <h2 className={styles.section__title}>Projects</h2>
-        <span className={styles.section__subtitle}>Featured builds</span>
-        <div className={styles.projects_description}>
-          I've worked on a range of projects focused on cloud infrastructure,
-           automation, and CI/CD pipelines. These projects reflect my continuous 
-           learning and growth in these areas. Below are some of the key projects I’ve developed and deployed.
-        </div>
-        <div className={styles.category__bar}>
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`${styles.category__item} ${selectedCategory === category ? styles.active : ''}`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-  
-        <div className={`${styles.projects__container} ${styles.grid}`}>
+      <div className={styles.category__bar}>
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => {
+              setSelectedCategory(category)
+              setSelectedSubcategory(null)
+            }}
+            className={`${styles.category__item} ${selectedCategory === category ? styles.active : ""}`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className={styles.projects__container}>
+        <div className={styles.content__wrapper}>
+          {selectedCategory !== "All" && subcategoryMap[selectedCategory] && (
+            <div className={styles.subcategory__sidebar}>
+              <h4 className={styles.subcategory__title}>Filter by</h4>
+              <ul className={styles.subcategory__list}>
+                <li
+                  onClick={() => setSelectedSubcategory(null)}
+                  className={`${styles.subcategory__item} ${selectedSubcategory === null ? styles.active : ""}`}
+                >
+                  All
+                </li>
+                {subcategoryMap[selectedCategory].map((sub) => (
+                  <li
+                    key={sub}
+                    onClick={() => setSelectedSubcategory(sub)}
+                    className={`${styles.subcategory__item} ${selectedSubcategory === sub ? styles.active : ""}`}
+                  >
+                    {sub}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className={styles.projects}>
-            {filteredProjects.map(project => (
+            {filteredProjects.map((project) => (
               <div key={project.title} className={styles.features__cards}>
                 <div className={styles.features__image}>
-                  <Image src={project.image} alt={project.title} width={300} height={5} />
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} width={300} height={200} />
                 </div>
                 <Link href={project.link}>
                   <div className={styles.features__content}>
                     <h2 className={styles.features__title}>{project.title}</h2>
                     <p className={styles.features__des}>{project.description}</p>
                     <div className={styles.features__techstack}>
-        
-                      {project.tech.map(tech => (
-                        <span key={tech} className={styles.techBadge}>{tech}</span>
+                      {project.tech.map((tech) => (
+                        <span key={tech} className={styles.techBadge}>
+                          {tech}
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -89,12 +116,11 @@ const Projects = () => {
             ))}
           </div>
         </div>
-  
-        <div className={styles.experiences__footer}>
-          Projects.
-        </div>
-      </section>
-    )
-  }
+      </div>
+
+      <div className={styles.experiences__footer}>Projects.</div>
+    </section>
+  )
+}
 
 export default Projects
