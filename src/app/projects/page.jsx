@@ -34,11 +34,16 @@ const subcategoryMap = {
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null)
 
-  const filteredProjects = selectedCategory === 'All'
-    ? projects
-    : projects.filter(project => project.categories?.includes(selectedCategory))
 
+  const filteredProjects = projects.filter(project => {
+      const matchCategory =
+        selectedCategory === 'All' || project.categories?.includes(selectedCategory)
+      const matchSubcategory =
+        !selectedSubcategory || project.subcategories?.includes(selectedSubcategory)
+      return matchCategory && matchSubcategory
+    })
 
     return (
       <section className={styles.section} id="projects">
