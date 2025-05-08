@@ -16,33 +16,6 @@ const projects = [
     tech_icons: ["/icons/AWS.svg", "/icons/Docker.svg", "/icons/terraform.svg"]
 
   },
-  {
-    title: "GitHub Actions CI/CD Pipeline to ECR",
-    description: "CI/CD pipeline using GitHub Actions to push Docker images to Amazon ECR.",
-    image: "/IDS-Architecture.png",
-    categories: ["AWS"],
-    subcategories: ["ECR"],
-    link: "/projects/github-actions-ecr-pipeline",
-    tech: ["GitHub Actions", "Docker", "ECR"],
-  },
-  {
-    title: "GitHub Actions CI/CD Pipeline to ECR",
-    description: "CI/CD pipeline using GitHub Actions to push Docker images to Amazon ECR.",
-    image: "/IDS-Architecture.png",
-    categories: ["AWS"],
-    subcategories: ["S3"],
-    link: "/projects/github-actions-ecr-pipeline",
-    tech: ["GitHub Actions", "Docker", "ECR"],
-  },
-  {
-    title: "GitHub Actions CI/CD Pipeline to ECR",
-    description: "CI/CD pipeline using GitHub Actions to push Docker images to Amazon ECR.",
-    image: "/IDS-Architecture.png",
-    categories: ["AWS"],
-    subcategories: ["lambda"],
-    link: "/projects/github-actions-ecr-pipeline",
-    tech: ["GitHub Actions", "Docker", "ECR"],
-  },
 ]
 
 const categories = ["All", "AWS", "CI/CD", "Monitoring", "Terraform", "Data Engineering", "Linux"]
