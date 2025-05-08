@@ -13,6 +13,8 @@ const projects = [
     subcategories: ["ECS"],
     link: "/projects/intrusion-detection-system",
     tech: ["AWS", "Terraform", "Docker"],
+    tech_icons: ["/icons/AWS.svg", "/icons/terraform.svg", "/icons/Docker.svg"]
+
   },
   {
     title: "GitHub Actions CI/CD Pipeline to ECR",
