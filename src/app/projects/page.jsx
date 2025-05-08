@@ -15,13 +15,14 @@ const projects = [
     tech: ["AWS", "Docker", "Terraform"],
     tech_icons: ["/icons/AWS.svg", "/icons/Docker.svg", "/icons/terraform.svg"]
 
-  },
+  }
 ]
 
-const categories = ["All", "AWS", "CI/CD", "Monitoring", "Terraform", "Data Engineering", "Linux"]
+// const categories = ["All", "AWS", "CI/CD", "Monitoring", "Terraform", "Data Engineering", "Linux"]
+const categories = ["All", "AWS"]
 
 const subcategoryMap = {
-  AWS: ["ECS", "S3", "Lambda"],
+  AWS: ["ECS"],
   "CI/CD": ["GitHub Actions", "CodePipeline", "Jenkins"],
   Terraform: ["Modules", "Remote State"],
   "Data Engineering": ["ETL", "Airflow", "Glue"],
