@@ -90,7 +90,6 @@ const Projects = () => {
         <div className={styles.content__wrapper}>
           {selectedCategory !== "All" && subcategoryMap[selectedCategory] && (
             <div className={styles.subcategory__sidebar}>
-              <h4 className={styles.subcategory__title}>Filter by</h4>
               <ul className={styles.subcategory__list}>
                 <li
                   onClick={() => setSelectedSubcategory(null)}
@@ -115,7 +114,7 @@ const Projects = () => {
             {filteredProjects.map((project) => (
               <div key={project.title} className={styles.features__cards}>
                 <div className={styles.features__image}>
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} width={300} height={200} />
+                  <Image src={project.image} alt={project.title} width={300} height={200} />
                 </div>
                 <Link href={project.link}>
                   <div className={styles.features__content}>
