@@ -12,8 +12,8 @@ const projects = [
     categories: ["AWS"],
     subcategories: ["ECS"],
     link: "/projects/intrusion-detection-system",
-    tech: ["AWS", "Terraform", "Docker"],
-    tech_icons: ["/icons/AWS.svg", "/icons/terraform.svg", "/icons/Docker.svg"]
+    tech: ["AWS", "Docker", "Terraform"],
+    tech_icons: ["/icons/AWS.svg", "/icons/Docker.svg", "/icons/terraform.svg"]
 
   },
   {
@@ -123,11 +123,20 @@ const Projects = () => {
                     <h2 className={styles.features__title}>{project.title}</h2>
                     <p className={styles.features__des}>{project.description}</p>
                     <div className={styles.features__techstack}>
-                      {project.tech.map((tech) => (
-                        <span key={tech} className={styles.techBadge}>
-                          {tech}
-                        </span>
-                      ))}
+                    {project.tech.map((tech, index) => (
+                      <div key={tech} className={styles.tech}>
+                        <div className={styles.tech__icon}>
+                          <img
+                            src={project.tech_icons?.[index] }
+                            alt={tech}
+                            width={30}
+                            height={30}
+                          />
+                        </div>
+                        <div className={styles.tech__line}></div>
+                        <h3 className={styles.tech__title}>{tech}</h3>
+                      </div>
+                    ))}
                     </div>
                   </div>
                 </Link>
