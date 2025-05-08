@@ -39,7 +39,6 @@
   max-width: 996px;
   margin: 0 auto;
   padding: 0 2rem;
-  padding-top: 30px;
 }
 
 .content__wrapper {
@@ -73,7 +72,7 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 2rem;
 }
 
 .projects__title {
@@ -314,6 +313,9 @@
 @media screen and (max-width: 576px) {
   .projects {
     grid-template-columns: 1fr;
+  }
+  .features__image{
+    display: none;
   }
 }
 
