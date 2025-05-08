@@ -10,20 +10,28 @@ const projects = [
       description: 'Flask web app with Docker for analyzing NSL-KDD format network data.',
       image: '/IDS-Architecture.png',
       categories: ['AWS', 'Terraform', 'Docker'],
+      subcategories: ['ECS'],
       link: '/projects/intrusion-detection-system',
-      tech: ['aws', 'terraform', 'docker']
+      tech: ['AWS', 'Terraform', 'Docker']
     },
     {
-      title: 'CI/CD Monitoring Dashboard',
-      description: 'Monitoring pipelines with Prometheus, Grafana, and GitHub Actions.',
-      image: '/cicd-monitoring.png',
-      category: ['AWS', 'Terraform', 'Docker'],
-      link: '/projects/ci-cd-monitoring-dashboard',
-      tech: ['github', 'grafana', 'prometheus']
-    }
+      title: 'GitHub Actions CI/CD Pipeline to ECR',
+      description: 'A github actions CI/CD pipeline to build and push Docker images to Amazon ECR.',
+      image: '/IDS-Architecture.png',
+      categories: ['AWS', 'Terraform', 'Docker'],
+      link: '/projects/intrusion-detection-system',
+      tech: ['AWS', 'Terraform', 'Docker', 'Github Actions']
+    },
+
   ]
   
-const categories = ['All', 'AWS', 'CI/CD', 'Monitoring', 'Terraform', 'Data Engineering', 'Linux']
+const categories = ['All', 'Originals' ,'AWS', 'CI/CD', 'Monitoring', 'Terraform', 'Data Engineering', 'Linux']
+
+const subcategoryMap = {
+  AWS: ['ECS', 'EC2'],
+  'CI/CD': ['GitHub Actions', 'CodePipeline', 'Jenkins'],
+}
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
 
@@ -58,7 +66,7 @@ const Projects = () => {
             {filteredProjects.map(project => (
               <div key={project.title} className={styles.features__cards}>
                 <div className={styles.features__image}>
-                  <Image src={project.image} alt={project.title} width={350} height={200} />
+                  <Image src={project.image} alt={project.title} width={300} height={5} />
                 </div>
                 <Link href={project.link}>
                   <div className={styles.features__content}>
