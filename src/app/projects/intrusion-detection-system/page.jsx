@@ -113,9 +113,14 @@ const IDS = () => {
             <div className={styles.title}>
               Project Overview
             </div>
-          A scalable, efficient system for classifying network traffic as "normal" or
-          "malicious" using machine learning, with a user-friendly interface  for data upload, 
-          analysis, and visualization.
+            <div className={styles.project_des}>
+              This system classifies network traffic as "normal" or "malicious" using a
+              machine learning model trained on the NSL-KDD dataset. The application, built 
+              with Flask, allows users to upload data and visualize results. <br /><br />
+              Terraform is used to provision AWS resources, including ECS Fargate for containerized deployment. 
+              The CI/CD pipeline, implemented with GitHub Actions, automates testing, image scanning, 
+              and deployment across Dev, Staging, and Production environments.
+             </div>
           </div>
 
           <div className={styles.projects__properties}>

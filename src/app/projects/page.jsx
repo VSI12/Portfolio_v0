@@ -15,16 +15,28 @@ const projects = [
     tech: ["AWS", "Docker", "Terraform"],
     tech_icons: ["/icons/AWS.svg", "/icons/Docker.svg", "/icons/terraform.svg"]
 
+  },
+  {
+    title: "EC2 Instance configuration with Terraform and Ansible",
+    description: "Provisioning EC2 instances with Terraform and configuring them with Ansible.",
+    image: "/IDS-Architecture.png",
+    categories: ["AWS", "Terraform", "Aut"],
+    subcategories: ["EC2"],
+    link: "/projects",
+    tech: ["AWS", "Ansible", "Terraform", "Bash"],
+    tech_icons: ["/icons/AWS.svg", "/icons/Ansible.svg", "/icons/terraform.svg", "/icons/Bash.svg"]
+
   }
+
 ]
 
 // const categories = ["All", "AWS", "CI/CD", "Monitoring", "Terraform", "Data Engineering", "Linux"]
-const categories = ["All", "AWS"]
+const categories = ["All", "AWS", "Terraform"]
 
 const subcategoryMap = {
-  AWS: ["ECS"],
+  AWS: ["ECS","EC2"],
   "CI/CD": ["GitHub Actions", "CodePipeline", "Jenkins"],
-  Terraform: ["Modules", "Remote State"],
+  Terraform: ["EC2"],
   "Data Engineering": ["ETL", "Airflow", "Glue"],
 }
 
@@ -89,10 +101,11 @@ const Projects = () => {
           <div className={styles.projects}>
             {filteredProjects.map((project) => (
               <div key={project.title} className={styles.features__cards}>
-                <div className={styles.features__image}>
-                  <Image src={project.image} alt={project.title} width={300} height={200} />
-                </div>
                 <Link href={project.link}>
+                  <div className={styles.features__image}>
+                    <Image src={project.image} alt={project.title} width={300} height={200} />
+                  </div>
+                
                   <div className={styles.features__content}>
                     <h2 className={styles.features__title}>{project.title}</h2>
                     <p className={styles.features__des}>{project.description}</p>
@@ -113,8 +126,9 @@ const Projects = () => {
                     ))}
                     </div>
                   </div>
-                </Link>
-              </div>
+                  </Link>
+                </div>
+              
             ))}
           </div>
         </div>
