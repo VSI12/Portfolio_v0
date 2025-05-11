@@ -19,10 +19,10 @@ const projects = [
   {
     title: "EC2 Instance configuration with Terraform and Ansible",
     description: "Provisioning EC2 instances with Terraform and configuring them with Ansible.",
-    image: "/IDS-Architecture.png",
+    image: "/ec2.png",
     categories: ["AWS", "Terraform", "Aut"],
     subcategories: ["EC2"],
-    link: "/projects",
+    link: "/projects/ec2-instance-configuration-with-terraform-and-ansible",
     tech: ["AWS", "Ansible", "Terraform", "Bash"],
     tech_icons: ["/icons/AWS.svg", "/icons/Ansible.svg", "/icons/terraform.svg", "/icons/Bash.svg"]
 
