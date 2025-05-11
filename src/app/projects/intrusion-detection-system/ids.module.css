@@ -153,6 +153,10 @@
     font-size: 18px;
     font-family: "inter", sans-serif;
   }
+  .bold{
+    font-weight: 650;
+    color: #414141
+  }
 
   @media screen and (max-width: 1172px) {
     .architecture{
