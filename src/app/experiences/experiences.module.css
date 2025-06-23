@@ -275,16 +275,7 @@
     object-fit: cover;
   }
   
-  .connectingLine {
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: calc(100% + 3rem - 70px);
-    background-color: #a7a6a6;
-    z-index: 1;
-  }
+  
   
   .content {
     min-width: 350px;
@@ -316,13 +307,14 @@
   
   .description {
     list-style-type: disc;
-    padding-left: 1.25rem;
-    margin-top: 0.75rem;
+    padding-left: 1rem;
+    font-family: 'inclusive sans', 'sans-serif';
+    font-size: 18px;
   }
   
   .description li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-size: 18px;
     color: #4b5563;
   }
   
