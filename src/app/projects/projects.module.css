@@ -100,7 +100,7 @@
   transform: scale(1.05);
 }
 .features__title {
-  font-size: 24px;
+  font-size: 20px;
   color: #414141;
 }
 .features__image {
@@ -119,9 +119,9 @@
 .features__des {
   color: #4a4a4a;
   font-weight: 550;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
-  font-family: "inter", sans-serif;
+  font-family: "inclusive sans", sans-serif;
 }
 .features__content {
   padding: 20px;
