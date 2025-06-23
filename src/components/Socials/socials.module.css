@@ -23,9 +23,9 @@
     gap: 1rem;
 }
 
-/* Dev.to */
+/* Hashnode (replaces Dev.to) */
 .social a:nth-child(1) .icon:hover {
-  color: #0A0A0A;
+  color: #2962FF; /* Hashnode blue */
 }
 
 /* GitHub */
