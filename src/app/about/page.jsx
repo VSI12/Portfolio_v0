@@ -344,7 +344,7 @@ const About = () => {
                       icon: "/piano.svg" },
 
                     { 
-                      description: "Expressing creativity through intricate sketches and bold strokes.",
+                      description: "Drawing and Painting.",
                       icon: "/art.svg" },
 
                   ].map((skill, index) => (
