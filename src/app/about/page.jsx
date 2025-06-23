@@ -45,7 +45,7 @@ const About = () => {
               <div className={styles.about__links}>
                 <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <div className={styles.icon}>
-                  <Image src="/resume.svg" alt="Resume" width={50} height={50} />
+                  <Image src="/resume.svg" alt="Resume" width={40} height={50} />
                   </div>
                     <h3 className={styles.about__h3}>
                       View my <br />
@@ -54,7 +54,7 @@ const About = () => {
                 </Link>
                 <Link href="/experiences" target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <div className={styles.icon}>
-                  <Image src="/experience.svg" alt="experience" width={50} height={50} />
+                  <Image src="/experience.svg" alt="experience" width={40} height={50} />
                   </div>
                     <h3 className={styles.about__h3}>
                       My <br />
@@ -63,7 +63,7 @@ const About = () => {
                 </Link>
                 <a href="https://victoriliya.hashnode.dev" target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <div className={styles.icon}>
-                  <Image src="/blog.svg" alt="Blog" width={50} height={50} />
+                  <Image src="/blog.svg" alt="Blog" width={40} height={50} />
                   </div>
                     <h3 className={styles.about__h3}>
                       Go to my <br />
