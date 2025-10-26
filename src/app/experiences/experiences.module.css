@@ -418,8 +418,6 @@
   color: rgba(0, 0, 0, 0.05);
   font-size: 140px;
   font-weight: 600;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Mobile responsive styles */
@@ -685,7 +683,7 @@
       }
 }
 
-/* Work Experience Styles - Transparent cards with proper grid layout */
+/* Work Experience Styles - Auto-height cards with current tag */
 .workExperience {
   max-width: 996px;
   margin: 0 auto;
@@ -694,25 +692,42 @@
 
 .workContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns on large screens */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
+  align-items: start; 
 }
 
 .workCard {
-  background: rgba(255, 255, 255, 0.7); /* Transparent background */
-  backdrop-filter: blur(10px); /* Glass effect */
+  background: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(10px); 
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(229, 231, 235, 0.3); /* Semi-transparent border */
+  border: 1px solid rgba(229, 231, 235, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
 }
 
-.workCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.9); /* Slightly more opaque on hover */
+
+.currentTag {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 12px;
+  padding: 4px 12px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  z-index: 10;
+}
+
+.currentTagText {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "inclusive sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .workCardHeader {
@@ -726,7 +741,7 @@
   width: 60px;
   height: 60px;
   border-radius: 12px;
-  background-color: rgba(248, 249, 250, 0.8); /* Semi-transparent background */
+  background-color: rgba(248, 249, 250, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -805,17 +820,16 @@
   position: fixed;
   z-index: -100;
   bottom: 0px;
-  left: 0; /* Changed from center to left */
+  left: 0;
   color: rgba(0, 0, 0, 0.05);
   font-size: 140px;
   font-weight: 600;
-  /* Removed transform: translateX(-50%) */
 }
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .workContainer {
-    grid-template-columns: repeat(2, 1fr); /* Keep two columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
   
@@ -826,7 +840,7 @@
 
 @media screen and (max-width: 768px) {
   .workContainer {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
@@ -836,6 +850,16 @@
   
   .workCard {
     padding: 1.25rem;
+  }
+  
+  .currentTag {
+    top: -6px;
+    right: 10px;
+    padding: 3px 10px;
+  }
+  
+  .currentTagText {
+    font-size: 0.7rem;
   }
   
   .workCardHeader {
@@ -877,6 +901,16 @@
   
   .workCard {
     padding: 1rem;
+  }
+  
+  .currentTag {
+    top: -5px;
+    right: 8px;
+    padding: 2px 8px;
+  }
+  
+  .currentTagText {
+    font-size: 0.65rem;
   }
   
   .workCardHeader {

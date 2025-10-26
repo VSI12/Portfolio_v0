@@ -11,6 +11,7 @@ const experiences = [
       "Configured hotel management systems using Opera, setting up rooms for seamless operations.",
     ],
     logo: "/clhs.svg",
+    isCurrent: true, // Add this flag for current job
   },
   {
     id: 2,
@@ -63,6 +64,11 @@ const Work = () => {
 const ExperienceCard = ({ experience }) => {
   return (
     <div className={styles.workCard}>
+      {experience.isCurrent && (
+        <div className={styles.currentTag}>
+          <span className={styles.currentTagText}>Current</span>
+        </div>
+      )}
       <div className={styles.workCardHeader}>
         <div className={styles.workLogo}>
           <Image
