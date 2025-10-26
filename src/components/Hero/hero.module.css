@@ -34,12 +34,11 @@
     color: #383838;
 }
 .home__description{
+    font-family: 'Inclusive Sans', sans-serif;
     max-width: 796px;
     color: #4A4A4A;
-    font-weight: 500;
-    font-size: 22px;
-    font-family: 'inter' , sans-serif;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.3;
 }
 .home__highlight{
     color: #006CE0;

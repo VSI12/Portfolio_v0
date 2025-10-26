@@ -2,7 +2,7 @@
   padding: 0 2rem;
 }
 .about__container {
-  max-width: 1280px;
+  max-width: 990px;
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -48,12 +48,12 @@
   color: black;
  
   padding: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .about__subtitle{
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
-
+  color: #4A4A4A;
   padding: 0;
   margin: 0;
 }
@@ -95,6 +95,10 @@
 }
 
 .about__philosophy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
   max-width: 500px;
   text-align: center;
@@ -119,16 +123,15 @@
   font-weight: 700;
 }
 .about__links {
-  padding-top: 150px;
+  padding-top: 100px;
   display: flex;
   gap: 20px;
-
 }
 .link {
   flex: 1; /* Makes all divs take equal space */
   min-width: 100px; /* Ensures they don’t shrink too much */
-  max-width: 150px; /* Prevents excessive stretching */
-  height: 150px; /* Fixed height for uniformity */
+  max-width: 125px; /* Prevents excessive stretching */
+  height: 125px; /* Fixed height for uniformity */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,16 +151,15 @@
 
 /* Ensures the icons and text are spaced properly */
 .about__links .icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-bottom: 10px; /* Space between icon and text */
 }
 
 .about__links .about__h3 {
-  font-size: 18px;
-  line-height: 1.4; /* Reduces space between broken lines */
-  font-weight: bold;
-  
+  font-size: 14px;
+  line-height: 1.4; 
+  font-family: 'inclusive sans', sans-serif;
 }
 .about__span{
   font-size: 36px;

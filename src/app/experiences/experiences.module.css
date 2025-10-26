@@ -61,7 +61,7 @@
     font-size: 22px;
     font-weight: 500;
     text-align: center;
-    font-family: 'inter', sans-serif;
+    font-family: 'inclusive sans', sans-serif;
     color: #424242;
     line-height: 1.5;
 }
@@ -210,9 +210,9 @@
 
 /* Work Content (Right Side) */
 .workExperience {
-    padding: 4rem 2rem;
-    max-width: 1200px;
+    max-width: 996px;
     margin: 0 auto;
+    padding: 0 2rem;
   }
   
   .sectionTitle {
@@ -275,54 +275,47 @@
     object-fit: cover;
   }
   
-  .connectingLine {
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: calc(100% + 3rem - 70px);
-    background-color: #a7a6a6;
-    z-index: 1;
-  }
+  
   
   .content {
     min-width: 350px;
     border-radius: 8px;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e5e7eb;;
   }
   
   .company {
-    font-size: 1.25rem;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #111827;
+    color: #1d1d1d;
+    margin: 0 0 0.5rem 0;
   }
   
   .position {
     font-size: 1rem;
     font-weight: 500;
-    color: #3b82f6;
-    margin-bottom: 0.5rem;
+    color: #424242;
+    margin: 0 0 0.5rem 0;
+    
   }
   
   .duration {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #6b7280;
-    margin-bottom: 1rem;
+    margin: 0;
   }
   
   .description {
     list-style-type: disc;
-    padding-left: 1.25rem;
-    margin-top: 0.75rem;
+    padding-left: 1rem;
+    font-family: 'inclusive sans', 'sans-serif';
+    font-size: 18px;
   }
   
   .description li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-size: 18px;
     color: #4b5563;
   }
   
@@ -354,10 +347,114 @@
     font-weight: 600;
   }
     
+.experiences_description {
+  max-width: 996px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "inclusive sans", sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  color: #424242;
+}
 
+.category__bar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+  max-width: fit-content;
+  border-radius: 7.5px;
+  margin: 0 auto;
+  padding: 7.5px;
+  margin-bottom: 2rem;
+}
 
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
+.category__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+  background: transparent;
+  transition: background-color 0.2s ease-in-out;
+  font-family: "inclusive sans", sans-serif;
+  font-weight: 500;
+}
+
+.category__item:hover {
+  background-color: #ddd;
+}
+
+.category__item.active {
+  background-color: #8a8a8a;
+  color: white;
+}
+
+.category__icon {
+  font-size: 1rem;
+}
+
+.content__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.selected__content {
+  width: 100%;
+  max-width: 996px;
+  margin: 0 auto;
+}
+
+.experiences__footer {
+  position: fixed;
+  z-index: -100;
+  bottom: 0px;
+  color: rgba(0, 0, 0, 0.05);
+  font-size: 140px;
+  font-weight: 600;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .category__bar {
+    margin-bottom: 1rem;
+    padding: 5px;
+  }
+  
+  .category__item {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .experiences_description {
+    font-size: 20px;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .category__bar {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .category__item {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .experiences_description {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 992px) {
     .qualification__container {
         margin-left: auto;
@@ -585,5 +682,288 @@
         font-size:80px;
       }
 }
-     
-      
+
+/* Work Experience Styles - Auto-height cards with current tag */
+.workExperience {
+  max-width: 996px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.workContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start; 
+}
+
+.workCard {
+  background: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(10px); 
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(229, 231, 235, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
+}
+
+
+.currentTag {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 12px;
+  padding: 4px 12px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  z-index: 10;
+}
+
+.currentTagText {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "inclusive sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.workCardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.workLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: rgba(248, 249, 250, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(229, 231, 235, 0.5);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.workLogoImage {
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.workCardInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.workCompany {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1d1d1d;
+  margin: 0 0 0.25rem 0;
+  font-family: "inclusive sans", sans-serif;
+  line-height: 1.3;
+}
+
+.workPosition {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #424242;
+  margin: 0 0 0.5rem 0;
+  font-family: "inclusive sans", sans-serif;
+  line-height: 1.2;
+}
+
+.workDuration {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+  font-family: "inclusive sans", sans-serif;
+  font-weight: 500;
+}
+
+.workDescription {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.workDescription li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  font-family: "inclusive sans", sans-serif;
+}
+
+.workDescription li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8a8a8a;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.workDescription li:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer positioning - moved to left */
+.experiences__footer {
+  position: fixed;
+  z-index: -100;
+  bottom: 0px;
+  left: 0;
+  color: rgba(0, 0, 0, 0.05);
+  font-size: 140px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .workContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .workExperience {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .workContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .workExperience {
+    padding: 0 1rem;
+  }
+  
+  .workCard {
+    padding: 1.25rem;
+  }
+  
+  .currentTag {
+    top: -6px;
+    right: 10px;
+    padding: 3px 10px;
+  }
+  
+  .currentTagText {
+    font-size: 0.7rem;
+  }
+  
+  .workCardHeader {
+    gap: 0.75rem;
+  }
+  
+  .workLogo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .workCompany {
+    font-size: 1.1rem;
+  }
+  
+  .workPosition {
+    font-size: 0.95rem;
+  }
+  
+  .workDuration {
+    font-size: 0.85rem;
+  }
+  
+  .workDescription li {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .experiences__footer {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .workContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .workCard {
+    padding: 1rem;
+  }
+  
+  .currentTag {
+    top: -5px;
+    right: 8px;
+    padding: 2px 8px;
+  }
+  
+  .currentTagText {
+    font-size: 0.65rem;
+  }
+  
+  .workCardHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .workLogo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .workCompany {
+    font-size: 1rem;
+  }
+  
+  .workPosition {
+    font-size: 0.9rem;
+  }
+  
+  .workDescription li {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .workExperience {
+    padding: 0 0.5rem;
+  }
+  
+  .workCard {
+    padding: 0.75rem;
+  }
+  
+  .workCompany {
+    font-size: 0.95rem;
+  }
+  
+  .workPosition {
+    font-size: 0.85rem;
+  }
+  
+  .workDescription li {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .experiences__footer {
+    font-size: 80px;
+  }
+}
+
+

@@ -63,7 +63,7 @@
   padding-bottom: 30px;
   font-size: 22px;
   font-weight: 500;
-  font-family: "inter", sans-serif;
+  font-family: "inclusive sans", sans-serif;
   line-height: 1.5;
   text-align: center;
   color: #424242;
@@ -100,7 +100,7 @@
   transform: scale(1.05);
 }
 .features__title {
-  font-size: 24px;
+  font-size: 20px;
   color: #414141;
 }
 .features__image {
@@ -119,9 +119,9 @@
 .features__des {
   color: #4a4a4a;
   font-weight: 550;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
-  font-family: "inter", sans-serif;
+  font-family: "inclusive sans", sans-serif;
 }
 .features__content {
   padding: 20px;
@@ -135,7 +135,7 @@
   gap: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding:0 5px;
+  padding:0 9px;
 }
 .tech__line {
   width: 1px;
@@ -143,7 +143,7 @@
   background-color: #505050; /* Adjust color as needed */
 }
 .tech__title{
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   color: #414141;
   font-family: 'jetbrains mono', monospace;

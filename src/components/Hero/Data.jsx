@@ -17,7 +17,7 @@ const Data = () => {
           I spend my days (and often nights) creating efficient
           CI/CD pipelines, designing and managing resilient
           infrastructure, and ensuring deployments run like 
-          clockwork. Leveraging AWS cloud services,I turn scripts 
+          clockwork. Leveraging AWS cloud services, I turn scripts 
           and cloud technologies into scalable and highly available 
           systems that runs smoothly.
         </p>
