@@ -63,7 +63,7 @@
   padding-bottom: 30px;
   font-size: 22px;
   font-weight: 500;
-  font-family: "inter", sans-serif;
+  font-family: "inclusive sans", sans-serif;
   line-height: 1.5;
   text-align: center;
   color: #424242;
@@ -135,7 +135,7 @@
   gap: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding:0 5px;
+  padding:0 9px;
 }
 .tech__line {
   width: 1px;
