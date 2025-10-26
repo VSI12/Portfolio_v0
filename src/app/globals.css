@@ -1,5 +1,5 @@
 :root {
-  --background: #f8f7f2; /* Changed to your desired color */
+  --background: #f8fafa; /* Changed to your desired color */
   --foreground: #171717;
 
 
@@ -20,7 +20,7 @@
 
 body {
   color: var(--foreground);
-  background-color: #f8f7f2;
+  background-color: #f8fafa;
   font-family: 'jetbrains mono', sans-serif;
   transition: background-color 0.2s ease-in-out;
 }
