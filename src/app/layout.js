@@ -1,24 +1,5 @@
-import { JetBrains_Mono } from 'next/font/google';
-import { Inter } from 'next/font/google';
-import { Inclusive_Sans } from 'next/font/google'; 
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ['latin'],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ['latin'],
-});
-
-const inclusiveSans = Inclusive_Sans({ 
-  variable: "--font-inclusive-sans",
-  subsets: ['latin'],
-  weight: "400", // Add this line
-});
 
 export const metadata = {
   title: "Victor Iliya | DevOps Engineer",
@@ -28,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} ${inter.variable} ${inclusiveSans.variable}` }> {/* Add the variable here */}
+      <body>
         <Navbar/>
         {children}
       </body>

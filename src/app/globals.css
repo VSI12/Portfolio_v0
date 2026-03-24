@@ -1,6 +1,9 @@
 :root {
   --background: #f8fafa; /* Changed to your desired color */
   --foreground: #171717;
+  --font-inter: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", "SFMono-Regular", "Cascadia Code", monospace;
+  --font-inclusive-sans: "Inclusive Sans", "Inter", "Segoe UI", Arial, sans-serif;
 
 
   --section-title-size: 2rem;
@@ -19,9 +22,10 @@
 }
 
 body {
+  margin: 0;
   color: var(--foreground);
   background-color: #f8fafa;
-  font-family: 'jetbrains mono', sans-serif;
+  font-family: var(--font-jetbrains-mono);
   transition: background-color 0.2s ease-in-out;
 }
 
