@@ -7,17 +7,17 @@ import { usePathname } from 'next/navigation'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 import styles from './navbar.module.css'
 
+const navItems = [
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Experiences', href: '/experiences' },
+  { label: 'Contact', href: '/contact' },
+]
+
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
-
-  const navItems = [
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Experiences', href: '/experiences' },
-    { label: 'Contact', href: '/contact' },
-  ]
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
@@ -31,6 +31,10 @@ const Navbar = () => {
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'visible'
   }, [isMenuOpen])
+
+  if (pathname === '/') {
+    return null
+  }
 
   return (
     <nav className={styles.navbar}>
