@@ -14,7 +14,7 @@ const certs = [
   {
     title: "Hashicorp Certified Terraform Associate",
     image: "/HCTA 003.png",
-    link: "lhttps://www.credly.com/badges/e45abcbe-b410-4f85-8fc0-eec05019d17b/public_url",
+    link: "https://www.credly.com/badges/e45abcbe-b410-4f85-8fc0-eec05019d17b/public_url",
     icon: "/HCP.svg",
   },
   {
