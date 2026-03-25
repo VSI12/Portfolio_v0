@@ -6,6 +6,7 @@ import Image from 'next/image';
 import AsciiCanvas from './AsciiCanvas';
 import CustomCursor from './CustomCursor';
 import ScrambleText from './ScrambleText';
+import ViewCounter from '@/components/Hero/Counter';
 import styles from './landing.module.css';
 
 const NAV_LINKS = [
@@ -125,6 +126,9 @@ export default function LandingPage() {
           <p className={styles.heroSubline}>
             Building resilient delivery systems across signal, scale, and uptime.
           </p>
+          <div className={styles.viewCounter}>
+            <ViewCounter />
+          </div>
           <div className={styles.metaRender}>
             <div className={styles.telemetry}>
               <span>RENDER: <span ref={renderRef}>0.0</span>ms</span>

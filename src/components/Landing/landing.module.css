@@ -87,6 +87,20 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+/* ── View counter ── */
+.viewCounter {
+  margin-top: 12px;
+  font-family: var(--landing-font-mono);
+  font-size: 0.7rem;
+  color: var(--landing-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.viewCounter p {
+  margin: 0;
+}
+
 /* ── Canvas zone ── */
 .canvasZone {
   position: relative;
@@ -122,18 +136,17 @@
 
 .heroName {
   margin: 0 0 16px;
-  font-family: var(--landing-font-mono);
+  font-family: var(--landing-font-main);
   font-size: clamp(1.6rem, 2.88vw, 2.88rem);
-  font-weight: 600;
-  font-family: var(--font-inclusive-sans), sans-serif;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  color: #3a3a3a;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #444;
 }
 
 .heroSubline {
   margin: 0;
-  font-family: var(--landing-font-mono);
+  font-family: var(--landing-font-main);
   font-size: 1rem;
   color: var(--landing-secondary);
   max-width: 52ch;
