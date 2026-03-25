@@ -108,10 +108,11 @@ const Contact = () => {
           {status === 'error' && <p className={styles.errorMsg}>Something went wrong. Please try again.</p>}
         </form>
 
-        <div className={styles.socials}>
-          <Socials />
-        </div>
       </section>
+
+      <div className={styles.socials}>
+        <Socials />
+      </div>
 
       <footer className={styles.footerContainer}>
         <span className={styles.footer}>Designed and built by Victor Iliya</span>
