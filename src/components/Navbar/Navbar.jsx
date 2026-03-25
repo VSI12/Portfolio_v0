@@ -32,7 +32,7 @@ const Navbar = () => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'visible'
   }, [isMenuOpen])
 
-  if (pathname === '/' || pathname === '/about') {
+  if (pathname === '/' || pathname === '/about' || pathname === '/projects' || pathname === '/experiences' || pathname === '/contact' || pathname.startsWith('/blog')) {
     return null
   }
 

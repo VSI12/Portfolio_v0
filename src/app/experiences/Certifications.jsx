@@ -44,10 +44,10 @@ const CertificationCard = ({ cert }) => (
         <div className={styles.topsection}>
           <div className={styles.border}></div>
           <div className={styles.icons}>
-            <Image src={cert.icon} alt={cert.title} width={170} height={170} className={styles.certifications__icon} />
+            <Image src={cert.icon} alt={cert.title} width={18} height={18} className={styles.certifications__icon} />
           </div>
           <div className={styles.imageContainer}>
-            <Image src={cert.image} alt={cert.title} width={170} height={170} className={styles.certifications__img} />
+            <Image src={cert.image} alt={cert.title} width={130} height={130} className={styles.certifications__img} />
           </div>
         </div>
         <div className={styles.bottomsection}>
