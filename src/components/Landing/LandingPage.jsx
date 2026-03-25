@@ -3,8 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Menu } from 'lucide-react';
 import AsciiCanvas from './AsciiCanvas';
 import CustomCursor from './CustomCursor';
+import NavigationOverlay from './NavigationOverlay';
 import ScrambleText from './ScrambleText';
 import ViewCounter from '@/components/Hero/Counter';
 import styles from './landing.module.css';
@@ -60,6 +62,7 @@ const SOCIAL_LINKS = [
 ];
 
 export default function LandingPage() {
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const mouseRef = useRef({ x: 0, y: 0 });
   const timestampRef = useRef(null);
   const renderRef = useRef(null);
@@ -99,7 +102,16 @@ export default function LandingPage() {
             </Link>
           ))}
         </nav>
+        <button
+          className={styles.menuBtn}
+          onClick={() => setIsOverlayOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu size={20} />
+        </button>
       </header>
+
+      <NavigationOverlay isOpen={isOverlayOpen} onClose={() => setIsOverlayOpen(false)} />
 
       {/* Canvas zone — ASCII lives on the right half */}
       <section className={styles.canvasZone}>
@@ -124,7 +136,7 @@ export default function LandingPage() {
         {/* Left — subline + telemetry */}
         <div className={styles.footerLeft}>
           <p className={styles.heroSubline}>
-            Building resilient delivery systems across signal, scale, and uptime.
+            Building resilient, highly available, and cost-efficient systems from infrastructure to deployment.
           </p>
           <div className={styles.viewCounter}>
             <ViewCounter />

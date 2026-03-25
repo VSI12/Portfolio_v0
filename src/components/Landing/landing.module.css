@@ -13,6 +13,8 @@
   color: var(--landing-text);
   font-family: var(--landing-font-main);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .page,
@@ -87,6 +89,26 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+.menuBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--landing-secondary);
+  cursor: none;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.menuBtn:hover {
+  color: var(--landing-text);
+  background: rgba(0, 0, 0, 0.05);
+}
+
 /* ── View counter ── */
 .viewCounter {
   margin-top: 12px;
@@ -154,6 +176,7 @@
 
 /* ── Footer ── */
 .footer {
+  margin-top: auto;
   height: 30vh;
   min-height: 140px;
   padding: var(--landing-pad);
@@ -357,6 +380,19 @@
 
   .topNav {
     display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .footerRight {
+    display: none;
+  }
+
+  .footer {
+    height: 30vh;
+    min-height: 140px;
   }
 }
 
