@@ -1,0 +1,64 @@
+---
+title: "Cutting AWS Costs with S3 VPC Gateway Endpoints"
+date: "2026-03-01"
+excerpt: "How I identified S3-bound traffic routing through NAT gateways and eliminated unnecessary data transfer costs with a simple endpoint."
+tags: ["AWS", "Cost Optimisation", "Networking"]
+---
+
+## The Problem
+
+While auditing our AWS spend at SpendNetwork, I noticed a recurring pattern in the cost explorer — NAT gateway data processing charges were higher than expected, and they were climbing steadily with our data pipeline workloads.
+
+The root cause: our private subnets were routing S3 traffic through the NAT gateway. Every `s3:GetObject` and `s3:PutObject` call from an ECS task was going:
+
+```
+ECS Task → NAT Gateway → Internet → S3
+```
+
+At scale, this adds up fast. NAT gateway data processing is charged at **$0.045 per GB** in addition to the data transfer costs.
+
+## Why It Happens
+
+When you launch resources in a private subnet, all outbound internet traffic routes through a NAT gateway by default — including calls to AWS services like S3. S3 has public endpoints, so without a VPC endpoint configured, your traffic leaves the VPC entirely, gets processed by the NAT gateway, and travels out to the S3 public endpoint.
+
+## The Fix: VPC Gateway Endpoints
+
+S3 (and DynamoDB) support **Gateway Endpoints** — these are free, they don't require an ENI in your subnet, and they route traffic to S3 privately within the AWS network backbone.
+
+```
+ECS Task → VPC Gateway Endpoint → S3 (private)
+```
+
+No NAT gateway. No data processing charge. No internet traversal.
+
+### Setting it up
+
+In Terraform:
+
+```hcl
+resource "aws_vpc_endpoint" "s3" {
+  vpc_id       = aws_vpc.main.id
+  service_name = "com.amazonaws.${var.region}.s3"
+  route_table_ids = [
+    aws_route_table.private.id
+  ]
+
+  tags = {
+    Name = "s3-gateway-endpoint"
+  }
+}
+```
+
+That's it. AWS automatically adds a route to your route table pointing S3-destined traffic at the endpoint instead of the NAT gateway.
+
+## Verifying It Works
+
+After applying, check the route table in the console — you should see a new entry with a destination of `pl-xxxxxxxx` (the S3 managed prefix list) and a target of `vpce-xxxxxxxx`.
+
+You can also verify traffic is no longer hitting the NAT gateway by checking CloudWatch metrics for `BytesOutToDestination` on the NAT gateway — it should drop for S3-bound workloads.
+
+## Results
+
+Within a billing cycle, our NAT gateway data processing charges dropped noticeably for the affected subnets. For workloads doing heavy S3 I/O (which ours were — processing CSV files through a pipeline), this is one of the highest-ROI cost optimisations you can make with minimal effort and zero risk.
+
+Gateway endpoints are free, there's no performance overhead, and the change is entirely transparent to your application code.
