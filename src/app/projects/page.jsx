@@ -83,7 +83,7 @@ export default function Projects() {
           <div className={styles.heroLeftInner}>
             <p className={styles.pageLabel}>Projects</p>
             <p className={styles.pageDesc}>
-              A range of projects focused on cloud infrastructure, automation, and CI/CD pipelines —
+              A range of projects focused on cloud infrastructure, automation, and CI/CD pipelines,
               reflecting my continuous learning in these areas.
             </p>
           </div>
