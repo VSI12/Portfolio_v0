@@ -1,8 +1,18 @@
 "use client"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Menu } from "lucide-react"
+import NavigationOverlay from "@/components/Landing/NavigationOverlay"
+import AsciiCanvas from "@/components/Landing/AsciiCanvas"
 import styles from "./projects.module.css"
+
+const NAV_LINKS = [
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Experiences', href: '/experiences' },
+  { label: 'Contact', href: '/contact' },
+]
 
 const projects = [
   {
@@ -13,36 +23,35 @@ const projects = [
     subcategories: ["ECS"],
     link: "/projects/intrusion-detection-system",
     tech: ["AWS", "Docker", "Terraform"],
-    tech_icons: ["/icons/AWS.svg", "/icons/Docker.svg", "/icons/terraform.svg"]
-
   },
   {
     title: "EC2 Instance configuration with Terraform and Ansible",
     description: "Provisioning EC2 instances with Terraform and configuring them with Ansible.",
     image: "/ec2.png",
-    categories: ["AWS", "Terraform", "Aut"],
+    categories: ["AWS", "Terraform"],
     subcategories: ["EC2"],
     link: "/projects/ec2-instance-configuration-with-terraform-and-ansible",
     tech: ["AWS", "Ansible", "Terraform", "Bash"],
-    tech_icons: ["/icons/AWS.svg", "/icons/Ansible.svg", "/icons/terraform.svg", "/icons/Bash.svg"]
-
-  }
-
+  },
 ]
 
-// const categories = ["All", "AWS", "CI/CD", "Monitoring", "Terraform", "Data Engineering", "Linux"]
 const categories = ["All", "AWS", "Terraform"]
 
 const subcategoryMap = {
-  AWS: ["ECS","EC2"],
+  AWS: ["ECS", "EC2"],
   "CI/CD": ["GitHub Actions", "CodePipeline", "Jenkins"],
   Terraform: ["EC2"],
   "Data Engineering": ["ETL", "Airflow", "Glue"],
 }
 
-const Projects = () => {
+export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedSubcategory, setSelectedSubcategory] = useState(null)
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false)
+  const mouseRef = useRef({ x: -9999, y: -9999 })
+  const renderRef = useRef(null)
+  const mouseXRef = useRef(null)
+  const mouseYRef = useRef(null)
 
   const filteredProjects = projects.filter((project) => {
     const matchCategory = selectedCategory === "All" || project.categories?.includes(selectedCategory)
@@ -51,92 +60,94 @@ const Projects = () => {
   })
 
   return (
-    <section className={styles.section} id="projects">
-      <h2 className={styles.section__title}>Projects</h2>
-      <span className={styles.section__subtitle}>Featured builds</span>
-      <div className={styles.projects_description}>
-        I've worked on a range of projects focused on cloud infrastructure, automation, and CI/CD pipelines. These
-        projects reflect my continuous learning and growth in these areas.
-      </div>
+    <div className={styles.page}>
+      <header className={styles.topBar}>
+        <Link href="/" className={styles.topLogo}>
+          <Image src="/logo.svg" alt="Victor Iliya" width={44} height={44} priority />
+        </Link>
+        <nav className={styles.topNav}>
+          {NAV_LINKS.map((item) => (
+            <Link key={item.href} href={item.href} className={`${styles.topNavLink} ${item.href === '/projects' ? styles.topNavActive : ''}`}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <button className={styles.menuBtn} onClick={() => setIsOverlayOpen(true)} aria-label="Open menu">
+          <Menu size={20} />
+        </button>
+      </header>
+      <NavigationOverlay isOpen={isOverlayOpen} onClose={() => setIsOverlayOpen(false)} />
 
-      <div className={styles.category__bar}>
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => {
-              setSelectedCategory(category)
-              setSelectedSubcategory(null)
-            }}
-            className={`${styles.category__item} ${selectedCategory === category ? styles.active : ""}`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <div className={styles.hero}>
+        <div className={styles.heroLeft}>
+          <div className={styles.heroLeftInner}>
+            <p className={styles.pageLabel}>Projects</p>
+            <p className={styles.pageDesc}>
+              A range of projects focused on cloud infrastructure, automation, and CI/CD pipelines —
+              reflecting my continuous learning in these areas.
+            </p>
+          </div>
+          <div className={styles.canvasWrap}>
+            <AsciiCanvas mouseRef={mouseRef} renderRef={renderRef} mouseXRef={mouseXRef} mouseYRef={mouseYRef} />
+          </div>
+        </div>
 
-      <div className={styles.projects__container}>
-        <div className={styles.content__wrapper}>
-          {selectedCategory !== "All" && subcategoryMap[selectedCategory] && (
-            <div className={styles.subcategory__sidebar}>
-              <ul className={styles.subcategory__list}>
-                <li
+        <div className={styles.heroRight}>
+          <div className={styles.tabs}>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => { setSelectedCategory(category); setSelectedSubcategory(null) }}
+                className={`${styles.tab} ${selectedCategory === category ? styles.tabActive : ""}`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          <div className={styles.contentArea}>
+            {selectedCategory !== "All" && subcategoryMap[selectedCategory] && (
+              <div className={styles.subtabs}>
+                <button
                   onClick={() => setSelectedSubcategory(null)}
-                  className={`${styles.subcategory__item} ${selectedSubcategory === null ? styles.active : ""}`}
+                  className={`${styles.subtab} ${selectedSubcategory === null ? styles.subtabActive : ""}`}
                 >
                   All
-                </li>
+                </button>
                 {subcategoryMap[selectedCategory].map((sub) => (
-                  <li
+                  <button
                     key={sub}
                     onClick={() => setSelectedSubcategory(sub)}
-                    className={`${styles.subcategory__item} ${selectedSubcategory === sub ? styles.active : ""}`}
+                    className={`${styles.subtab} ${selectedSubcategory === sub ? styles.subtabActive : ""}`}
                   >
                     {sub}
-                  </li>
+                  </button>
                 ))}
-              </ul>
-            </div>
-          )}
+              </div>
+            )}
 
-          <div className={styles.projects}>
-            {filteredProjects.map((project) => (
-              <div key={project.title} className={styles.features__cards}>
-                <Link href={project.link}>
-                  <div className={styles.features__image}>
-                    <Image src={project.image} alt={project.title} width={300} height={200} />
-                  </div>
-                
-                  <div className={styles.features__content}>
-                    <h2 className={styles.features__title}>{project.title}</h2>
-                    <p className={styles.features__des}>{project.description}</p>
-                    <div className={styles.features__techstack}>
-                    {project.tech.map((tech, index) => (
-                      <div key={tech} className={styles.tech}>
-                        <div className={styles.tech__icon}>
-                          <img
-                            src={project.tech_icons?.[index] }
-                            alt={tech}
-                            width={30}
-                            height={30}
-                          />
-                        </div>
-                        <div className={styles.tech__line}></div>
-                        <h3 className={styles.tech__title}>{tech}</h3>
-                      </div>
-                    ))}
+            <div className={styles.projectsScroll}>
+              <div className={styles.projects}>
+                {filteredProjects.map((project) => (
+                  <Link key={project.title} href={project.link} className={styles.projectCard}>
+                    <div className={styles.projectImage}>
+                      <Image src={project.image} alt={project.title} width={300} height={180} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
-                  </div>
+                    <div className={styles.projectContent}>
+                      <h2 className={styles.projectTitle}>{project.title}</h2>
+                      <p className={styles.projectDesc}>{project.description}</p>
+                      <div className={styles.techStack}>
+                        {project.tech.map((tech) => (
+                          <span key={tech} className={styles.techBadge}>{tech}</span>
+                        ))}
+                      </div>
+                    </div>
                   </Link>
-                </div>
-              
-            ))}
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className={styles.experiences__footer}>Projects.</div>
-    </section>
+    </div>
   )
 }
-
-export default Projects

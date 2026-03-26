@@ -4,17 +4,32 @@ import styles from "./experiences.module.css";
 const experiences = [
   {
     id: 1,
+    company: "SpendNetwork",
+    position: "DevOps Engineer",
+    duration: "October 2025 – Present",
+    description: [
+      "Developed Python preprocessing scripts to resolve CSV parsing failures and implemented null-safe PostgreSQL joins using IS NOT DISTINCT FROM to ensure row-level data integrity post-enrichment.",
+      "Managed and troubleshot containerised microservices on ECS, diagnosing health check failures, startup race conditions, and ELB target group misconfigurations in production.",
+      "Configured IAM users, least-privilege access policies, and credential management workflows using AWS SSO and aws-vault for secure infrastructure access.",
+      "Audited AWS activity via CloudTrail and Athena, constructing SQL queries to surface access key usage, cross-service API calls, and potential policy violations for security reviews.",
+      "Optimised CloudWatch spend by enforcing log retention policies and designing an export strategy to S3/Glacier for infrequently accessed logs.",
+      "Identified S3-bound traffic routing unnecessarily through NAT gateways and implemented S3 VPC Gateway Endpoints to route traffic privately within the AWS network, eliminating unnecessary data transfer costs.",
+    ],
+    logo: "https://www.spendnetwork.com/wp-content/uploads/2020/12/sn_tiempos_black_logo_red_dot-2.png",
+    isCurrent: true,
+  },
+  {
+    id: 2,
     company: "Current Link Hospitality Systems",
     position: "Cloud Support Engineer",
-    duration: "March 2025 - Present",
+    duration: "March 2025 – October 2025",
     description: [
       "Configured hotel management systems using Opera, setting up rooms for seamless operations.",
     ],
     logo: "/clhs.svg",
-    isCurrent: true, // Add this flag for current job
   },
   {
-    id: 2,
+    id: 3,
     company: "HNG Tech",
     position: "DevOps Engineer",
     duration: "Jan 2025 - March 2025",
@@ -26,7 +41,7 @@ const experiences = [
     logo: "/hng.svg",
   },
   {
-    id: 3,
+    id: 4,
     company: "Transcorp Hilton, Abuja",
     position: "Network Systems Intern",
     duration: "May 2023 - September 2023",
@@ -38,7 +53,7 @@ const experiences = [
     logo: "/hilton.svg",
   },
   {
-    id: 4,
+    id: 5,
     company: "Institute of Human Virology, Nigeria",
     position: "IT Intern",
     duration: "June 2022 - September 2022",

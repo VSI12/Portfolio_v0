@@ -1,69 +1,102 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, Briefcase, Award, GraduationCap } from "lucide-react";
 import styles from "./experiences.module.css";
 import Certifications from "./Certifications";
 import Work from "./Work";
 import Education from "./Education";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faCertificate, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import AsciiCanvas from "@/components/Landing/AsciiCanvas";
+import NavigationOverlay from "@/components/Landing/NavigationOverlay";
 
-const experiences = {
-  work: <Work />,
-  certifications: <Certifications />,
-  education: <Education />
-};
+const NAV_LINKS = [
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Experiences', href: '/experiences' },
+  { label: 'Contact', href: '/contact' },
+];
 
-const categories = ["Work", "Certifications", "Education"];
+const TABS = [
+  { key: 'work', label: 'Work', icon: Briefcase },
+  { key: 'certifications', label: 'Certifications', icon: Award },
+  { key: 'education', label: 'Education', icon: GraduationCap },
+];
 
-const categoryIcons = {
-  Work: faBriefcase,
-  Certifications: faCertificate,
-  Education: faGraduationCap
-};
-
-const Experiences = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Work");
+export default function Experiences() {
+  const [activeTab, setActiveTab] = useState('work');
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const mouseRef = useRef({ x: -9999, y: -9999 });
+  const renderRef = useRef(null);
+  const mouseXRef = useRef(null);
+  const mouseYRef = useRef(null);
 
   return (
-    <section className={`${styles.qualification} ${styles.section}`} id="experiences">
-      <h2 className={styles.section__title}>Experiences</h2>
-      <span className={styles.section__subtitle}>My Personal Journey</span>
-      
-      <div className={styles.experiences_description}>
-        My journey in tech has been shaped by a combination of education, hands-on work,
-        and professional certifications. Each experience has strengthened my skills and 
-        deepened my understanding of cloud technologies and DevOps practices.
-      </div>
+    <div className={styles.page}>
+      <header className={styles.topBar}>
+        <Link href="/" className={styles.topLogo}>
+          <Image src="/logo.svg" alt="Victor Iliya" width={44} height={44} priority />
+        </Link>
+        <nav className={styles.topNav}>
+          {NAV_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`${styles.topNavLink} ${item.href === '/experiences' ? styles.topNavActive : ''}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <button className={styles.menuBtn} onClick={() => setIsOverlayOpen(true)} aria-label="Open menu">
+          <Menu size={20} />
+        </button>
+      </header>
 
-      <div className={styles.category__bar}>
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`${styles.category__item} ${selectedCategory === category ? styles.active : ""}`}
-          >
-            <FontAwesomeIcon 
-              icon={categoryIcons[category]} 
-              className={styles.category__icon} 
+      <NavigationOverlay isOpen={isOverlayOpen} onClose={() => setIsOverlayOpen(false)} />
+
+      <div className={styles.hero}>
+        {/* Left — description + ASCII canvas */}
+        <div className={styles.heroLeft}>
+          <div className={styles.heroLeftInner}>
+            <p className={styles.pageLabel}>Experiences</p>
+            <p className={styles.pageDesc}>
+              My journey in tech has been shaped by education, hands-on work,
+              and professional certifications. Each experience has strengthened
+              my understanding of cloud technologies and DevOps practices.
+            </p>
+          </div>
+          <div className={styles.canvasWrap}>
+            <AsciiCanvas
+              mouseRef={mouseRef}
+              renderRef={renderRef}
+              mouseXRef={mouseXRef}
+              mouseYRef={mouseYRef}
             />
-            {category}
-          </button>
-        ))}
-      </div>
+          </div>
+        </div>
 
-      <div className={`${styles.qualification__container} ${styles.container}`}>
-        <div className={styles.content__wrapper}>
-          <div className={styles.selected__content}>
-            {experiences[selectedCategory.toLowerCase()]}
+        {/* Right — tabs + content */}
+        <div className={styles.heroRight}>
+          <div className={styles.tabs}>
+            {TABS.map(({ key, label, icon: Icon }) => (
+              <button
+                key={key}
+                className={`${styles.tab} ${activeTab === key ? styles.tabActive : ''}`}
+                onClick={() => setActiveTab(key)}
+              >
+                <Icon size={14} />
+                {label}
+              </button>
+            ))}
+          </div>
+          <div className={styles.tabContent}>
+            {activeTab === 'work' && <Work />}
+            {activeTab === 'certifications' && <Certifications />}
+            {activeTab === 'education' && <Education />}
           </div>
         </div>
       </div>
-
-      <div className={styles.experiences__footer}>
-        Experiences.
-      </div>
-    </section>
+    </div>
   );
-};
-
-export default Experiences;
+}
