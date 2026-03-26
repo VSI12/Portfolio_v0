@@ -1,5 +1,9 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
+import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata = {
   title: "Victor Iliya | DevOps Engineer",
@@ -8,9 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
-        <Navbar/>
         {children}
       </body>
     </html>
