@@ -1,0 +1,339 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --background: #f8fafa; /* Changed to your desired color */
+  --foreground: #171717;
+  --font-inter: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", "SFMono-Regular", "Cascadia Code", monospace;
+  --font-inclusive-sans: "Inclusive Sans", "Inter", "Segoe UI", Arial, sans-serif;
+
+
+  --section-title-size: 2rem;
+  --section-subtitle-size: 1rem;
+  --hue: 0;
+  --sat: 0%;
+  --section-title-color: #342F2F;
+  --section-subtitle-color: #545252;
+  --watermark-color: #73737334;
+
+  --content-font-size: 22px;
+  --content-font-weight: 500;
+  --content-font-colour: #4A4A4A;
+  --content-font-family: 'inclusive sans' , sans-serif;
+  --content-line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background-color: #f8fafa;
+  font-family: var(--font-jetbrains-mono);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Add fine noise texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    );
+}
+
+a {
+  text-decoration: none;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Navbar/navbar.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/* Navbar container */
+.navbar_navbar__SjCXx {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: #00000013 2px solid;
+}
+
+/* Navbar container styles */
+.navbar_navbarContainer___zvJC {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Navbar Header */
+.navbar_navbarHeader__jSj_T {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* Navbar Links (Desktop) */
+.navbar_navbarLinks__61ek0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 16px;
+}
+
+.navbar_navLink__2xe_B {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #171717c2;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.navbar_navLink__2xe_B:hover {
+  transition: 0.2s ease;
+  color: #000000e7;
+  font-weight: 700;
+}
+
+.navbar_navLink__2xe_B.navbar_active__FeLeQ {
+  color: #000000e7;
+  font-weight: 700;
+}
+
+/* Navbar Actions */
+.navbar_navbarActions___z27U {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar_darkModeToggle__Fw6dJ {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background: none;
+  color: #424242;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar_darkModeToggle__Fw6dJ:hover {
+  color: #000000;
+}
+
+/* Menu Toggle Button (Mobile) */
+.navbar_menuToggle__S8WHL {
+  display: none;
+  padding: 0.5rem;
+  background: none;
+  color: #171717;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar_menuToggle__S8WHL:hover {
+  color: #1e40af;
+}
+
+/* Mobile menu styles */
+.navbar_mobileMenuWrapper__jNXow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar_mobileMenuWrapper__jNXow.navbar_show__DQSix {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar_mobileMenuBackdrop__jZ6wV {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.navbar_mobileMenu__y7XdQ {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background); /* Default light background */
+  background-image: var(--light-background-image); /* Default light background image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps it fixed while scrolling */
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.4s ease-in-out; /* Smooth slide effect */
+}
+
+.navbar_mobileMenuWrapper__jNXow.navbar_show__DQSix .navbar_mobileMenu__y7XdQ {
+  transform: translateX(0); /* Slide in from right */
+}
+.navbar_mobileMenuWrapper__jNXow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* High value to stay on top */
+}
+
+.navbar_closeButton__eDTQv {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #171717;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.navbar_closeButton__eDTQv:hover {
+  color: #1e40af;
+}
+
+body.navbar_dark__G6rR8 .navbar_closeButton__eDTQv {
+  color: #ededed;
+}
+
+body.navbar_dark__G6rR8 .navbar_closeButton__eDTQv:hover {
+  color: #60a5fa;
+}
+
+
+.navbar_mobileLinks__R4MCs {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.navbar_mobileNavLink__NdWrp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #171717;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+  border-bottom: #00000013 2px solid;
+}
+
+.navbar_mobileNavLink__NdWrp:hover {
+  color: #1e40af;
+  background-color: #e5e7eb;
+}
+
+.navbar_mobileNavLink__NdWrp.navbar_active__FeLeQ {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow *//* Ensure it stays on top of other content */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Hide desktop navbar links */
+  .navbar_navbarLinks__61ek0 {
+    display: none;
+  }
+
+  /* Show mobile menu toggle button */
+  .navbar_menuToggle__S8WHL {
+    display: block;
+  }
+}
+
+
+
+/* Dark Mode */
+body.navbar_dark__G6rR8 {
+  background-color: #171717;
+  color: #ededed;
+}
+
+body.navbar_dark__G6rR8 .navbar_navbar__SjCXx {
+  background-color: #222222;
+}
+
+body.navbar_dark__G6rR8 .navbar_navbarLinks__61ek0 .navbar_navLink__2xe_B,
+body.navbar_dark__G6rR8 .navbar_mobileLinks__R4MCs .navbar_mobileNavLink__NdWrp {
+  color: #ededed;
+}
+
+body.navbar_dark__G6rR8 .navbar_navbarActions___z27U .navbar_darkModeToggle__Fw6dJ {
+  color: #ededed;
+}
+
+body.navbar_dark__G6rR8 .navbar_menuToggle__S8WHL {
+  color: #ededed;
+}
+
+body.navbar_dark__G6rR8 .navbar_mobileMenu__y7XdQ {
+  background-color: #1f2937;
+}
+
+body.navbar_dark__G6rR8 .navbar_mobileNavLink__NdWrp {
+  color: #f3f4f6;
+  background-color: #374151;
+}
+
+body.navbar_dark__G6rR8 .navbar_mobileNavLink__NdWrp:hover {
+  color: #60a5fa;
+  background-color: #4b5563;
+}
+
+body.navbar_dark__G6rR8 .navbar_mobileNavLink__NdWrp.navbar_active__FeLeQ {
+  color: #ffffff;
+  background-color: #2563eb;
+}
+
+.navbar_icon__u1fet{
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  color: #525252;
+  transition: all 0.3s ease-in-out;
+}

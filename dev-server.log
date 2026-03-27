@@ -1,0 +1,16 @@
+
+> portfolio_v0@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.1.0
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.56.1:3001
+
+ ✓ Starting...
+ ✓ Ready in 950.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 3.5s (678 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.1s (920 modules)
+ GET / 500 in 6587ms
+[?25h
